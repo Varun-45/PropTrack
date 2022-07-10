@@ -1,0 +1,32 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+html{
+  scroll-behavior: smooth;
+  
+}
+body{
+  background: aliceblue;
+}
+.margin_left_auto{
+  margin-left: auto;
+}
+.text_right{
+  text-align: right;
+}
+.pos_rel{
+  position: relative;
+}
+.bold{
+  font-weight: 700;
+}
+.c-gold-900 {
+  color: #ffc72c;
+}
+.push_right {
+  float: right;
+}
+.card_shadow {
+  transition: box-shadow .25s ease-out;
+}

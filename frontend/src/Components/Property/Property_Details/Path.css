@@ -1,0 +1,130 @@
+/* [data-darkreader-inline-bgcolor] {
+    background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+    background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border-top] {
+    border-top-color: var(--darkreader-inline-border-top) !important;
+}
+.bdrt, .ac-bdrt > *, .acac-bdrt > * > *, .bdrT {
+    border-top: 1px solid #ccc;
+}
+.bdrt, .ac-bdrt > *, .acac-bdrt > * > *, .bdrT {
+    border-top-color: rgb(62, 68, 70);
+}
+.fo, .ac-fo > *, .acac-fo > * > * {
+    zoom: 1;
+}
+.fw {
+    width: 998px;
+    margin: 0 auto;
+}
+.fo:before, .fo:after, .ac-fo > *:before, .ac-fo > *:after, .acac-fo > * > *:before, .acac-fo > * > *:after {
+    content: "";
+    display: table;
+}
+
+.fo:after, .ac-fo > *:after, .acac-fo > * > *:after {
+    clear: both;
+}
+.fo:before, .fo:after, .ac-fo > *:before, .ac-fo > *:after, .acac-fo > * > *:before, .acac-fo > * > *:after {
+    content: "";
+    display: table;
+}
+
+.ffos {
+    font-family: 'Open Sans', sans-serif;
+}
+.mb7px, .ac-mb7px > *, .acac-mb7px > * > * {
+    margin-bottom: 7px;
+}
+.mt7px, .ac-mt7px > *, .acac-mt7px > * > * {
+    margin-top: 7px;
+}
+.black, .blue, .brown, .chocolate, .golden, .gray, .green, .magenta, .maroon, .orange, .purple, .red, .hig, .dif, .dul, .errorcolor, .infocolor, .successcolor, .warningcolor {
+    text-shadow: 1px 1px rgb(255 255 255 / 75%);
+}
+blockquote, body, button, dd, details, dl, fieldset, figure, form, h1, h2, h3, h4, h5, h6, input, ol, p, select, summary, td, textarea, ul {
+    margin: 0;
+    padding: 0;
+}
+.dul, .dul a, a.dul {
+    color: #999;
+}
+.small {
+    font-size: 0.9em;
+}
+.fo, .ac-fo > *, .acac-fo > * > * {
+    zoom: 1;
+}
+ol, ul {
+    list-style-image: initial;
+}
+ol, ul {
+    list-style: none;
+}
+.ts0, .ts0px {
+    text-shadow: 0 0 transparent;
+}
+.fl, .ac-fl > *, .acac-fl > * > * {
+    float: left;
+    *display: inline-block;
+}
+.pr, .ac-pr > *, .acac-pr > * > * {
+    position: relative;
+}
+.mr7px, .ac-mr7px > *, .acac-mr7px > * > * {
+    margin-right: 7px;
+}
+
+.uo a {
+    text-decoration: none;
+}
+.hig, .hig a, a.hig, .hig-anchors a {
+    color: #08c;
+}
+.hig, .hig a, a.hig, .hig-anchors a {
+    color: #0075b8;
+}
+.uo a {
+    text-decoration-color: initial;
+}
+.dul, .dul a, a.dul {
+    color: rgb(168, 160, 149);
+}
+.hig, .hig a, a.hig, .hig-anchors a {
+    color: rgb(61, 190, 255);
+}
+.hig, .hig a, a.hig, .hig-anchors a {
+    color: rgb(75, 190, 255);
+}
+.dul, .dul a, a.dul {
+    color: #999;
+}
+meta {
+    display: none;
+}
+.pr5px, .ac-pr5px > *, .acac-pr5px > * > * {
+    padding-right: 5px;
+}
+.pl3px, .ac-pl3px > *, .acac-pl3px > * > * {
+    padding-left: 3px;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-angle-right:before {
+    content: "\f105";
+}
+@media (min-width: 1025px){}
+.stretch .fw {
+    width: auto;
+    max-width: 1152px;
+} */

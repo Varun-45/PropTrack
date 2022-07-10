@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7a64b87c1c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css\login.css">
+    <title>OTP</title>
+</head>
+<body>
+    <div class="box">
+        <div class="close" >
+            <a href="#" class="close1" >
+        <i class="fa fa-times fa-3x" aria-hidden="true"></i></a>
+    </div>
+    <div class="container">
+		<h1 class="title" style="margin-bottom: 50px;">ENTER OTP</h1>
+        
+		<div class="userInput">
+			<input class="otp" type="text" id='ist' maxlength="1" onkeyup="clickEvent(this,'sec')">
+			<input class="otp" type="text" id="sec" maxlength="1" onkeyup="clickEvent(this,'third')">
+			<input class="otp" type="text" id="third" maxlength="1" onkeyup="clickEvent(this,'fourth')">
+			<input class="otp" type="text" id="fourth" maxlength="1" onkeyup="clickEvent(this,'fifth')">
+			<input class="otp" type="text" id="fifth" maxlength="1">
+		</div>
+        <button style="width:90%;height: 40px; font-size: 17px; text-align: center; margin: 20px; margin-top: 50px; color: #fffcfc; background-color:rgb(164, 164, 164); border: none;">CONFIRM</button>
+		
+	</div>
+    </div>
+    <script>function clickEvent(first,last)
+    {
+        if(first.value.length){
+            document.getElementById(last).focus();
+        }
+    }</script>
+</body>
+</html>

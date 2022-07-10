@@ -1,0 +1,196 @@
+@media(max-width:998px) {
+  html{
+    font-size:55%;
+  }
+  
+}
+@media(max-width:768px) {
+  html{
+    font-size:45%;
+  }
+  
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background: black;
+  height: 100vh;
+  overflow: hidden;
+}
+.box{
+  background: rgba(255, 255, 255, 0.296);
+    height: 50rem;
+    position: absolute;
+  top: 17rem;
+  left: 70rem;
+  transform: translate(-8rem, -8rem);
+  width: 40rem;
+  
+}
+.close{
+    position: relative;
+    z-index: 1;
+    left: 41rem;
+    bottom: .7rem;
+    
+}
+
+.up{
+    position: relative;
+    z-index: 2;
+    left: 1.6rem;
+   
+   
+}
+ .txt_field{
+    position: relative;
+    border-bottom: .2rem solid #adadad;
+    margin: 3rem 0;
+ }
+ .txt_field input{
+    width: 50rem;
+    padding: 0 .5rem;
+    height: 4rem;
+    font-size: 1.6rem;
+    border: none;
+    background: none;
+    outline: none;
+  }
+  .txt_field label{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    color: #adadad;
+    transform: translateY(-1rem);
+    font-size: 2rem;
+    pointer-events: none;
+    transition: .5s;
+  }
+  .txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 0%;
+    height: .2rem;
+    font-size: .1rem;
+    background: #2691d9;
+    transition: .5s;
+  }
+  .txt_field input:focus ~ label,
+  .txt_field input:valid ~ label{
+    top: -.5rem;
+    font-size: 1.5rem;
+    color: #2691d9;
+  }
+  .txt_field input:focus ~ span::before,
+  .txt_field input:valid ~ span::before{
+    width: 100%;
+  }
+  
+  .eye{
+    position: absolute;
+   top: 18rem;
+    left: 35rem;
+    cursor: pointer;
+  }
+  .fa{
+    color: #a6a6a6;
+    font-size: 1.5rem;
+  }
+  .abc5{
+    color: #a6a6a6;
+    font-size: 4rem;
+  }
+  /*opt code*/
+
+  .container{
+    display: flex;
+    flex-flow: column;
+    height: 60%;
+    align-items: space-around;
+    justify-content: center;
+  }
+  
+  .userInput{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .otp{
+    margin: .5rem;
+    height: 3.5rem;
+    width: 6.5rem;
+    border: none;
+    border-radius: .5rem;
+    text-align: center;
+    font-family: arimo;
+    font-size: 2rem;
+    background: #eef2f3;
+  
+  }
+  
+  .title{
+    text-align: center;
+    font-family: arimo;
+    color: honeydew;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+
+  }
+  .abc{
+    color:#adadad;
+     margin-left: 3rem; 
+     margin-top: .5rem;
+     font-size: 1.7rem;
+  }
+  .button1{
+    width:90%;height: 4rem; 
+    font-size: 1.7rem; 
+    text-align: center; 
+    margin: 2rem; 
+    margin-top: 0rem;
+    color: #fffcfc; 
+    background-color:rgb(164, 164, 164);
+    border: none;
+    margin-top: 3rem;
+  }
+.abc2{
+  text-align: center;  
+  color: #adadad;
+  font-size: 1.7rem;
+}
+.button2{
+  background-color: rgba(255, 255, 255, 0); 
+  border-radius: 2rem; 
+  width:30%;
+  height: 4rem; 
+  border-color: #fffcfc; 
+  margin-left: 5rem;
+  margin-top: 3rem;
+}
+.img1{
+  height:3rem;
+  width:3rem;
+
+}
+.abc3{
+  text-align: center; 
+  text-decoration: underline;
+   color: #adadad;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+}
+.img2{
+  height:6rem;
+   width:6rem;
+   display: block;
+   margin-left: 15rem;
+   
+}
+.abc4{
+  margin-bottom: 5rem;
+}

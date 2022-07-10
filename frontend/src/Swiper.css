@@ -1,0 +1,83 @@
+:root {
+  --swiper-navigation-size: 44px;
+}
+
+:root {
+  --swiper-theme-color: #007aff;
+}
+.swiper_container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+.swiper_wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+
+.swiper_container_android .swiper_slide,
+.swiper_wrapper {
+  transform: translateZ(0);
+}
+.swiper_slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+}
+
+.swiper_button_next,
+.swiper_button_prev {
+  position: absolute;
+  top: 50%;
+  width: calc(var(--swiper-navigation-size)/44*27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(var(--swiper-navigation-size)*-1/2);
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--swiper-navigation-color, var(--swiper-theme-color));
+}
+
+.swiper_button_prev,
+.swiper_container_rtl .swiper_button_next {
+  left: 10px;
+  right: auto;
+}
+
+.swiper_button_next.swiper_button_disabled,
+.swiper_button_prev.swiper_button_disabled {
+  opacity: .35;
+  cursor: auto;
+  pointer-events: none;
+}
+
+.swiper_button_next,
+.swiper_container_rtl .swiper_button_prev {
+  right: 10px;
+  left: auto;
+}
+.swiper_button_next:after, .swiper_button_prev:after {
+  font-family: swiper-icons;  
+  font-size: var(--swiper-navigation-size);
+  text-transform: none!important;
+  letter-spacing: 0;
+  text-transform: none;
+  font-variant: normal;
+  line-height: 1;
+}
+.swiper_button_next:after, .swiper_container_rtl .swiper_button_prev:after {
+  content: "next";
+}

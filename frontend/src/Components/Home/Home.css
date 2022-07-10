@@ -1,0 +1,10 @@
+.pt_home {
+    background-color: #fff;
+    font-family: Montserrat;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.pt_home, .pt_home * {
+    box-sizing: border-box;
+}
