@@ -67,6 +67,8 @@ const Login = () => {
   
   return (
     <>
+    <div className="boxcontain">
+
       <div className="box">
         <div className="close">
             <a href="#" className="close1" >
@@ -83,7 +85,7 @@ const Login = () => {
         <span></span>
         <label>Enter Phone Number Or Email</label>
       </div>
-      <div>
+      <div className='btn_field'>
         <button className="button1" onClick={continuehandle}>CONTINUE</button>
       </div>
       <div>
@@ -92,6 +94,7 @@ const Login = () => {
       <div>
       <button  className="button2"><img src="/facebook-logo-png-23.png" className="img1" alt=""/></button>
       <button className="button2"><img src="/google-logo-9824.png" className="img1" alt=""/></button>
+    </div>
     </div>
     </div>
     </>

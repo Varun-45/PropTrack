@@ -206,7 +206,7 @@ exports.forgotpass = catchAsyncErrors(async (req, res, next) => {
   if (!user) {
     return next(new ErrorHandler("User not found", 404));
   }
-  // Generate token
+  
   const resettoken = await user.generateresettoken();
 
   if (value == "MobileNumber") {
