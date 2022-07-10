@@ -1,4 +1,3 @@
-import e from 'express'
 import React, { useEffect, useState } from 'react'
 import { useAlert } from 'react-alert'
 import { useDispatch, useSelector } from 'react-redux'
@@ -74,7 +73,7 @@ const Login = () => {
         <i className="abc5 fa fa-times fa-3x" aria-hidden="true"></i></a>
     </div>
     <div className="up">
-        <img src="./PropTrack_Logo.png " className="img2" alt=""/>
+        <img src="/PropTrack_Logo.png " className="img2" alt=""/>
     </div>
     <div>
         <p className="abc3"> India’s most innovative real estate platform <br/> to simplify home search. </p>
@@ -91,8 +90,8 @@ const Login = () => {
         <p className="abc2">Or Connect With</p>
       </div>
       <div>
-      <button  className="button2"><img src="./facebook-logo-png-23.png" className="img1" alt=""/></button>
-      <button className="button2"><img src="./google-logo-9824.png" className="img1" alt=""/></button>
+      <button  className="button2"><img src="/facebook-logo-png-23.png" className="img1" alt=""/></button>
+      <button className="button2"><img src="/google-logo-9824.png" className="img1" alt=""/></button>
     </div>
     </div>
     </>
