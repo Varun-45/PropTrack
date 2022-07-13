@@ -254,7 +254,7 @@ const Login = () => {
           </a>
         </div>
 
-        <img src="/PropTrack_Logo.png " class="img2" alt="" />
+        <img src="./Images/PropTrack_Logo.png " class="img2" alt="" />
 
         <p class="abc3">
           <span>India's most innovative real estate platform</span>
@@ -280,10 +280,10 @@ const Login = () => {
 
         <div class="other-btns">
           <button class="button2">
-            <img src="/facebook-logo-png-23.png" class="img1" alt="" />
+            <img src="./Images/facebook-logo-png-23.png" class="img1" alt="" />
           </button>
           <button class="button2">
-            <img src="/google-logo-9824.png" class="img1" alt="" />
+            <img src="./Images/google-logo-9824.png" class="img1" alt="" />
           </button>
         </div>
       </div>
