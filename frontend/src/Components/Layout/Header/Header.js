@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import "./Header.css";
+import Login_Register from '../../User/Login_Register'
 
 const Header = () => {
   const Cities = [
@@ -22,9 +23,11 @@ const Header = () => {
   const [propertyservicesactive, setpropertyservicesactive] = useState("");
   const [ptadviceactive, setptadviceactive] = useState("");
   const [helpactive, sethelpactive] = useState("");
+  const [loginopen, setloginopen] = useState(false);
 
   return (
     <>
+    {loginopen && <Login_Register/>}
       <header className="header">
         <section className="header_main">
           <div className="header_container_div">
@@ -124,7 +127,6 @@ const Header = () => {
             </div>
             <div className="header_login">
               <a
-                href="/login"
                 className={`header_main_link ${loginactive}`}
                 onMouseOver={() => setloginactive("active")}
                 onMouseOut={() => setloginactive("")}
@@ -167,12 +169,12 @@ const Header = () => {
                   </ul>
                 </div>
                 <div className="login_drop_down">
-                  <a href="/login" className="login_drop_loginbtn">
+                  <a className="login_drop_loginbtn" onClick={(e)=> {e.preventDefault();setloginopen(true)}}>
                     Login
                   </a>
                   <div className="login_drop_text">
                     New to Magicbricks?{" "}
-                    <a href="/login" className="login_drop_signupbtn">
+                    <a className="login_drop_signupbtn">
                       Sign Up
                     </a>
                   </div>

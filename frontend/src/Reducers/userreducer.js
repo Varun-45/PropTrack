@@ -109,7 +109,8 @@ export const OtpReducer = (state={},action)=>{
         ...state,
         loading:true,
         CodeSent:false,
-        error:null
+        error:null,
+        useralready:null
       }
     case USER_OTP_SUCCESS:
       return {

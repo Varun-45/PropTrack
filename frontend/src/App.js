@@ -14,7 +14,7 @@ const About = lazy(()=> import("./Components/Layout/About/About"))
 const Contact = lazy(()=> import("./Components/Layout/Contact/Contact"))
 const Footer = lazy(()=> import("./Components/Layout/Footer/Footer"))
 const Header = lazy(()=> import("./Components/Layout/Header/Header"))
-const Login = lazy(()=> import("./Components/User/Login"))
+const Login = lazy(()=> import("./Components/User/Login_Register"))
 const NewProperty = lazy(()=> import("./Components/Property/New/NewProperty"))
 const Basic = lazy(()=> import("./Components/Property/New/Basic"))
 const Address = lazy(()=> import("./Components/Property/New/Address"))
@@ -39,7 +39,7 @@ const App = () => {
 
   return (
     <>
-    {/* <Suspense fallback={<div></div>}><Header/></Suspense> */}
+    <Suspense fallback={<div></div>}><Header/></Suspense>
 
       {/* {isAuthenticated && <UserOptions user={user} />}
       {!isAuthenticated && show && <UserOptions2/>} */}

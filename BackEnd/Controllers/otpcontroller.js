@@ -30,7 +30,7 @@ exports.generateotp = catchasyncerrors(async (req, res, next) => {
     return next(new ErrorHandler("Please Enter a Valid Email OR MobileNumber"));
   }
   
-  const otp = Math.floor(100000 + Math.random() * 900000);
+  const otp = Math.floor(1000 + Math.random() * 9000);
   
   const otpexpire = new Date(Date.now()+10*60*1000);
   
