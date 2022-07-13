@@ -145,7 +145,7 @@ const Login = () => {
         <h1 class="title4">REGISTER</h1>
 
         <div class="image-field">
-          <img src={Avatar || "/bg.jpeg"} id="output" class="prof" />
+          <img src={Avatar || "./Images/bg.jpeg"} id="output" class="prof" />
           <input
             type="file"
             accept="image/*"
