@@ -1,6 +1,5 @@
 const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
 var CompressionPlugin = require("compression-webpack-plugin");
-const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 
 module.exports = function override(config, env) {
   config.plugins.push(
@@ -16,9 +15,6 @@ module.exports = function override(config, env) {
       threshold: 0,
       minRatio:1
     })
-  );
-  config.plugins.push(
-    new NodePolyfillPlugin()
   );
 
   return config;
