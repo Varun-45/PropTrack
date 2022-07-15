@@ -51,7 +51,7 @@ const Search = () => {
                   </div>
                   <div className="search_button">
                     <span className="search_button_icon"></span>
-                    Search
+                    <span className="search_button_text">Search</span>
                   </div>
                 </div>
               </div>
