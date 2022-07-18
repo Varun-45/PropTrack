@@ -36,11 +36,6 @@
   display: flex;
   transition: all 0.3s;
 }
-
-/* .header_sub {
-  top: 48px;
-} */
-
 .header_container_div {
   width: 81%;
   margin: auto;
@@ -762,7 +757,7 @@
   top: 4px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .header_main {
     height: auto;
     padding-top: 2px;

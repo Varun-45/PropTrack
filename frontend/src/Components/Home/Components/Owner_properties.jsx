@@ -49,7 +49,7 @@ const Owner_properties = () => {
                       className="swiper_slide swiper_slide_active"
                       role="group"
                       aria-label="1 / 8"
-                      style={{'width': '296px', 'margin-right': '16px'}}
+                      // style={{'width': '296px', 'margin-right': '16px'}}
                     >
                       <div className="home_owner_prop_card card_shadow">
                         <a
@@ -99,7 +99,7 @@ const Owner_properties = () => {
                       className="swiper_slide swiper_slide_next"
                       role="group"
                       aria-label="2 / 8"
-                      style={{'width': '296px', 'margin-right': '16px'}}
+                      // style={{'width': '296px', 'margin-right': '16px'}}
                     >
                       <div className="home_owner_prop_card card_shadow">
                         <a
@@ -149,7 +149,7 @@ const Owner_properties = () => {
                       className="swiper_slide"
                       role="group"
                       aria-label="3 / 8"
-                      style={{'width': '296px', 'margin-right': '16px'}}
+                      // style={{'width': '296px', 'margin-right': '16px'}}
                     >
                       <div className="home_owner_prop_card card_shadow">
                         <a
@@ -199,7 +199,7 @@ const Owner_properties = () => {
                       className="swiper_slide"
                       role="group"
                       aria-label="4 / 8"
-                      style={{'width': '296px', 'margin-right': '16px'}}
+                      // style={{'width': '296px', 'margin-right': '16px'}}
                     >
                       <div className="home_owner_prop_card card_shadow">
                         <a
@@ -249,7 +249,7 @@ const Owner_properties = () => {
                       className="swiper_slide"
                       role="group"
                       aria-label="5 / 8"
-                      style={{'width': '296px', 'margin-right': '16px'}}
+                      // style={{'width': '296px', 'margin-right': '16px'}}
                     >
                       <div className="home_owner_prop_card card_shadow">
                         <a
@@ -299,7 +299,7 @@ const Owner_properties = () => {
                       className="swiper_slide"
                       role="group"
                       aria-label="6 / 8"
-                      style={{'width': '296px', 'margin-right': '16px'}}
+                      // style={{'width': '296px', 'margin-right': '16px'}}
                     >
                       <div className="home_owner_prop_card card_shadow">
                         <a
@@ -349,7 +349,7 @@ const Owner_properties = () => {
                       className="swiper_slide"
                       role="group"
                       aria-label="7 / 8"
-                      style={{'width': '296px', 'margin-right': '16px'}}
+                      // style={{'width': '296px', 'margin-right': '16px'}}
                     >
                       <div className="home_owner_prop_card card_shadow">
                         <a
@@ -399,7 +399,7 @@ const Owner_properties = () => {
                       className="swiper_slide"
                       role="group"
                       aria-label="8 / 8"
-                      style={{'width': '296px', 'margin-right': '16px'}}
+                      // style={{'width': '296px', 'margin-right': '16px'}}
                     >
                       <div className="home_owner_prop_card card_shadow">
                         <a
