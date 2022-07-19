@@ -28,6 +28,14 @@ const Header = () => {
   const showHeaderSub = () => document.getElementsByClassName("header_sub")[0].classList.add("show"),
     hideHeaderSub = () => document.getElementsByClassName("header_sub")[0].classList.remove("show");
 
+  const showLinks = (e) => {
+    e.preventDefault();
+    e.target.nextElementSibling.classList.add("active");
+  },
+    hideLinks = (e) => {
+      e.target.parentElement.classList.remove("active")
+    }
+
   return (
     <>
     {loginopen && <Login_Register/>}
@@ -207,6 +215,7 @@ const Header = () => {
                   className={`header_sub_tabs_link ${buyactive}`}
                   onMouseOver={() => setbuyactive("active")}
                   onMouseOut={() => setbuyactive("")}
+                  onClick={showLinks}
                 >
                   Buy
                 </a>
@@ -216,6 +225,7 @@ const Header = () => {
                   onMouseOver={() => setbuyactive("active")}
                   onMouseOut={() => setbuyactive("")}
                 >
+                  <div className="header_sub_tabs_dropdown_btn" onClick={hideLinks}>Back</div>
                   <div className="swiper_container swiper_container_initialized swiper_container_horizontal">
                     <div
                       className="swiper_wrapper"
@@ -228,7 +238,7 @@ const Header = () => {
                     >
                       <div
                         className="drop_row swiper_slide swiper_slide_active"
-                        style={{ width: "998px", "marginRight": "1px" }}
+                        // style={{ width: "998px", "marginRight": "1px" }}
                         role="group"
                         aria-label="1 / 3"
                       >
@@ -365,7 +375,7 @@ const Header = () => {
                       </div>
                       <div
                         className="drop_row swiper_slide show_view_more swiper_slide_next"
-                        style={{ width: "998px", "marginRight": "1px" }}
+                        // style={{ width: "998px", "marginRight": "1px" }}
                         role="group"
                         aria-label="2 / 3"
                       >
@@ -873,7 +883,7 @@ const Header = () => {
                         className="drop_row swiper_slide show_view_more"
                         role="group"
                         aria-label="3 / 3"
-                        style={{ width: "998px", "marginRight": "1px" }}
+                        // style={{ width: "998px", "marginRight": "1px" }}
                       >
                         <div className="drop_call">
                           <div className="drop_heading">
@@ -1317,6 +1327,7 @@ const Header = () => {
                   className={`header_sub_tabs_link ${rentactive}`}
                   onMouseOver={() => setrentactive("active")}
                   onMouseOut={() => setrentactive("")}
+                  onClick={showLinks}
                 >
                   Rent
                 </a>
@@ -1326,6 +1337,7 @@ const Header = () => {
                   onMouseOver={() => setrentactive("active")}
                   onMouseOut={() => setrentactive("")}
                 >
+                  <div className="header_sub_tabs_dropdown_btn" onClick={hideLinks}>Back</div>
                   <div className="swiper_container swiper_container_initialized swiper_container_horizontal">
                     <div
                       className="swiper_wrapper"
@@ -1335,7 +1347,7 @@ const Header = () => {
                       <div
                         className="drop_row swiper_slide swiper_slide_active"
                         id="staticSwiperSliderRent"
-                        style={{ width: "792px", "marginRight": "1px" }}
+                        // style={{ width: "792px", "marginRight": "1px" }}
                         role="group"
                         aria-label="1 / 3"
                       >
@@ -1538,7 +1550,7 @@ const Header = () => {
                       </div>
                       <div
                         className="drop_row swiper_slide show_view_more swiper_slide_next"
-                        style={{ width: "792px", "marginRight": "1px" }}
+                        // style={{ width: "792px", "marginRight": "1px" }}
                         role="group"
                         aria-label="2 / 3"
                       >
@@ -1939,7 +1951,7 @@ const Header = () => {
                         className="drop_row swiper_slide show_view_more"
                         role="group"
                         aria-label="3 / 3"
-                        style={{ width: "792px", "marginRight": "1px" }}
+                        // style={{ width: "792px", "marginRight": "1px" }}
                       >
                         <div className="drop_call">
                           <div className="drop_heading">
@@ -2393,6 +2405,7 @@ const Header = () => {
                   className={`header_sub_tabs_link ${sellactive}`}
                   onMouseOver={() => setsellactive("active")}
                   onMouseOut={() => setsellactive("")}
+                  onClick={showLinks}
                 >
                   Sell
                 </a>
@@ -2402,6 +2415,7 @@ const Header = () => {
                   onMouseOver={() => setsellactive("active")}
                   onMouseOut={() => setsellactive("")}
                 >
+                  <div className="header_sub_tabs_dropdown_btn" onClick={hideLinks}>Back</div>
                   <div className="drop_row">
                     <div className="drop_call">
                       <div className="drop_heading">For Owner</div>
@@ -2491,6 +2505,7 @@ const Header = () => {
                   className={`header_sub_tabs_link ${homeloansactive}`}
                   onMouseOver={() => sethomeloansactive("active")}
                   onMouseOut={() => sethomeloansactive("")}
+                  onClick={showLinks}
                 >
                   Home Loans
                 </a>
@@ -2500,6 +2515,7 @@ const Header = () => {
                   onMouseOver={() => sethomeloansactive("active")}
                   onMouseOut={() => sethomeloansactive("")}
                 >
+                  <div className="header_sub_tabs_dropdown_btn" onClick={hideLinks}>Back</div>
                   <div className="swiper_container swiper_container-initialized swiper_container_horizontal">
                     <div
                       className="swiper_wrapper"
@@ -2510,7 +2526,7 @@ const Header = () => {
                         className="drop_row swiper_slide show_view_more swiper_slide_active"
                         role="group"
                         aria-label="1 / 2"
-                        style={{ width: "1014px", "marginRight": "1px" }}
+                        // style={{ width: "1014px", "marginRight": "1px" }}
                       >
                         <div className="drop_call">
                           <div className="drop_heading">Apply Now</div>
@@ -2702,7 +2718,7 @@ const Header = () => {
                         className="drop_row swiper_slide swiper_slide-next"
                         role="group"
                         aria-label="2 / 2"
-                        style={{ width: "1014px", "marginRight": "1px" }}
+                        // style={{ width: "1014px", "marginRight": "1px" }}
                       >
                         <div className="drop_call">
                           <div className="drop_heading">
@@ -2836,6 +2852,7 @@ const Header = () => {
                   className={`header_sub_tabs_link ${propertyservicesactive}`}
                   onMouseOver={() => setpropertyservicesactive("active")}
                   onMouseOut={() => setpropertyservicesactive("")}
+                  onClick={showLinks}
                 >
                   Property Services
                 </a>
@@ -2845,6 +2862,7 @@ const Header = () => {
                   onMouseOver={() => setpropertyservicesactive("active")}
                   onMouseOut={() => setpropertyservicesactive("")}
                 >
+                  <div className="header_sub_tabs_dropdown_btn" onClick={hideLinks}>Back</div>
                   <div className="drop_row">
                     <div className="drop_call">
                       <div className="drop_heading">Rent Services</div>
@@ -2952,6 +2970,7 @@ const Header = () => {
                   className={`header_sub_tabs_link ${ptadviceactive}`}
                   onMouseOver={() => setptadviceactive("active")}
                   onMouseOut={() => setptadviceactive("")}
+                  onClick={showLinks}
                 >
                   {`PT Advice `}
                   <span className="badge">NEW</span>
@@ -2962,6 +2981,7 @@ const Header = () => {
                   onMouseOver={() => setptadviceactive("active")}
                   onMouseOut={() => setptadviceactive("")}
                 >
+                  <div className="header_sub_tabs_dropdown_btn" onClick={hideLinks}>Back</div>
                   <div className="drop_row">
                     <div className="drop_call">
                       <div className="drop_heading">MB Research</div>
@@ -3100,14 +3120,17 @@ const Header = () => {
                   className={`header_sub_tabs_link ${helpactive}`}
                   onMouseOver={() => sethelpactive("active")}
                   onMouseOut={() => sethelpactive("")}
+                  onClick={showLinks}
                 >
                   Help
                 </a>
                 <div
+                  id="helpdrop"
                   className={`header_sub_tabs_dropdown ${helpactive}`}
                   onMouseOver={() => sethelpactive("active")}
                   onMouseOut={() => sethelpactive("")}
                 >
+                  <div className="header_sub_tabs_dropdown_btn" onClick={hideLinks}>Back</div>
                   <div className="drop_row">
                     <div className="drop_call">
                       <ul className="drop_links">

@@ -433,9 +433,6 @@
 	display: flex;
 	flex-grow: 1;
 	justify-content: space-evenly;
-}
-
-.header_sub_tasks > li {
   position: relative;
 }
 
@@ -497,7 +494,6 @@
 
 .header_sub_tabs_dropdown {
 	position: absolute;
-	left: 0;
 	top: 100%;
 	border-radius: 0 8px 8px 8px;
 	padding: 24px 24px 36px;
@@ -509,15 +505,10 @@
 
 .header_sub_tabs_dropdown.active {
   display: block;
+  max-width: 100%;
 }
-.header_sub_tabs_dropdown .swiper_container {
-  max-width: 998px;
-}
-.header_sub_tabs_dropdown#buyDrop .swiper_container {
-  width: 998px;
-}
-.header_sub_tabs_dropdown#rentDrop .swiper_container {
-  width: 792px;
+.header_sub_tabs_dropdown_btn {
+  display: none;
 }
 
 .header_sub_tabs_dropdown .swiper_button_next,
@@ -602,31 +593,22 @@
   display: inline-block;
 }
 
-#homeloansdrop.header_sub_tabs_dropdown {
-  left: -190px;
-}
-
-#ptadvicedrop.header_sub_tabs_dropdown {
-  width: 800px;
-  left: -335px;
+#ptadvicedrop, #helpdrop {
+	right: 0;
 }
 
 .header_sub_tabs > li.active {
   padding-top: 4px;
 }
 
-.drop_row {
+.header_sub_tasks .drop_row {
   display: flex;
   width: 100%;
+  justify-content: space-between;
 }
 
-.drop_call {
-  width: 165px;
-  margin-right: 44px;
-}
-
-#propservdrop .drop_row .drop_call {
-  width: 185px;
+.drop_call:not(.drop_call:first-of-type) {
+	margin-left: 2em;
 }
 
 .drop_heading {
@@ -646,19 +628,16 @@
   border-color: var(--brand-color);
 }
 
-.drop_links {
-  width: 100%;
-}
-
 .drop_links > li > a {
-  display: block;
-  font-size: 14px;
-  line-height: 32px;
-  color: #303030;
-  cursor: pointer;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+	display: block;
+	font-size: 14px;
+	line-height: 150%;
+	color: #303030;
+	cursor: pointer;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-bottom: 4px;
+	padding: 4px 0;
 }
 
 .drop_links > li > a:hover {
@@ -817,7 +796,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
     display: initial;
     transform: translateX(-100%);
     width: 100%;
@@ -852,7 +830,7 @@
     transform: translate(-50%, -50%) rotate(-45deg);
   }
   .header_sub > .header_container_div,
-  .header_sub_tasks {
+  .header_sub_tasks, .header_sub_tasks .swiper_wrapper, .header_sub_tasks .drop_row {
     flex-direction: column;
   }
   .header_sub > .header_container_div {
@@ -861,7 +839,11 @@
     background-color: #fff;
     max-width: 350px;
     display: inline-block;
-    height: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+  .header_sub_tasks {
+    position: static;
   }
   .header_sub_tasks > li {
     border-bottom: 1px solid #00000080;
@@ -882,7 +864,38 @@
     position: initial;
     transform: rotate(90deg);
   }
-
+  .header_sub_tabs_dropdown.active {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 0;
+    width:min(100vw, 400px);
+    overflow-y: scroll;
+    height: 100vh;
+  }
+  .header_sub_tabs_dropdown_btn {
+    display: block;
+    text-align: right;
+    padding: 1em 2em;
+  }
+  .swiper_button_prev, .swiper_button_next {
+    display: none;
+  }
+  .drop_call {
+    background-color: #0001;
+    margin-bottom: 1em;
+  }
+  .drop_call:not(.drop_call:first-of-type) {
+    margin-left: 0;
+  }
+  .drop_heading {
+    padding: 10px 16px;
+    background: #0002;
+    border-radius: 5px;
+  }
+  .drop_links {
+    padding: 0 16px;
+  }
   .header_sub_tasks_rent {
     width: initial;
     margin: 0;
