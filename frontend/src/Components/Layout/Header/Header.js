@@ -25,17 +25,20 @@ const Header = () => {
   const [helpactive, sethelpactive] = useState("");
   const [loginopen, setloginopen] = useState(false);
 
+  const showHeaderSub = () => document.getElementsByClassName("header_sub")[0].classList.add("show"),
+    hideHeaderSub = () => document.getElementsByClassName("header_sub")[0].classList.remove("show");
+
   return (
     <>
     {loginopen && <Login_Register/>}
       <header className="header">
         <section className="header_main">
           <div className="header_container_div">
-          <div className="header_menu_btn" aria-roledescription="button" tabIndex={0}>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
+            <div className="header_menu_btn" aria-roledescription="button" tabIndex={0} onClick={showHeaderSub}>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
           
             <div className="header_logo">
               <a href="/"></a>
@@ -3130,6 +3133,10 @@ const Header = () => {
                 Pay your Rent
               </a>
             </div>
+          </div>
+
+          <div className="header_sub_btn" tabIndex={0} role="button" onClick={hideHeaderSub}>
+            <div></div><div></div>
           </div>
         </section>
       </header>

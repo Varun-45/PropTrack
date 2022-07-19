@@ -78,7 +78,7 @@ const Featured_projects = () => {
                       id="featured_projects_content"
                       aria-live="polite"
                       style={{
-                        "transition-duration": "300ms",
+                        "transitionDuration": "300ms",
                         transform: `translate3d(${translatefeatured}px, 0px, 0px)`,
                       }}
                       ref={swiperWrapper}

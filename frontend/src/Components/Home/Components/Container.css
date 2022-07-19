@@ -1,6 +1,3 @@
-.pt_home_container_main {
-  margin-top: 10em;
-}
 .home_container {
   width: 81%;
   margin: auto;
@@ -184,11 +181,10 @@
 }
 
 .home_featured_proj_card {
-    height: 332px;
+    /* height: 332px; */
     overflow: hidden;
     border: 1px solid #d7d7d7;
     border-radius: 8px;
-    background-clip: padding-box;
 }
 
 .card_shadow:hover {
@@ -549,24 +545,13 @@
     padding: 10px 0;
 }
 .home_prop_service_card {
-    width: 100%;
-    height: 216px;
     overflow: hidden;
     border: 1px solid #d7d7d7;
     border-radius: 8px;
-    background-clip: padding-box;
-}
-.home_prop_service_card>a {
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: relative;
 }
 .home_prop_service_card_graphic {
-    width: 100%;
     height: 112px;
     overflow: hidden;
-    position: relative;
 }
 .home_prop_service_card_graphic>img {
     width: 100%;
@@ -579,10 +564,7 @@
     transform: scale(1.1);
 }
 .home_prop_service_card_content {
-    width: 100%;
-    height: calc(100% - 112px);
     padding: 16px 24px;
-    position: relative;
 }
 .home_prop_service_card_title {
     color: #303030;
@@ -593,15 +575,12 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-}.home_prop_service_card_text {
+}
+.home_prop_service_card_text {
     color: #303030;
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
 }
 .home_post_property {
     padding: 24px 32px;
@@ -662,13 +641,39 @@
     width: 100%;
     margin-right: 0;
   }
-  .home_owner_prop .swiper_slide, .home_prop_service .swiper_slide{
+  .home_owner_prop .swiper_slide{ 
     --numberOfSlides: 2;
+  }
+  .home_prop_service .swiper_wrapper {
+    overflow-x: auto;
+  }
+  .home_prop_service .swiper_slide {
+    width: 300px;
   }
 }
 @media only screen and (max-width:800px) {
-  .home_owner_prop .swiper_slide, .home_prop_service .swiper_slide{
+  .home_owner_prop .swiper_slide {
     --numberOfSlides: 1;
+  }
+  .home_featured_proj_card_content {
+    flex-direction: column;
+  }
+  .home_featured_proj_card_brand {
+    display: none;
+  }
+  .home_featured_proj_card_detail {
+    padding: 0;
+  }
+  .home_featured_proj_card_info {
+    text-align: left;
+    margin: 12px 0;
+  }
+  .home_featured_proj_card .home_action {
+    text-align: right;
+    position: static;
+  }
+  .home_prop_service .swiper_slide{
+    width: 200px
   }
   .home_section_title_anchor_see_all {
     float: none;

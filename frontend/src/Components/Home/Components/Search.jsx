@@ -55,7 +55,7 @@ const Search = () => {
                   </div>
                 </div>
               </div>
-              <div className="search_payrent_banner"></div>
+              {/* <div className="search_payrent_banner"></div> */}
             </div>
           </section>
         </section>
