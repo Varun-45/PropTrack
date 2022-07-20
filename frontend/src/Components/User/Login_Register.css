@@ -202,10 +202,10 @@ html {
 
 .container {
   display: flex;
-  flex-flow: column;
+  /* flex-flow: column;
   height: 60%;
   align-items: space-around;
-  justify-content: center;
+  justify-content: center; */
 }
 
 .userInput {

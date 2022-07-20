@@ -1,21 +1,29 @@
 import React from 'react'
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const Featured_projects = () => {
     
+  const swiperWrapper = useRef();
+
   const [nextfeatureddisabled, setnextfeatureddisabled] = useState('');
   const [translatefeatured, settranslatefeatured] = useState("0");
 
   const nextfeatured = (e) => {
     e.preventDefault();
     setnextfeatureddisabled(true);
-    settranslatefeatured((prev) => prev - 624);
+    settranslatefeatured((prev) => prev - getWidthToTranslate());
   };
   const previousfeatured = (e) => {
     e.preventDefault();
     setnextfeatureddisabled(false);
-    settranslatefeatured((prev) => prev + 624);
+    settranslatefeatured((prev) => prev + getWidthToTranslate());
   };
+
+  const getWidthToTranslate = () => {
+    const computedStyles = getComputedStyle(swiperWrapper.current.firstElementChild);
+    const width = Number(computedStyles.width.slice(0, -2)) + Number(computedStyles.marginRight.slice(0, -2));
+    return width
+  }
 
   return (
     <div className="home_container_fluid" id="featured_projects">
@@ -70,15 +78,15 @@ const Featured_projects = () => {
                       id="featured_projects_content"
                       aria-live="polite"
                       style={{
-                        "transition-duration": "300ms",
+                        "transitionDuration": "300ms",
                         transform: `translate3d(${translatefeatured}px, 0px, 0px)`,
                       }}
+                      ref={swiperWrapper}
                     >
                       <div
                         className="swiper_slide"
                         role="group"
                         aria-label="1 / 3"
-                        style={{ width: "608px", "margin-right": "16px" }}
                       >
                         <div className="home_featured_proj_card card_shadow">
                           <a href="" target="_blank">

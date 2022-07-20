@@ -80,7 +80,7 @@ const App = () => {
 
           <Route exact path="*" element={<Suspense fallback={<div></div>}><Error404/></Suspense>} />
         </Routes>
-      {/* <Suspense fallback={<div></div>}><Footer/></Suspense> */}
+      <Suspense fallback={<div></div>}><Footer/></Suspense>
       </>
   )
 }

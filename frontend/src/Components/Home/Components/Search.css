@@ -8,16 +8,6 @@
   background-color: #fff;
 }
 
-.searchbanner_container {
-  width: 1232px;
-  margin: auto;
-}
-
-.search_container {
-  float: left;
-  width: 940px;
-}
-
 .search_heading {
   font-size: 28px;
   color: #303030;
@@ -255,14 +245,13 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .search_wrap, .search_container, .searchbanner_container, .search_tab {
     width: auto;
   }
 
   .search_container {
     padding: 0 4px;
-    float: none;
 }
 
   .search_heading {
@@ -300,7 +289,7 @@
   }
 
   .search_location_input {
-    margin-right: 25px;
+    margin-right: 0px;
   }
 
   .search_button {

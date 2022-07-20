@@ -43,7 +43,6 @@ const Property_services = () => {
                       className="swiper_slide swiper_slide_active"
                       role="group"
                       aria-label="1 / 4"
-                      style={{ width: "296px", "margin-right": "16px" }}
                     >
                       <div className="home_prop_service_card card_shadow">
                         <a href="">
@@ -72,7 +71,6 @@ const Property_services = () => {
                       className="swiper_slide swiper_slide_next"
                       role="group"
                       aria-label="2 / 4"
-                      style={{ width: "296px", "margin-right": "16px" }}
                     >
                       <div className="home_prop_service_card card_shadow">
                         <a href="" target="_blank">
@@ -100,7 +98,6 @@ const Property_services = () => {
                       className="swiper_slide"
                       role="group"
                       aria-label="3 / 4"
-                      style={{ width: "296px", "margin-right": "16px" }}
                     >
                       <div className="home_prop_service_card card_shadow">
                         <a href="">
@@ -129,7 +126,6 @@ const Property_services = () => {
                       className="swiper_slide"
                       role="group"
                       aria-label="4 / 4"
-                      style={{ width: "296px", "margin-right": "16px" }}
                     >
                       <div className="home_prop_service_card card_shadow">
                         <a href="">
