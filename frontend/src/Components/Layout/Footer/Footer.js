@@ -7,20 +7,18 @@ const Footer = () => {
         <section className="footer_main">
           <div className="container footer_main_section">
             <div className="footer_main_left">
-              <div className="footer_main_title">About PropTrack </div>
+              <div className="footer_main_title">About PropTrack</div>
               <div className="footer_main_content">
                 Launched in 2022, PropTrack is India's No.1 online Property
                 marketplace to buy, sell, and rent residential and commercial
                 properties. Adjudged as the most preferred real estate portal in
                 India by various independent surveys.
               </div>
+              <ul className="footer_main_download">
+                <li><a href="" className="google_play"></a></li>
+                <li><a href="" className="apple_store"></a></li>
+              </ul>
               <ul className="footer_main_social_links">
-                <li>
-                  <a href="" className="google_play"></a>
-                </li>
-                <li>
-                  <a href="" className="apple_store"></a>
-                </li>
                 <li>
                   <a
                     href=""
