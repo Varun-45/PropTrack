@@ -761,7 +761,7 @@
 
   .header_city,
   .header_prime,
-  .header_login {
+  .header_login, .header_sub .swiper_button_prev, .header_sub .swiper_button_next, #owner_properties .swiper_button_prev, #owner_properties .swiper_button_next{
     display: none;
   }
 
@@ -859,9 +859,16 @@
     width: 100%;
     padding: 0 1em;
   }
-
+  .header_sub_tasks > li > a.active {
+    color: inherit;
+    box-shadow: none;
+    top: 0;
+  }
   .header_sub_tabs_link:after {
     position: initial;
+    transform: rotate(90deg);
+  }
+  .header_sub_tabs_link.active:after {
     transform: rotate(90deg);
   }
   .header_sub_tabs_dropdown.active {
@@ -877,9 +884,6 @@
     display: block;
     text-align: right;
     padding: 1em 2em;
-  }
-  .swiper_button_prev, .swiper_button_next {
-    display: none;
   }
   .drop_call {
     background-color: #0001;
