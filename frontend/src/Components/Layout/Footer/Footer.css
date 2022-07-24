@@ -17,57 +17,57 @@
 .footer_main_left, .footer_main_right {
   width: 100%;
 }
+.footer_main_left {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
 .footer_main_title {
+  grid-column: 1/span 2;
   font-size: 16px;
   line-height: 16px;
   color: #303030;
   font-weight: 500;
-  margin-bottom: 16px;
 }
 .footer_main_content {
+  grid-column: 1/span 2;
   font-size: 14px;
   line-height: 24px;
   color: #303030;
 }
-.footer_main_social_links {
+.footer_main_social_links, .footer_main_download {
   display: flex;
-  margin-top: 32px;
 }
-.footer_main_social_links>li>a {
+.footer_main_left li a {
   background-image: url(https://cdn.staticmb.com/magicservicestatic/1655835027028/images/revamp/web-header-footer.svg);
   background-repeat: no-repeat;
   display: inline-block;
   margin-right: 8px;
 }
-.footer_main_social_links .google_play {
+.google_play {
   width: 120px;
   height: 32px;
   background-position: -59px 0;
 }
-.footer_main_social_links .apple_store {
+.apple_store {
   width: 120px;
   height: 32px;
   background-position: -187px 0;
-  margin-right: 44px;
 }
-.footer_main_social_links .facebook {
+.footer_main_social_links a {
   width: 32px;
   height: 32px;
+}
+.footer_main_social_links .facebook {
   background-position: -59px -52px;
 }
 .footer_main_social_links .twitter {
-  width: 32px;
-  height: 32px;
   background-position: -99px -52px;
 }
 .footer_main_social_links .linkedin {
-  width: 32px;
-  height: 32px;
   background-position: -139px -52px;
 }
 .footer_main_social_links .youtube {
-  width: 32px;
-  height: 32px;
   background-position: -179px -52px;
 }
 .footer_main_right_content_1 {
@@ -144,9 +144,9 @@
   }
 }
 @media screen and (max-width:600px) {
-  .footer_main_social_links {
+  .footer_main_left {
+    display: flex;
     flex-direction: column;
-    gap: 4px;
   }
   .footer_secondary_links {
     display: block;

@@ -3,9 +3,20 @@ import { useState } from 'react'
 import './Search.css'
 
 const Search = () => {
-  const [searchaniwidth, setsearchaniwidth] = useState('51.56')
-  const [searchanileft, setsearchanileft] = useState('52.8')
-  const searchanileftdefault = '52.8'
+  const [searchaniwidth, setsearchaniwidth] = useState('')
+  const [searchanileft, setsearchanileft] = useState('')
+
+  const setWidthAndLeft = (e) => {
+    setsearchaniwidth(e.target.scrollWidth);
+    setsearchanileft(e.target.offsetLeft);
+  },
+    setToDefault = () => {
+      const firstTab = document.getElementsByClassName("search_tab_item")[0];
+      setsearchaniwidth(firstTab.scrollWidth);
+      setsearchanileft(firstTab.offsetLeft);
+    };
+
+  useEffect(() => {setTimeout(setToDefault, 1000)}, []);
 
   return (
         <section className="searchform">
@@ -16,12 +27,9 @@ const Search = () => {
                   Welcome back! Let's continue your search
                 </div>
                 <div className="search_tab">
-                  <div className="search_tab_item" onMouseOver={()=>{setsearchaniwidth('51.56');setsearchanileft('52.8')}} onMouseOut={()=>{setsearchaniwidth('51.56');setsearchanileft(searchanileftdefault)}}>Buy</div>
-                  <div className="search_tab_item" onMouseOver={()=>{setsearchaniwidth('57.73');setsearchanileft('104.5')}} onMouseOut={()=>{setsearchaniwidth('51.56');setsearchanileft(searchanileftdefault)}}>Rent</div>
-                  <div className="search_tab_item" onMouseOver={()=>{setsearchaniwidth('44.88');setsearchanileft('162')}} onMouseOut={()=>{setsearchaniwidth('51.56');setsearchanileft(searchanileftdefault)}}>PG</div>
-                  <div className="search_tab_item" onMouseOver={()=>{setsearchaniwidth('52.28');setsearchanileft('206')}} onMouseOut={()=>{setsearchaniwidth('51.56');setsearchanileft(searchanileftdefault)}}>Plot</div>
-                  <div className="search_tab_item" onMouseOver={()=>{setsearchaniwidth('109.69');setsearchanileft('259')}} onMouseOut={()=>{setsearchaniwidth('51.56');setsearchanileft(searchanileftdefault)}}>Commercial</div>
-                  <div className="search_tab_item" onMouseOver={()=>{setsearchaniwidth('177.55');setsearchanileft('368')}} onMouseOut={()=>{setsearchaniwidth('51.56');setsearchanileft(searchanileftdefault)}}>Post Free Property Ad</div>
+                  {["Buy", "Rent", "PG", "Plot", "Commercial", "Post Free Property Ad"]
+                    .map((tab, i) => <div className='search_tab_item' key={tab+i} onMouseOver={setWidthAndLeft} onMouseOut={setToDefault}>{tab}</div>)
+                  }
                   <span
                     className="search_tab_ani"
                     style={{ width: searchaniwidth + "px", left: searchanileft + "px" }}

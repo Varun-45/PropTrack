@@ -548,6 +548,7 @@
     overflow: hidden;
     border: 1px solid #d7d7d7;
     border-radius: 8px;
+    height: 100%;
 }
 .home_prop_service_card_graphic {
     height: 112px;
@@ -644,7 +645,7 @@
   .home_owner_prop .swiper_slide{ 
     --numberOfSlides: 2;
   }
-  .home_prop_service .swiper_wrapper {
+  .home_prop_service .swiper_wrapper, .home_owner_prop .swiper_container {
     overflow-x: auto;
   }
   .home_prop_service .swiper_slide {
