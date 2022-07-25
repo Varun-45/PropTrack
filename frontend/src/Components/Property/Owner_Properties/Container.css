@@ -496,12 +496,6 @@ table {
     padding-top: 12px
 }
 
-@media screen and (max-width:1280px) {
-    .top-filter--wrap {
-        width: 1232px
-    }
-}
-
 .top-filter__item {
     float: left;
     margin-right: 4px;
@@ -532,7 +526,6 @@ table {
     position: absolute;
     top: 37px;
     white-space: nowrap;
-    width: auto;
     z-index: 9;
     box-shadow: 0 1px 4px rgba(0, 0, 0, .5)
 }
@@ -626,7 +619,6 @@ table {
 }
 
 .top-filter-autosuggest__drop-down .auto-suggest__tag-wrap {
-    height: auto;
     display: block
 }
 
@@ -1737,11 +1729,11 @@ table {
         left: 0;
         right: 0;
         bottom: 0;
-        width: auto;
+  
         z-index: 5;
         box-shadow: 0 -28px 34px 0 rgba(0, 0, 0, .3);
         border-radius: 16px 16px 0 0;
-        height: auto;
+  
         margin: 0
     }
 }
@@ -2267,7 +2259,6 @@ table {
 }
 
 .mb-srp__breadcrumb__list {
-    width: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center
@@ -2346,7 +2337,6 @@ table {
 
 .mb-srp__breadcrumb__dropdown {
     width: 210px;
-    height: auto;
     position: absolute;
     left: 0;
     top: 6px;
@@ -2356,7 +2346,6 @@ table {
 
 .mb-srp__breadcrumb__dropdown__list {
     width: 100%;
-    height: auto;
     background-color: #fff;
     padding: 8px 0;
     margin-top: 14px;
@@ -2387,7 +2376,6 @@ table {
 }
 
 .mb-srp__breadcrumb--last-updated {
-    width: auto;
     margin-left: auto;
     color: #606060;
     font-size: 10px;
@@ -3068,7 +3056,7 @@ table {
         bottom: 0;
         z-index: 2;
         background-color: #fff;
-        height: auto;
+  
         border-radius: 0
     }
 }
@@ -3415,8 +3403,7 @@ textarea:focus {
 }
 
 .container-fluid .container {
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .mb-footer {
@@ -3429,7 +3416,7 @@ textarea:focus {
 
 .mb-srp {
     grid-template-columns: 75% auto;
-    padding-top: 2em;
+    padding: 2em 2em 0;
     display: grid;
     gap: 2em;
 }
@@ -3553,7 +3540,6 @@ textarea:focus {
 
 .mb-srp__tabs__sortby__dd__list {
     width: 100%;
-    height: auto;
     overflow: hidden;
     border-radius: 8px;
     background-clip: padding-box
@@ -3759,7 +3745,6 @@ textarea:focus {
 }
 
 .mb-srp__card__photo__fig--cat-name {
-    width: auto;
     height: 22px;
     padding: 0 4px 0 8px;
     position: absolute;
@@ -3949,25 +3934,19 @@ textarea:focus {
 }
 
 .mb-srp__card__ads--coworking-logo {
-    width: auto;
     height: auto
 }
 
 .mb-srp__card__ads--coworking-logo>img {
-    width: auto;
-    height: auto;
     max-height: 22px
 }
 
 .mb-srp__card__ads--managed-home-logo {
-    width: auto;
     height: 28px;
     margin-top: 4px
 }
 
 .mb-srp__card__ads--managed-home-logo>img {
-    width: auto;
-    height: auto;
     max-height: 28px
 }
 
@@ -4074,7 +4053,6 @@ textarea:focus {
 
 .mb-srp__card__ads__shield {
     width: 100%;
-    height: auto;
     display: flex;
     padding-bottom: 8px;
     white-space: nowrap
@@ -4088,7 +4066,6 @@ textarea:focus {
 }
 
 .mb-srp__card__ads__shield--item {
-    width: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -4255,7 +4232,6 @@ textarea:focus {
 }
 
 .mb-srp__card__tags span {
-    width: auto;
     height: 16px;
     display: flex;
     justify-content: flex-start;
@@ -4383,7 +4359,6 @@ textarea:focus {
 
 .mb-srp__card__sort--doat__list {
     width: 100%;
-    height: auto;
     overflow: hidden;
     border-radius: 8px;
     background-clip: padding-box
@@ -4520,38 +4495,28 @@ textarea:focus {
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .1)
 }
 
-.mb-srp__card__summary.open .mb-srp__card__summary__list {
-    height: auto
-}
-
 .mb-srp__card__summary.open .mb-srp__card__summary__action:after {
     transform: rotate(135deg)
 }
 
 .mb-srp__card__summary__list {
-    height: 48px;
-    padding: 0;
+    max-height: 5ch;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
 .mb-srp__card__summary__list--item {
-    width: 33.33333%;
-    padding: 0 8px 0 56px;
-    margin: 8px 0;
+    width: calc(100%/3);
+    padding: 1ch;
     border-right: 1px solid #d7d7d7;
-    position: relative
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0 1ch;
 }
 
 .card-luxury .mb-srp__card__summary__list--item {
     background-image: unset;
     padding-left: 16px
-}
-
-.mb-srp__card__summary__list--item:nth-child(3n+1) {
-    padding-left: 56px
 }
 
 .card-luxury .mb-srp__card__summary__list--item:nth-child(3n+1) {
@@ -4564,13 +4529,10 @@ textarea:focus {
 }
 
 .mb-srp__card__summary__list--item:before {
-    position: absolute;
-    display: block;
+    grid-row: 1/3;
     content: "";
     width: 30px;
     height: 30px;
-    left: 14px;
-    top: 0;
     background: url(https://cdn.staticmb.com/srpstatic/images/srp-property-feature-sprite-web-v1.svg) no-repeat
 }
 
@@ -4766,7 +4728,6 @@ textarea:focus {
 
 .mb-srp__card__summary-commercial {
     width: 100%;
-    height: auto;
     display: flex;
     margin: 8px 0 16px;
     position: relative
@@ -4774,7 +4735,6 @@ textarea:focus {
 
 .mb-srp__card__summary-commercial__list {
     width: 100%;
-    height: auto;
     padding: 0;
     display: table;
     border: 1px solid #e8e8e8;
@@ -4839,7 +4799,6 @@ textarea:focus {
 
 .mb-srp__card__accomodation {
     width: 100%;
-    height: auto;
     padding-bottom: 24px;
     display: flex;
     justify-content: flex-start;
@@ -5428,7 +5387,6 @@ textarea:focus {
 
 .mb-srp__card--desc-wrap {
     width: 100%;
-    height: auto;
     display: flex;
     padding-bottom: 8px;
     align-items: flex-start
@@ -5604,7 +5562,6 @@ textarea:focus {
 }
 
 .mb-srp__card__usp-near--item {
-    width: auto;
     color: #303030;
     font-size: 12px;
     font-weight: 400;
@@ -5666,7 +5623,6 @@ textarea:focus {
 
 .mb-srp__card__offer {
     width: 100%;
-    height: auto;
     background-color: #fff7e1;
     margin-bottom: 8px;
     padding: 4px;
@@ -5682,7 +5638,6 @@ textarea:focus {
 }
 
 .mb-srp__card__offer--label {
-    width: auto;
     height: 16px;
     padding: 0 4px;
     margin-right: 8px;
@@ -5705,14 +5660,12 @@ textarea:focus {
 
 .mb-srp__card__coworking-time {
     width: 100%;
-    height: auto;
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 8px
 }
 
 .mb-srp__card__coworking-time--item {
-    width: auto;
     color: #303030;
     font-size: 12px;
     line-height: 16px;
@@ -5743,7 +5696,6 @@ textarea:focus {
 
 .mb-srp__card__price-coworking {
     width: 100%;
-    height: auto;
     padding: 0 24px
 }
 
@@ -5763,7 +5715,6 @@ textarea:focus {
 
 .mb-srp__card__price-coworking__list--item {
     width: 100%;
-    height: auto;
     padding-bottom: 12px;
     display: flex;
     align-items: center
@@ -6000,14 +5951,12 @@ textarea:focus {
 
 .mb-srp__card__breakup {
     width: 100%;
-    height: auto;
     padding: 36px 16px 16px;
     text-align: left
 }
 
 .mb-srp__card__breakup__title {
     width: 100%;
-    height: auto;
     padding-bottom: 6px
 }
 
@@ -6058,7 +6007,6 @@ textarea:focus {
 
 .mb-srp__card__breakup__row {
     width: 100%;
-    height: auto;
     display: flex;
     align-items: flex-end;
     padding: 12px 0;
@@ -6111,7 +6059,6 @@ textarea:focus {
 
 .mb-srp__card__breakup__gray {
     width: calc(100% + 24px);
-    height: auto;
     padding: 12px;
     margin: 20px 0 -12px -12px;
     background-color: #f5f5f5;
@@ -6121,7 +6068,6 @@ textarea:focus {
 
 .mb-srp__card__legal-infra {
     width: 100%;
-    height: auto;
     padding: 24px;
     text-align: left
 }
@@ -6144,7 +6090,6 @@ textarea:focus {
 
 .mb-srp__card__legal-infra__no-login {
     width: 100%;
-    height: auto;
     display: flex;
     padding-top: 12px
 }
@@ -6207,7 +6152,6 @@ textarea:focus {
 }
 
 .mb-srp__card__legal-infra__no-login--column-right .contact-form__btn {
-    width: auto;
     padding: 0 36px
 }
 
@@ -6372,7 +6316,6 @@ textarea:focus {
 
 .mb-srp__card__other-prop {
     width: 100%;
-    height: auto;
     border-top: 1px solid #e8e8e8;
     overflow: hidden;
     border-radius: 0 0 8px 0;
@@ -6399,14 +6342,12 @@ textarea:focus {
 
 .mb-srp__card__other-prop__list {
     width: 100%;
-    height: auto;
     display: flex;
     flex-wrap: wrap
 }
 
 .mb-srp__card__other-prop__list--item {
     width: 100%;
-    height: auto;
     display: flex;
     flex-wrap: nowrap;
     border-bottom: 1px solid #e8e8e8
@@ -6482,7 +6423,6 @@ textarea:focus {
 }
 
 .mb-srp__card__nri-tag__tooltip__title .highlight {
-    height: auto;
     color: #303030;
     font-size: 12px;
     font-weight: 600
@@ -6495,7 +6435,6 @@ textarea:focus {
 }
 
 .mb-srp__card__nri-tag__tooltip__list--item {
-    width: auto;
     color: #303030;
     font-size: 11px;
     font-weight: 400;
@@ -6606,7 +6545,6 @@ textarea:focus {
 
 .mb-srp__card__tooltip-agent__highlight-tag {
     width: 100%;
-    height: auto;
     padding: 4px 8px;
     color: #303030;
     font-size: 12px;
@@ -6741,7 +6679,6 @@ textarea:focus {
 
 .mb-srp__card__tooltip-agent__points {
     width: 100%;
-    height: auto;
     padding: 12px 0 0;
     display: flex;
     justify-content: flex-start;
@@ -6876,27 +6813,22 @@ textarea:focus {
 
 .mb-srp__card__kilometre {
     width: 100%;
-    height: auto;
     border-top: 1px solid #f5f5f5
 }
 
 .mb-srp__card__kilometre__container {
     width: 100%;
-    height: auto;
     display: flex;
     padding: 16px 64px 16px 16px
 }
 
 .mb-srp__card__kilometre__list {
     width: 85%;
-    height: auto;
     display: flex
 }
 
 .mb-srp__card__kilometre__list--item {
-    width: auto;
     max-width: 33.33333%;
-    height: auto;
     color: #303030;
     font-size: 12px;
     font-weight: 600;
@@ -6984,13 +6916,11 @@ textarea:focus {
 
 .mb-srp__alternate-path {
     width: 100%;
-    height: auto;
     padding: 16px 0
 }
 
 .mb-srp__alternate-path__title {
     width: 100%;
-    height: auto;
     padding-bottom: 24px
 }
 
@@ -7233,7 +7163,6 @@ textarea:focus {
 }
 
 .mb-srp__bhk-prop__card--pic-count {
-    width: auto;
     height: 24px;
     line-height: 24px;
     padding: 0 6px 0 22px;
@@ -7401,7 +7330,6 @@ textarea:focus {
 }
 
 .mb-srp__mustsee-prop__card--pic-count {
-    width: auto;
     height: 24px;
     line-height: 24px;
     padding: 0 6px 0 22px;
@@ -7569,7 +7497,6 @@ textarea:focus {
 }
 
 .mb-srp__ready-prop__card--pic-count {
-    width: auto;
     height: 24px;
     line-height: 24px;
     padding: 0 6px 0 22px;
@@ -7685,7 +7612,6 @@ textarea:focus {
 
 .mb-srp__bnr-prime {
     width: 100%;
-    height: auto;
     padding: 48px;
     background-color: #29313b;
     border-radius: 8px;
@@ -7694,7 +7620,6 @@ textarea:focus {
 
 .mb-srp__bnr-prime__body {
     width: 100%;
-    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center
@@ -7735,7 +7660,6 @@ textarea:focus {
 }
 
 .mb-srp__bnr-prime__list {
-    width: auto;
     height: auto
 }
 
@@ -7767,7 +7691,6 @@ textarea:focus {
 }
 
 .mb-srp__bnr-prime .mb-srp__action {
-    width: auto;
     margin-left: auto
 }
 
@@ -7777,7 +7700,6 @@ textarea:focus {
 
 .mb-srp__bnr-handpick-prime {
     width: 100%;
-    height: auto;
     padding: 30px 24px 30px 40px;
     margin-bottom: 16px;
     background-color: #e8e8e8;
@@ -7787,7 +7709,6 @@ textarea:focus {
 
 .mb-srp__bnr-handpick-prime__body {
     width: 100%;
-    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center
@@ -7841,13 +7762,11 @@ textarea:focus {
 }
 
 .mb-srp__bnr-handpick-prime__right {
-    width: auto;
     margin-left: auto;
     text-align: center
 }
 
 .mb-srp__bnr-handpick-prime__right .mb-srp__action {
-    width: auto;
     margin-left: auto
 }
 
@@ -7896,8 +7815,6 @@ textarea:focus {
 }
 
 .mb-srp__bnr-handpick-prime__price .price-discount {
-    width: auto;
-    height: auto;
     padding: 0 6px;
     line-height: 20px;
     color: #303030;
@@ -8013,7 +7930,6 @@ textarea:focus {
 }
 
 .mb-srp__popular-proj-nri__card--graphic--tag-rera {
-    width: auto;
     height: 16px;
     line-height: 16px;
     padding: 0 6px 0 18px;
@@ -8112,7 +8028,6 @@ textarea:focus {
 
 .mb-srp__bnr-prop-look {
     width: 100%;
-    height: auto;
     margin: 16px 0;
     overflow: hidden;
     background: #dff6f9 url(https://cdn.staticmb.com/srpstatic/images/graphic-wanted.svg) no-repeat 32px 4px;
@@ -8122,7 +8037,6 @@ textarea:focus {
 
 .mb-srp__bnr-prop-look>a {
     width: 100%;
-    height: auto;
     padding: 24px 32px 24px 200px;
     display: table;
     position: relative
@@ -8149,13 +8063,11 @@ textarea:focus {
 
 .mb-srp__bnr-prop-look__body {
     width: 100%;
-    height: auto;
     display: flex;
     align-items: center
 }
 
 .mb-srp__bnr-prop-look__title {
-    width: auto;
     line-height: 20px
 }
 
@@ -8172,13 +8084,11 @@ textarea:focus {
 }
 
 .mb-srp__bnr-prop-look .mb-srp__action {
-    width: auto;
     margin-left: auto
 }
 
 .mb-srp__bnr-plot-corridor {
     width: 100%;
-    height: auto;
     margin-bottom: 24px;
     padding: 32px;
     display: flex;
@@ -8211,7 +8121,6 @@ textarea:focus {
 
 .mb-srp__bnr-plot-corridor__title {
     width: 100%;
-    height: auto;
     padding-bottom: 24px
 }
 
@@ -8283,7 +8192,6 @@ textarea:focus {
 
 .mb-srp__premium-loc {
     width: 1024px;
-    height: auto;
     position: relative
 }
 
@@ -8334,7 +8242,6 @@ textarea:focus {
 }
 
 .mb-srp__premium-loc__card--tag {
-    width: auto;
     height: 22px;
     padding: 0 4px 0 8px;
     position: absolute;
@@ -8374,7 +8281,6 @@ textarea:focus {
 
 .mb-srp__premium-loc__card--location {
     width: 100%;
-    height: auto;
     color: #303030;
     font-size: 20px;
     font-weight: 600;
@@ -8387,7 +8293,6 @@ textarea:focus {
 
 .mb-srp__premium-loc__card__row-flex {
     width: 100%;
-    height: auto;
     display: flex;
     align-items: center;
     justify-content: flex-start
@@ -8430,7 +8335,6 @@ textarea:focus {
 
 .mb-srp__premium-loc__card--desc {
     width: 100%;
-    height: auto;
     padding-top: 8px;
     color: #606060;
     font-size: 14px;
@@ -8466,7 +8370,6 @@ textarea:focus {
 
 .mb-srp__alternate-commercial {
     width: 1024px;
-    height: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -8475,7 +8378,6 @@ textarea:focus {
 
 .mb-srp__alternate-commercial__title {
     width: 370px;
-    height: auto;
     padding: 0 24px 0 12px;
     line-height: 32px
 }
@@ -8494,7 +8396,6 @@ textarea:focus {
 
 .mb-srp__alternate-commercial__slider {
     width: calc(100% - 370px);
-    height: auto;
     position: relative
 }
 
@@ -8871,7 +8772,6 @@ textarea:focus {
     display: block;
     content: "";
     content: "NEW";
-    width: auto;
     height: 16px;
     line-height: 20px;
     padding: 0 4px;
@@ -8896,7 +8796,7 @@ textarea:focus {
 }
 
 .mb-srp__action--btn.medium {
-    padding: 0 3em;
+    padding: 0 2em;
     white-space: nowrap;
     line-height: 32px;
 }
@@ -9040,7 +8940,6 @@ textarea:focus {
 
 .reqiframe {
     width: 390px;
-    height: auto;
     border: 1px solid #d7d7d7;
     padding: 0 6px;
     background-color: #fff;
@@ -9437,12 +9336,6 @@ textarea:focus {
     background-color: #fff;
     border-bottom: 1px solid #e8e8e8;
     position: relative
-}
-
-@media screen and (min-width:1300px) {
-    .mb-header__main.white-theme .mb-container {
-        width: 1280px
-    }
 }
 
 .mb-header__main__section {
@@ -10599,7 +10492,6 @@ textarea:focus {
 .mb-header__sub__tabs__dropdown .drop-links>li>span.big-badge .badge {
     font-size: 14px;
     text-transform: none;
-    height: auto;
     border-radius: 4px;
     line-height: 24px
 }
@@ -10767,12 +10659,6 @@ body {
     display: flex;
     justify-content: space-between;
     font-family: Montserrat, Helvetica, Arial, sans-serif
-}
-
-@media screen and (max-width:767px) {
-    .mb-header {
-        height: 56px
-    }
 }
 
 .mb-header * {
@@ -11175,7 +11061,6 @@ body {
 
 .mb-header__menu__sub__drop-links.active {
     opacity: 1;
-    height: auto;
     display: block
 }
 
@@ -11266,7 +11151,6 @@ body {
 .mb-header__menu__sub__drop-links>li>span.big-badge .badge {
     font-size: 12px;
     text-transform: none;
-    height: auto;
     border-radius: 4px;
     line-height: 20px
 }
@@ -12091,7 +11975,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__mbprime {
     width: 100%;
-    height: auto;
     margin-bottom: 16px;
     background-color: #29313b;
     border-radius: 8px;
@@ -12121,7 +12004,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__mbprime__body {
     width: 870px;
-    height: auto;
     padding: 38px 28px;
     display: flex;
     justify-content: space-between;
@@ -12298,7 +12180,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__mbprime-top {
     width: 100%;
-    height: auto;
     margin-bottom: 16px;
     background-color: #29313b;
     border-radius: 8px;
@@ -12313,7 +12194,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__mbprime-top__body {
     width: 100%;
-    height: auto;
     padding: 13px 40px;
     display: flex;
     justify-content: space-between;
@@ -12376,7 +12256,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__nsr {
     width: 100%;
-    height: auto;
     padding: 32px 0
 }
 
@@ -12419,7 +12298,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__nsr__result-show {
     width: 100%;
-    height: auto;
     padding: 12px 0 0;
     display: flex;
     justify-content: center;
@@ -12437,8 +12315,6 @@ button.swiper-pagination-bullet {
 }
 
 .mb-srp__nsr__result-show__list {
-    width: auto;
-    height: auto;
     display: flex;
     flex-wrap: wrap
 }
@@ -12448,7 +12324,6 @@ button.swiper-pagination-bullet {
 }
 
 .mb-srp__nsr__result-show__list--item {
-    width: auto;
     height: 40px;
     line-height: 40px;
     text-align: center;
@@ -12516,7 +12391,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__nsr__form {
     width: 572px;
-    height: auto;
     margin: 24px auto;
     padding: 40px;
     background-color: #fff;
@@ -12576,7 +12450,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__jumbo {
     width: 100%;
-    height: auto;
     padding: 8px 0 16px;
     margin-bottom: 16px;
     border: 1px solid #d7d7d7;
@@ -12593,7 +12466,6 @@ button.swiper-pagination-bullet {
 }
 
 .mb-srp__jumbo--offer-tag {
-    width: auto;
     height: 16px;
     line-height: 16px;
     padding: 0 4px;
@@ -12613,7 +12485,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__jumbo__body {
     width: 100%;
-    height: auto;
     padding: 12px 16px 0
 }
 
@@ -12637,13 +12508,11 @@ button.swiper-pagination-bullet {
 }
 
 .mb-srp__jumbo--logo img {
-    width: auto;
     max-height: 36px
 }
 
 .mb-srp__jumbo--projname {
     width: 100%;
-    height: auto;
     color: #303030;
     font-size: 18px;
     font-weight: 600;
@@ -12657,7 +12526,6 @@ button.swiper-pagination-bullet {
 .mb-srp__jumbo--loc,
 .mb-srp__jumbo--type {
     width: 100%;
-    height: auto;
     color: #303030;
     font-size: 14px;
     font-weight: 400;
@@ -12709,7 +12577,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__jumbo--heading {
     width: 100%;
-    height: auto;
     padding: 24px 0 16px;
     color: #303030;
     font-size: 16px;
@@ -12933,7 +12800,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__star-bnr__box {
     width: 100%;
-    height: auto;
     padding: 8px 8px 16px;
     background-color: #fff;
     border: 1px solid #d7d7d7;
@@ -12951,7 +12817,6 @@ button.swiper-pagination-bullet {
 }
 
 .mb-srp__star-bnr--offer-tag {
-    width: auto;
     height: 16px;
     line-height: 16px;
     padding: 0 4px;
@@ -12970,7 +12835,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__star-bnr__body {
     width: 100%;
-    height: auto;
     padding: 12px 8px 0
 }
 
@@ -12988,13 +12852,11 @@ button.swiper-pagination-bullet {
 }
 
 .mb-srp__star-bnr--logo img {
-    width: auto;
     max-height: 36px
 }
 
 .mb-srp__star-bnr--projname {
     width: 100%;
-    height: auto;
     color: #303030;
     font-size: 16px;
     font-weight: 600;
@@ -13008,7 +12870,6 @@ button.swiper-pagination-bullet {
 .mb-srp__star-bnr--loc,
 .mb-srp__star-bnr--type {
     width: 100%;
-    height: auto;
     color: #303030;
     font-size: 14px;
     font-weight: 400;
@@ -13132,7 +12993,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__star-bnr__anim__body {
     width: 100%;
-    height: auto;
     padding: 24px 32px;
     display: flex;
     justify-content: flex-start;
@@ -13192,7 +13052,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__star-bnr__anim__highlight-list {
     width: 100%;
-    height: auto;
     padding: 32px 0
 }
 
@@ -13426,7 +13285,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__skyscraper__template-1 {
     width: 100%;
-    height: auto;
     overflow: hidden;
     margin-bottom: 16px;
     background-color: #fff;
@@ -13448,7 +13306,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__skyscraper__template-1__graphic {
     width: 100%;
-    height: auto;
     overflow: hidden;
     position: relative
 }
@@ -13461,7 +13318,6 @@ button.swiper-pagination-bullet {
 }
 
 .mb-srp__skyscraper__template-1__graphic--offer-tag {
-    width: auto;
     height: 16px;
     line-height: 16px;
     padding: 0 4px;
@@ -13548,7 +13404,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__skyscraper__template-2 {
     width: 100%;
-    height: auto;
     overflow: hidden;
     margin-bottom: 16px;
     background-color: #fff;
@@ -13570,14 +13425,12 @@ button.swiper-pagination-bullet {
 
 .mb-srp__skyscraper__template-2__graphic {
     width: 100%;
-    height: auto;
     overflow: hidden;
     position: relative
 }
 
 .mb-srp__skyscraper__template-2__graphic img {
     width: 100%;
-    height: auto;
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 8px 8px 0 0;
@@ -13585,7 +13438,6 @@ button.swiper-pagination-bullet {
 }
 
 .mb-srp__skyscraper__template-2__offer-tag {
-    width: auto;
     height: 16px;
     line-height: 16px;
     padding: 0 4px;
@@ -13604,7 +13456,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__skyscraper__template-2__content {
     width: 100%;
-    height: auto;
     padding: 0 4px
 }
 
@@ -13684,7 +13535,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__skyscraper__template-3 {
     width: 100%;
-    height: auto;
     overflow: hidden;
     margin-bottom: 16px;
     background-color: #fff;
@@ -13707,14 +13557,12 @@ button.swiper-pagination-bullet {
 
 .mb-srp__skyscraper__template-3__graphic {
     width: 100%;
-    height: auto;
     overflow: hidden;
     position: relative
 }
 
 .mb-srp__skyscraper__template-3__graphic img {
     width: 100%;
-    height: auto;
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 8px;
@@ -13722,7 +13570,6 @@ button.swiper-pagination-bullet {
 }
 
 .mb-srp__skyscraper__template-3__offer-tag {
-    width: auto;
     height: 16px;
     line-height: 16px;
     padding: 0 4px;
@@ -13741,7 +13588,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__skyscraper__template-3__content {
     width: 100%;
-    height: auto;
     padding: 12px 8px 6px
 }
 
@@ -14341,7 +14187,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__advertise-req {
     width: 100%;
-    height: auto;
     background-color: #fff;
     padding: 24px;
     margin-bottom: 16px;
@@ -14406,7 +14251,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__advertise-req__title {
     width: 100%;
-    height: auto;
     padding-bottom: 16px
 }
 
@@ -14496,7 +14340,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp .mb-share-feed__title {
     width: 100%;
-    height: auto;
     padding-bottom: 24px
 }
 
@@ -14523,14 +14366,12 @@ button.swiper-pagination-bullet {
 
 .mb-srp .mb-share-feed__options {
     width: 100%;
-    height: auto;
     display: flex;
     justify-content: center;
     align-items: center
 }
 
 .mb-srp .mb-share-feed__options--item {
-    width: auto;
     min-width: 88px;
     height: 40px;
     padding: 0 24px;
@@ -14604,7 +14445,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp .mb-share-feed__notification {
     width: 100%;
-    height: auto;
     background-color: #fff7e1;
     padding: 8px 210px 8px 16px;
     margin-bottom: 16px;
@@ -14625,7 +14465,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__faq__title {
     width: 100%;
-    height: auto;
     padding-bottom: 6px
 }
 
@@ -14653,7 +14492,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__faq__list--item {
     width: 100%;
-    height: auto;
     padding-bottom: 16px;
     border-bottom: 1px solid #e8e8e8
 }
@@ -14665,7 +14503,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__faq--q {
     width: 100%;
-    height: auto;
     position: relative;
     margin-top: 24px
 }
@@ -14696,7 +14533,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__faq--a {
     width: 100%;
-    height: auto;
     position: relative
 }
 
@@ -14716,7 +14552,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__faq--a p {
     width: 100%;
-    height: auto;
     color: #606060;
     font-size: 14px;
     font-weight: 400;
@@ -14741,7 +14576,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__faq__showmore {
     width: 100%;
-    height: auto;
     padding: 24px 0 0
 }
 
@@ -14793,7 +14627,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__faq__seo__card__list {
     width: 100%;
-    height: auto;
     display: flex;
     flex-wrap: wrap;
     padding-right: 16px
@@ -14801,12 +14634,10 @@ button.swiper-pagination-bullet {
 
 .mb-srp__faq__seo__card__list--item {
     width: 100%;
-    height: auto;
     padding: 0 0 12px
 }
 
 .mb-srp__faq__seo__card__list--item>a {
-    width: auto;
     max-width: 100%;
     display: inline-block;
     color: #303030;
@@ -14881,7 +14712,7 @@ button.swiper-pagination-bullet {
     }
 
     .floating-filter__wrap.single-line .filter__common__component {
-        width: auto;
+  
         display: block
     }
 }
@@ -15053,7 +14884,6 @@ button.swiper-pagination-bullet {
     .floating-filter__apply-btn {
         margin: 0 auto;
         display: block;
-        width: 170px
     }
 }
 
@@ -15087,7 +14917,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__share-prop {
     width: 100%;
-    height: auto;
     padding: 62px 32px;
     overflow: hidden;
     position: relative
@@ -15095,7 +14924,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__share-prop__title {
     width: 100%;
-    height: auto;
     padding-bottom: 40px;
     text-align: center
 }
@@ -15109,7 +14937,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__share-prop__list {
     width: 100%;
-    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15117,8 +14944,6 @@ button.swiper-pagination-bullet {
 }
 
 .mb-srp__share-prop__list--item {
-    width: auto;
-    height: auto;
     margin-right: 36px;
     text-align: center
 }
@@ -15140,7 +14965,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__share-prop__list--text {
     width: 100%;
-    height: auto;
     padding-top: 12px;
     color: #303030;
     font-size: 12px;
@@ -15184,8 +15008,6 @@ button.swiper-pagination-bullet {
 }
 
 .mb-srp__share-prop--copied {
-    width: auto;
-    height: auto;
     color: #fff;
     font-size: 12px;
     font-weight: 400;
@@ -15208,7 +15030,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__explore-pg {
     width: 1024px;
-    height: auto;
     padding: 24px 32px;
     margin-bottom: 16px;
     display: flex;
@@ -15221,13 +15042,11 @@ button.swiper-pagination-bullet {
 
 .mb-srp__explore-pg__left {
     width: 250px;
-    height: auto;
     padding: 10px 0 0
 }
 
 .mb-srp__explore-pg__right {
     width: calc(100% - 250px);
-    height: auto;
     position: relative;
     z-index: 1
 }
@@ -15248,7 +15067,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__explore-pg__title {
     width: 100%;
-    height: auto;
     padding-bottom: 16px
 }
 
@@ -15261,12 +15079,10 @@ button.swiper-pagination-bullet {
 
 .mb-srp__explore-pg__list {
     width: 100%;
-    height: auto;
     padding-bottom: 24px
 }
 
 .mb-srp__explore-pg__list--item {
-    width: auto;
     color: #303030;
     font-size: 14px;
     font-weight: 400;
@@ -15350,7 +15166,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__explore-pg__card__row {
     width: 100%;
-    height: auto;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -15408,7 +15223,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__explore-pg__card__list {
     width: 100%;
-    height: auto;
     display: flex;
     padding: 10px 0;
     overflow: hidden;
@@ -15417,7 +15231,6 @@ button.swiper-pagination-bullet {
 }
 
 .mb-srp__explore-pg__card__list--item {
-    width: auto;
     flex-basis: 50%;
     color: #303030;
     font-size: 12px;
@@ -15963,7 +15776,6 @@ button.swiper-pagination-bullet {
     height: 32px;
     line-height: 32px;
     display: inline-block;
-    width: auto;
     padding: 0 16px
 }
 
@@ -16157,7 +15969,6 @@ button.swiper-pagination-bullet {
 }
 
 .contact-form__pType__item {
-    width: auto;
     height: 32px;
     line-height: 32px;
     text-align: center;
@@ -16821,12 +16632,12 @@ button.swiper-pagination-bullet {
     }
 
     .contact-thankyou__left {
-        width: auto;
+  
         padding: 96px 16px 16px
     }
 
     .contact-thankyou__right {
-        width: auto;
+  
         background: #f5f5f5;
         padding: 16px
     }
@@ -18071,7 +17882,6 @@ button.swiper-pagination-bullet {
 
 .co-working-contact__container {
     width: 100%;
-    height: auto;
     background-color: #fff;
     padding: 48px 24px 24px;
     max-width: 400px
@@ -18538,8 +18348,6 @@ button.swiper-pagination-bullet {
     }
 
     .c-soc-exp__swiperElem {
-        min-width: 216px;
-        width: 216px;
         margin-left: 10px;
         height: 88px;
         position: relative
@@ -19190,7 +18998,6 @@ button.swiper-pagination-bullet {
 }
 
 .mbPIBanner__cta {
-    width: auto;
     height: 32px;
     line-height: 32px;
     padding: 0 32px;
@@ -19448,8 +19255,6 @@ button.swiper-pagination-bullet {
 
 .tabSlider .slider-container .photoGallery .imageContainer .sliderImages .imgCont {
     position: relative;
-    width: auto;
-    height: auto;
     margin: 0 auto
 }
 
@@ -19628,13 +19433,6 @@ button.swiper-pagination-bullet {
 .disabled {
     pointer-events: none;
     opacity: .4
-}
-
-@media (max-width:10000px) and (min-width:1367px) {
-    .slider-container {
-        width: 1280px !important;
-        margin: 0 auto
-    }
 }
 
 .gallery-caption {
@@ -19980,7 +19778,6 @@ button.swiper-pagination-bullet {
 }
 
 .mb-srp__leadgen-card--tag {
-    width: auto;
     height: 16px;
     line-height: 18px;
     padding: 0 6px;
@@ -20034,7 +19831,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__leadgen-card--row {
     width: 100%;
-    height: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -20072,7 +19868,6 @@ button.swiper-pagination-bullet {
 }
 
 .mb-srp__leadgen-card__offer {
-    height: auto;
     background-color: #fff7e1;
     padding: 4px 8px 4px 4px;
     margin-top: 4px
@@ -20080,7 +19875,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__leadgen-card__offer,
 .mb-srp__leadgen-card__offer--label {
-    width: auto;
     display: flex;
     align-items: center;
     border-radius: 4px;
@@ -20245,7 +20039,6 @@ button.swiper-pagination-bullet {
 }
 
 .mb-srp__itarget__card__offer {
-    height: auto;
     background-color: #fff7e1;
     padding: 4px;
     margin-top: 6px;
@@ -20254,7 +20047,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__itarget__card__offer,
 .mb-srp__itarget__card__offer--label {
-    width: auto;
     display: inline-flex;
     align-items: center;
     border-radius: 4px;
@@ -20338,7 +20130,6 @@ button.swiper-pagination-bullet {
 }
 
 .mb-srp__itarget-big__card--tag {
-    width: auto;
     height: 16px;
     line-height: 18px;
     padding: 0 6px;
@@ -20436,7 +20227,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__itarget-big__card__offer {
     width: calc(100% - 32px);
-    height: auto;
     background-color: #fff7e1;
     padding: 4px;
     display: table;
@@ -20453,7 +20243,6 @@ button.swiper-pagination-bullet {
 }
 
 .mb-srp__itarget-big__card__offer--label {
-    width: auto;
     height: 16px;
     display: inline-flex;
     align-items: center;
@@ -20501,7 +20290,7 @@ button.swiper-pagination-bullet {
         width: 100%;
         position: relative;
         padding: 12px 12px 20px;
-        height: auto;
+  
         border-radius: 0
     }
 
@@ -20519,7 +20308,7 @@ button.swiper-pagination-bullet {
     }
 
     .mb-srp__itarget__card__marketed {
-        width: auto;
+  
         text-align: right;
         position: absolute;
         top: auto;
@@ -20828,11 +20617,6 @@ button.swiper-pagination-bullet {
         align-items: center;
         justify-content: space-between;
         margin-bottom: 16px
-    }
-
-    .mb-srp__itarget-ps-banner .mb-srp__itarget {
-        width: 504px;
-        margin-bottom: 0
     }
 
     .mb-srp__itarget-ps-banner .mb-srp__itarget__card--loc {
@@ -21322,8 +21106,6 @@ button.swiper-pagination-bullet {
 }
 
 .til__modal__box {
-    width: auto;
-    height: auto;
     width: 780px;
     height: 440px;
     background-color: #fff;
@@ -21365,7 +21147,6 @@ button.swiper-pagination-bullet {
 
 .til__modal__body {
     width: 100%;
-    height: auto;
     position: relative;
     z-index: 1
 }
@@ -21601,9 +21382,10 @@ button.swiper-pagination-bullet {
 }
 
 .mb-srp__home-loan-seo__list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1em;
+    display: flex;
+    gap: 2ch;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .mb-srp__home-loan-seo__list--item>a {
@@ -21675,7 +21457,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp .mb-form__fieldset {
     width: 100%;
-    height: auto;
     position: relative;
     display: block;
     padding-bottom: 32px
@@ -21707,7 +21488,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp .mb-form--input {
     width: 100%;
-    height: auto;
     display: block;
     padding: 6px 0;
     font-size: 16px;
@@ -21761,7 +21541,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp .mb-form--textarea {
     width: 100%;
-    height: auto;
     display: block;
     padding: 6px 12px;
     font-size: 14px;
@@ -21826,7 +21605,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp .mb-form__checkbox__list {
     width: 100%;
-    height: auto;
     display: flex;
     flex-wrap: wrap
 }
@@ -21837,8 +21615,6 @@ button.swiper-pagination-bullet {
 }
 
 .mb-srp .mb-form__checkbox--item {
-    width: auto;
-    height: auto;
     position: relative;
     display: flex;
     align-items: center
@@ -21943,7 +21719,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp .mb-form__select-budget__dropdown {
     width: 100%;
-    height: auto;
     max-height: 180px;
     padding: 12px;
     overflow-y: auto;
@@ -21975,7 +21750,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__bnr-payrent-top {
     width: 100%;
-    height: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -21989,13 +21763,11 @@ button.swiper-pagination-bullet {
 
 .mb-srp__bnr-payrent-top__left {
     width: 200px;
-    height: auto;
     padding: 6px 44px 0 0
 }
 
 .mb-srp__bnr-payrent-top__right {
     width: calc(100% - 200px);
-    height: auto;
     display: flex
 }
 
@@ -22139,7 +21911,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__bnr-payrent__content {
     width: 48%;
-    height: auto;
     float: left;
     padding: 32px 0 0
 }
@@ -22169,7 +21940,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__bnr-payrent__list--item {
     width: 100%;
-    height: auto;
     position: relative;
     color: #303030;
     font-size: 14px;
@@ -22210,7 +21980,6 @@ button.swiper-pagination-bullet {
 }
 
 .mb-srp__bnr-payrent .mb-srp__action {
-    width: auto;
     position: absolute;
     right: 24px;
     bottom: 24px
@@ -22218,7 +21987,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__bnr-prop-service {
     width: 100%;
-    height: auto;
     background-color: #fff;
     margin-bottom: 16px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2)
@@ -22271,7 +22039,6 @@ button.swiper-pagination-bullet {
 
 .mb-srp__bnr-prop-service__rent-agree__title {
     width: 100%;
-    height: auto;
     color: #303030;
     font-size: 18px;
     font-weight: 400;
@@ -22284,7 +22051,6 @@ button.swiper-pagination-bullet {
 }
 
 .mb-srp__bnr-prop-service__rent-agree__list {
-    width: auto;
     height: auto
 }
 
@@ -23246,7 +23012,8 @@ button.swiper-pagination-bullet {
 }
 
 .mb-srp__owner-collection__content {
-    display: flex
+    display: flex;
+    overflow-x: auto;
 }
 
 .mb-srp__owner-collection__card {
@@ -25696,10 +25463,6 @@ fieldset[disabled] .m-contact__btn--primary-o:hover {
         font-size: 12px;
         line-height: 16px
     }
-}
-
-@media screen and (max-width:767px) {
-
     .mb-pagination--next a:active,
     .mb-pagination--previous a:active {
         text-decoration: underline
@@ -26783,7 +26546,6 @@ fieldset[disabled] .m-contact__btn--primary-o:hover {
 
 .mb-form__autosuggest {
     width: 100%;
-    height: auto;
     max-height: 200px;
     overflow-y: auto;
     margin: 0;
@@ -26957,7 +26719,6 @@ fieldset[disabled] .m-contact__btn--primary-o:hover {
 
 .mb-form__cta {
     min-width: 180px;
-    width: auto;
     height: 44px;
     border-radius: 4px;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .25), 0 0 0 4px #fbe9e9;
@@ -27066,4 +26827,13 @@ fieldset[disabled] .m-contact__btn--primary-o:hover {
     border-color: transparent #d8d8d8 #d8d8d8 transparent;
     border-style: solid;
     border-width: 1px
+}
+
+@media screen and (max-width: 1240px) {
+  .mb-srp {
+    display: block;
+  }
+  .mb-srp__right {
+    display: none;
+  }
 }

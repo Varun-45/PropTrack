@@ -1428,7 +1428,7 @@ const Container = () => {
                   </li>
                 </ul>
               </div>
-              <div className="mb-srp__list" id="cardid60541533">
+              {/* <div className="mb-srp__list" id="cardid60541533">
                 <div className="mb-srp__card">
                   <div className="mb-srp__card__container">
                     <div className="mb-srp__card__photo">
@@ -1648,7 +1648,7 @@ const Container = () => {
                     ></div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="mb-srp__list" id="cardid60850401">
                 <div className="mb-srp__card">
                   <div className="mb-srp__card__container">
@@ -2190,7 +2190,7 @@ const Container = () => {
                 </div>
               </div>
               <div></div>
-              <div className="mb-srp__list" id="cardid54019811">
+              {/* <div className="mb-srp__list" id="cardid54019811">
                 <div className="mb-srp__card">
                   <div className="mb-srp__card__container">
                     <div className="mb-srp__card__photo">
@@ -2459,7 +2459,7 @@ const Container = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="mb-srp__list" id="cardid60969779">
                 <div className="mb-srp__card">
                   <div className="mb-srp__card__container">
