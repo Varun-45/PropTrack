@@ -27,6 +27,7 @@ const UpdatePassword = lazy(()=> import("./Components/User/UpdatePassword"))
 const ResetPassword = lazy(()=> import("./Components/User/ResetPassword"))
 const ForgotPassword = lazy(()=> import("./Components/User/ForgotPassword"))
 const Dashboard = lazy(()=> import("./Components/Admin/Dashboard"))
+const Temp = lazy(()=> import("./Components/User/Temp"))
 
 const App = () => {
   const dispatch = useDispatch()
@@ -45,6 +46,7 @@ const App = () => {
       {!isAuthenticated && show && <UserOptions2/>} */}
 
         <Routes>
+          <Route exact path="/temp" element={<Suspense fallback={<div></div>}><Temp/></Suspense>}/>
 
           <Route exact path="/" element={<Suspense fallback={<div></div>}><Home/></Suspense>}/>
           <Route exact path="/about" element={<Suspense fallback={<div></div>}><About/></Suspense>} />
