@@ -894,26 +894,24 @@ const Container = () => {
               </div>
               <a
                 href="https://www.magicbricks.com/rent-sell-property-online?inc=owner-srp-postpropertyweb"
-                target="_blank"
+                target="_blank" className="postProp"
               >
-                <div className="postProp">
-                  <div className="postProp__content">
-                    <div className="postProp__content--left">
-                      <div className="postProp__content--title">
-                        Searching for a Buyer for your Property in New Delhi?
-                      </div>
-                      <div className="postProp__content--cta">Post FREE AD</div>
+                <div className="postProp__content">
+                  <div className="postProp__content--left">
+                    <div className="postProp__content--title">
+                      Searching for a Buyer for your Property in New Delhi?
                     </div>
-                    <div className="postProp__content--right">
-                      <ul className="postProp__content--listing">
-                        <li className="postProp__content--listingValue">
-                          Connect directly with genuine buyers
-                        </li>
-                        <li className="postProp__content--listingValue">
-                          Sell your property without any brokerage
-                        </li>
-                      </ul>
-                    </div>
+                    <div className="postProp__content--cta">Post FREE AD</div>
+                  </div>
+                  <div className="postProp__content--right">
+                    <ul className="postProp__content--listing">
+                      <li className="postProp__content--listingValue">
+                        Connect directly with genuine buyers
+                      </li>
+                      <li className="postProp__content--listingValue">
+                        Sell your property without any brokerage
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </a>
@@ -1430,7 +1428,7 @@ const Container = () => {
                   </li>
                 </ul>
               </div>
-              <div className="mb-srp__list" id="cardid60541533">
+              {/* <div className="mb-srp__list" id="cardid60541533">
                 <div className="mb-srp__card">
                   <div className="mb-srp__card__container">
                     <div className="mb-srp__card__photo">
@@ -1650,7 +1648,7 @@ const Container = () => {
                     ></div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="mb-srp__list" id="cardid60850401">
                 <div className="mb-srp__card">
                   <div className="mb-srp__card__container">
@@ -1885,56 +1883,52 @@ const Container = () => {
                 </div>
               </div>
               <div className="mb-srp__itarget-ps-banner1">
-                <div className="mb-srp__itarget">
-                  <div className="mb-srp__itarget__card card-shadow-hover">
-                    <a href="" target="">
-                      <div className="mb-srp__itarget__card--graphic">
-                        <img
-                          className="img-lazy"
-                          src="https://cdn.staticmb.com/property/microsite/new-banners/ifollow/dlf-capital-greens-moti-nagar-new-delhi/img.jpg"
-                          data-src="https://cdn.staticmb.com/property/microsite/new-banners/ifollow/dlf-capital-greens-moti-nagar-new-delhi/img.jpg"
-                          alt="DLF Capital Greens"
-                          decoding="async"
-                        />
-                        <div className="mb-srp__itarget__card--tag">
-                          Sponsored
-                        </div>
-                      </div>
-                      <div className="mb-srp__itarget__card--content">
-                        <div className="mb-srp__itarget__card--name">
-                          DLF Capital Greens
-                        </div>
-                        <div className="mb-srp__itarget__card--loc">
-                          Moti Nagar, New Delhi
-                        </div>
-                        <div className="mb-srp__itarget__card--priceWrap">
-                          <div className="mb-srp__itarget__card--type">
-                            Studios &amp; Flats
-                          </div>
-                          <span className="itarget-mobile-text">in</span>
-                          <div className="mb-srp__itarget__card--price">
-                            <span className="rupees">₹</span>23 Lac{" "}
-                            <span className="onwards">onwards</span>
-                          </div>
-                        </div>
-                        <div className="mb-srp__itarget__card__marketed">
-                          <div className="mb-srp__itarget__card__marketed--label">
-                            Marketed by
-                          </div>
-                          <div className="mb-srp__itarget__card__marketed--value">
-                            Aggarwal Real Estate
-                          </div>
-                        </div>
-                        <div className="mb-srp__action action--right mb-srp__itarget__link">
-                          <span className="mb-srp__action--btn btn-gray medium">
-                            Contact Agent
-                            <span className="mb-srp__itarget__link__arrow d-mobile-text"></span>
-                          </span>
-                        </div>
-                      </div>
-                    </a>
+                <a href="" target="" className="mb-srp__itarget__card card-shadow-hover">
+                  <div className="mb-srp__itarget__card--graphic">
+                    <img
+                      className="img-lazy"
+                      src="https://cdn.staticmb.com/property/microsite/new-banners/ifollow/dlf-capital-greens-moti-nagar-new-delhi/img.jpg"
+                      data-src="https://cdn.staticmb.com/property/microsite/new-banners/ifollow/dlf-capital-greens-moti-nagar-new-delhi/img.jpg"
+                      alt="DLF Capital Greens"
+                      decoding="async"
+                    />
+                    <div className="mb-srp__itarget__card--tag">
+                      Sponsored
+                    </div>
                   </div>
-                </div>
+                  <div className="mb-srp__itarget__card--content">
+                    <div className="mb-srp__itarget__card--name">
+                      DLF Capital Greens
+                    </div>
+                    <div className="mb-srp__itarget__card--loc">
+                      Moti Nagar, New Delhi
+                    </div>
+                    <div className="mb-srp__itarget__card--priceWrap">
+                      <div className="mb-srp__itarget__card--type">
+                        Studios &amp; Flats
+                      </div>
+                      <span className="itarget-mobile-text">in</span>
+                      <div className="mb-srp__itarget__card--price">
+                        <span className="rupees">₹</span>23 Lac{" "}
+                        <span className="onwards">onwards</span>
+                      </div>
+                    </div>
+                    <div className="mb-srp__itarget__card__marketed">
+                      <div className="mb-srp__itarget__card__marketed--label">
+                        Marketed by
+                      </div>
+                      <div className="mb-srp__itarget__card__marketed--value">
+                        Aggarwal Real Estate
+                      </div>
+                    </div>
+                    <div className="mb-srp__action mb-srp__itarget__link">
+                      <span className="mb-srp__action--btn btn-gray medium">
+                        Contact Agent
+                        <span className="mb-srp__itarget__link__arrow d-mobile-text"></span>
+                      </span>
+                    </div>
+                  </div>
+                </a>
               </div>
               <div className="mb-srp__list" id="cardid47683595">
                 <div className="mb-srp__card">
@@ -2196,7 +2190,7 @@ const Container = () => {
                 </div>
               </div>
               <div></div>
-              <div className="mb-srp__list" id="cardid54019811">
+              {/* <div className="mb-srp__list" id="cardid54019811">
                 <div className="mb-srp__card">
                   <div className="mb-srp__card__container">
                     <div className="mb-srp__card__photo">
@@ -2465,7 +2459,7 @@ const Container = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="mb-srp__list" id="cardid60969779">
                 <div className="mb-srp__card">
                   <div className="mb-srp__card__container">
@@ -7130,7 +7124,7 @@ const Container = () => {
                   </div>
                 </div>
               </div>
-              <div className="mb-srp__list" id="cardid60781397">
+              {/* <div className="mb-srp__list" id="cardid60781397">
                 <div className="mb-srp__card">
                   <div className="mb-srp__card__container">
                     <div className="mb-srp__card__photo">
@@ -7424,7 +7418,7 @@ const Container = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="mb-srp__list" id="cardid61532283">
                 <div className="mb-srp__card">
                   <div className="mb-srp__card__container">
@@ -7701,7 +7695,7 @@ const Container = () => {
                   </div>
                 </div>
               </div>
-              <div className="mb-srp__list" id="cardid61339845">
+              {/* <div className="mb-srp__list" id="cardid61339845">
                 <div className="mb-srp__card">
                   <div className="mb-srp__card__container">
                     <div className="mb-srp__card__photo">
@@ -7955,20 +7949,20 @@ const Container = () => {
                     itemtype="//schema.org/GeoCoordinates"
                   ></div>
                 </div>
-              </div>
+              </div> */}
             <div className="mb-pagination">
+              <div className="mb-pagination--previous disabled">
+                <a
+                  tabIndex="0"
+                  role="button"
+                  aria-disabled="true"
+                  aria-label="Previous page"
+                  rel="prev"
+                >
+                  Prev
+                </a>
+              </div>
               <ul className="mb-pagination__list">
-                <li className="mb-pagination--previous disabled">
-                  <a
-                    tabIndex="0"
-                    role="button"
-                    aria-disabled="true"
-                    aria-label="Previous page"
-                    rel="prev"
-                  >
-                    Prev
-                  </a>
-                </li>
                 <li className="mb-pagination__list--item active">
                   <a
                     role="button"
@@ -8023,20 +8017,20 @@ const Container = () => {
                   >
                     50
                   </a>
-                </li>
-                <li className="mb-pagination--next">
-                  <a
-                    href="/owner-property-for-sale-in-new-delhi-pppfs/page-2"
-                    tabIndex="0"
-                    role="button"
-                    aria-disabled="false"
-                    aria-label="Next page"
-                    rel="next"
-                  >
-                    Next
-                  </a>
-                </li>
+                </li> 
               </ul>
+              <div className="mb-pagination--next">
+                <a
+                  href="/owner-property-for-sale-in-new-delhi-pppfs/page-2"
+                  tabIndex="0"
+                  role="button"
+                  aria-disabled="false"
+                  aria-label="Next page"
+                  rel="next"
+                >
+                  Next
+                </a>
+              </div>
             </div>
             <div className="mb-srp__faq">
               <div className="mb-srp__faq__seo mb-srp__swiper-arrow">
@@ -8346,671 +8340,663 @@ const Container = () => {
           </div>
           <div className="mb-srp__right">
             <div className="mb-srp__skyscraper">
+              <a
+                href="https://www.magicbricks.com/property-services/?inc=srp_skyscraper"
+                target="_blank"
+                className="mb-srp__skyscraper__img-based"
+              >
+                <img
+                  data-src="https://cdn.staticmb.com/property/microsite/new-banners/sky-scraper/img/sky_property_services.jpg"
+                  src="https://cdn.staticmb.com/property/microsite/new-banners/sky-scraper/img/sky_property_services.jpg"
+                  className="img-lazy"
+                  alt="Property Services"
+                />
+              </a>
               <div>
                 <div>
-                  <div>
-                    <div className="mb-srp__skyscraper__img-based">
-                      <a
-                        href="https://www.magicbricks.com/property-services/?inc=srp_skyscraper"
-                        target="_blank"
-                      >
+                  <a
+                    href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/3-BHK-1760-Sq-ft-Multistorey-Apartment-FOR-Sale-Vasant-Kunj-in-New-Delhi&amp;id=4d423630353834373531&amp;campaignCode=sky_owner_sp_new delhi_60584751_3052022"
+                    target="_blank"
+                    className="rtbanner"
+                  >
+                    <div className="rtbanner-r">
+                      {" "}
+                      <div className="rtbanner-r__img">
+                        {" "}
                         <img
-                          data-src="https://cdn.staticmb.com/property/microsite/new-banners/sky-scraper/img/sky_property_services.jpg"
-                          src="https://cdn.staticmb.com/property/microsite/new-banners/sky-scraper/img/sky_property_services.jpg"
-                          className="img-lazy"
-                          alt="Property Services"
-                          style={{ width: "100%", border: "0px" }}
-                        />
-                      </a>
+                          className="img-lazy rtbanner-r--img"
+                          data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/3052022/60584751.jpg"
+                          src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/3052022/60584751.jpg"
+                          alt=" "
+                        />{" "}
+                      </div>{" "}
+                      <div className="rtbanner-r__detl">
+                        {" "}
+                        <div className="prp__type">3 Bhk Flat</div>{" "}
+                        <div className="prp__loc">Vasant Kunj</div>{" "}
+                        <div className="prp__info"></div>{" "}
+                        <div className="prp__price">
+                          <span className="rupees">₹</span> 2.70 Cr{" "}
+                        </div>{" "}
+                        <div className="prp__owner">
+                          Owner{" "}
+                          <span className="prp__owner--name">
+                            Shashi Bakshi
+                          </span>
+                        </div>{" "}
+                      </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
                 <div>
-                  <div>
-                    <a
-                      href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/3-BHK-1760-Sq-ft-Multistorey-Apartment-FOR-Sale-Vasant-Kunj-in-New-Delhi&amp;id=4d423630353834373531&amp;campaignCode=sky_owner_sp_new delhi_60584751_3052022"
-                      target="_blank"
-                      className="rtbanner"
-                    >
-                      <div className="rtbanner-r">
+                  <a
+                    href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/2-BHK-750-Sq-ft-Residential-House-FOR-SaleRohini-Sector-7-in-New-Delhi-&amp;id=4d423631333139323133&amp;campaignCode=sky_owner_sp_new delhi_61319213_262022"
+                    target="_blank"
+                    className="rtbanner"
+                  >
+                    <div className="rtbanner-r">
+                      {" "}
+                      <div className="rtbanner-r__img">
                         {" "}
-                        <div className="rtbanner-r__img">
-                          {" "}
-                          <img
-                            className="img-lazy rtbanner-r--img"
-                            data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/3052022/60584751.jpg"
-                            src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/3052022/60584751.jpg"
-                            alt=" "
-                          />{" "}
-                        </div>{" "}
-                        <div className="rtbanner-r__detl">
-                          {" "}
-                          <div className="prp__type">3 Bhk Flat</div>{" "}
-                          <div className="prp__loc">Vasant Kunj</div>{" "}
-                          <div className="prp__info"></div>{" "}
-                          <div className="prp__price">
-                            <span className="rupees">₹</span> 2.70 Cr{" "}
-                          </div>{" "}
-                          <div className="prp__owner">
-                            Owner{" "}
-                            <span className="prp__owner--name">
-                              Shashi Bakshi
-                            </span>
-                          </div>{" "}
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/2-BHK-750-Sq-ft-Residential-House-FOR-SaleRohini-Sector-7-in-New-Delhi-&amp;id=4d423631333139323133&amp;campaignCode=sky_owner_sp_new delhi_61319213_262022"
-                      target="_blank"
-                      className="rtbanner"
-                    >
-                      <div className="rtbanner-r">
+                        <img
+                          className="img-lazy rtbanner-r--img"
+                          data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/262022/61319213.jpg"
+                          src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/262022/61319213.jpg"
+                          alt=" "
+                        />{" "}
+                      </div>{" "}
+                      <div className="rtbanner-r__detl">
                         {" "}
-                        <div className="rtbanner-r__img">
-                          {" "}
-                          <img
-                            className="img-lazy rtbanner-r--img"
-                            data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/262022/61319213.jpg"
-                            src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/262022/61319213.jpg"
-                            alt=" "
-                          />{" "}
+                        <div className="prp__type">
+                          2 Residential House
                         </div>{" "}
-                        <div className="rtbanner-r__detl">
-                          {" "}
-                          <div className="prp__type">
-                            2 Residential House
-                          </div>{" "}
-                          <div className="prp__loc">Rohini Sector 7</div>{" "}
-                          <div className="prp__info">Ready to Move</div>{" "}
-                          <div className="prp__price">
-                            <span className="rupees">₹</span> 95.0 Lac{" "}
-                          </div>{" "}
-                          <div className="prp__owner">
-                            Owner{" "}
-                            <span className="prp__owner--name">Rakesh</span>
-                          </div>{" "}
-                        </div>
+                        <div className="prp__loc">Rohini Sector 7</div>{" "}
+                        <div className="prp__info">Ready to Move</div>{" "}
+                        <div className="prp__price">
+                          <span className="rupees">₹</span> 95.0 Lac{" "}
+                        </div>{" "}
+                        <div className="prp__owner">
+                          Owner{" "}
+                          <span className="prp__owner--name">Rakesh</span>
+                        </div>{" "}
                       </div>
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/3-BHK-1178-Sq-ft-Builder-Floor-Apartment-FOR-Sale-Pitampura-in-New-Delhi&amp;id=4d423631323633333733&amp;campaignCode=sky_owner_sp_new delhi_61263373_262022"
-                      target="_blank"
-                      className="rtbanner"
-                    >
-                      <div className="rtbanner-r">
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/3-BHK-1178-Sq-ft-Builder-Floor-Apartment-FOR-Sale-Pitampura-in-New-Delhi&amp;id=4d423631323633333733&amp;campaignCode=sky_owner_sp_new delhi_61263373_262022"
+                    target="_blank"
+                    className="rtbanner"
+                  >
+                    <div className="rtbanner-r">
+                      {" "}
+                      <div className="rtbanner-r__img">
                         {" "}
-                        <div className="rtbanner-r__img">
-                          {" "}
-                          <img
-                            className="img-lazy rtbanner-r--img"
-                            data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/262022/61263373.jpg"
-                            src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/262022/61263373.jpg"
-                            alt=" "
-                          />{" "}
-                        </div>{" "}
-                        <div className="rtbanner-r__detl">
-                          {" "}
-                          <div className="prp__type">3 Bhk Flat</div>{" "}
-                          <div className="prp__loc">Pitampura</div>{" "}
-                          <div className="prp__info">Ready to Move</div>{" "}
-                          <div className="prp__price">
-                            <span className="rupees">₹</span> 1.75 Cr{" "}
-                          </div>{" "}
-                          <div className="prp__owner">
-                            Owner{" "}
-                            <span className="prp__owner--name">Nipun</span>
-                          </div>{" "}
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/3-BHK-1960-Sq-ft-Residential-House-FOR-Sale-Punjabi-Bagh-East-in-New-Delhi&amp;id=4d423630373231353739&amp;campaignCode=sky_owner_sp_new delhi_60721579_862022"
-                      target="_blank"
-                      className="rtbanner"
-                    >
-                      <div className="rtbanner-r">
+                        <img
+                          className="img-lazy rtbanner-r--img"
+                          data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/262022/61263373.jpg"
+                          src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/262022/61263373.jpg"
+                          alt=" "
+                        />{" "}
+                      </div>{" "}
+                      <div className="rtbanner-r__detl">
                         {" "}
-                        <div className="rtbanner-r__img">
-                          {" "}
-                          <img
-                            className="img-lazy rtbanner-r--img"
-                            data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/862022/60721579.jpg"
-                            src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/862022/60721579.jpg"
-                            alt=" "
-                          />{" "}
+                        <div className="prp__type">3 Bhk Flat</div>{" "}
+                        <div className="prp__loc">Pitampura</div>{" "}
+                        <div className="prp__info">Ready to Move</div>{" "}
+                        <div className="prp__price">
+                          <span className="rupees">₹</span> 1.75 Cr{" "}
                         </div>{" "}
-                        <div className="rtbanner-r__detl">
-                          {" "}
-                          <div className="prp__type">3 Bhk House</div>{" "}
-                          <div className="prp__loc">Punjabi Bagh East</div>{" "}
-                          <div className="prp__info"></div>{" "}
-                          <div className="prp__price">
-                            <span className="rupees">₹</span> 1.85 Cr{" "}
-                          </div>{" "}
-                          <div className="prp__owner">
-                            Owner{" "}
-                            <span className="prp__owner--name">
-                              Vaibhav Saxena
-                            </span>
-                          </div>{" "}
-                        </div>
+                        <div className="prp__owner">
+                          Owner{" "}
+                          <span className="prp__owner--name">Nipun</span>
+                        </div>{" "}
                       </div>
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/5-BHK-3000-Sq-ft-Multistorey-Apartment-FOR-SaleMaya-Enclave-in-New-Delhi-&amp;id=4d423631353332323833&amp;campaignCode=sky_owner_sp_new delhi_61532283_1462022"
-                      target="_blank"
-                      className="rtbanner"
-                    >
-                      <div className="rtbanner-r">
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/3-BHK-1960-Sq-ft-Residential-House-FOR-Sale-Punjabi-Bagh-East-in-New-Delhi&amp;id=4d423630373231353739&amp;campaignCode=sky_owner_sp_new delhi_60721579_862022"
+                    target="_blank"
+                    className="rtbanner"
+                  >
+                    <div className="rtbanner-r">
+                      {" "}
+                      <div className="rtbanner-r__img">
                         {" "}
-                        <div className="rtbanner-r__img">
-                          {" "}
-                          <img
-                            className="img-lazy rtbanner-r--img"
-                            data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1462022/61532283.jpg"
-                            src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1462022/61532283.jpg"
-                            alt=" "
-                          />{" "}
-                        </div>{" "}
-                        <div className="rtbanner-r__detl">
-                          {" "}
-                          <div className="prp__type">5 Bhk Flat</div>{" "}
-                          <div className="prp__loc">Maya Enclave</div>{" "}
-                          <div className="prp__info">Ready to Move</div>{" "}
-                          <div className="prp__price">
-                            <span className="rupees">₹</span> 2.50 Cr{" "}
-                          </div>{" "}
-                          <div className="prp__owner">
-                            Owner <span className="prp__owner--name">Rani</span>
-                          </div>{" "}
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/2-BHK-1500-Sq-ft-Multistorey-Apartment-FOR-Sale-in-New-Delhi-&amp;id=4d423631343233363037&amp;campaignCode=sky_owner_sp_new delhi_61423607_1462022"
-                      target="_blank"
-                      className="rtbanner"
-                    >
-                      <div className="rtbanner-r">
+                        <img
+                          className="img-lazy rtbanner-r--img"
+                          data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/862022/60721579.jpg"
+                          src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/862022/60721579.jpg"
+                          alt=" "
+                        />{" "}
+                      </div>{" "}
+                      <div className="rtbanner-r__detl">
                         {" "}
-                        <div className="rtbanner-r__img">
-                          {" "}
-                          <img
-                            className="img-lazy rtbanner-r--img"
-                            data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1462022/61423607.jpg"
-                            src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1462022/61423607.jpg"
-                            alt=" "
-                          />{" "}
+                        <div className="prp__type">3 Bhk House</div>{" "}
+                        <div className="prp__loc">Punjabi Bagh East</div>{" "}
+                        <div className="prp__info"></div>{" "}
+                        <div className="prp__price">
+                          <span className="rupees">₹</span> 1.85 Cr{" "}
                         </div>{" "}
-                        <div className="rtbanner-r__detl">
-                          {" "}
-                          <div className="prp__type">2 Bhk Flat</div>{" "}
-                          <div className="prp__loc"></div>{" "}
-                          <div className="prp__info">Ready to Move</div>{" "}
-                          <div className="prp__price">
-                            <span className="rupees">₹</span> 2.10 Cr{" "}
-                          </div>{" "}
-                          <div className="prp__owner">
-                            Owner{" "}
-                            <span className="prp__owner--name">
-                              Sharad Kholi
-                            </span>
-                          </div>{" "}
-                        </div>
+                        <div className="prp__owner">
+                          Owner{" "}
+                          <span className="prp__owner--name">
+                            Vaibhav Saxena
+                          </span>
+                        </div>{" "}
                       </div>
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/10-plus-BHK-428-Sq-yrd-Residential-House-FOR-Sale-Rohini-Sector-21-in-New-Delhi&amp;id=4d423630323638363437&amp;campaignCode=sky_owner_sp_new delhi_60268647_1462022"
-                      target="_blank"
-                      className="rtbanner"
-                    >
-                      <div className="rtbanner-r">
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/5-BHK-3000-Sq-ft-Multistorey-Apartment-FOR-SaleMaya-Enclave-in-New-Delhi-&amp;id=4d423631353332323833&amp;campaignCode=sky_owner_sp_new delhi_61532283_1462022"
+                    target="_blank"
+                    className="rtbanner"
+                  >
+                    <div className="rtbanner-r">
+                      {" "}
+                      <div className="rtbanner-r__img">
                         {" "}
-                        <div className="rtbanner-r__img">
-                          {" "}
-                          <img
-                            className="img-lazy rtbanner-r--img"
-                            data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1462022/60268647.jpg"
-                            src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1462022/60268647.jpg"
-                            alt=" "
-                          />{" "}
-                        </div>{" "}
-                        <div className="rtbanner-r__detl">
-                          {" "}
-                          <div className="prp__type">&gt;10 Bhk House</div>{" "}
-                          <div className="prp__loc">Rohini Sector 21</div>{" "}
-                          <div className="prp__info"></div>{" "}
-                          <div className="prp__price">
-                            <span className="rupees">₹</span> 5.50 Cr{" "}
-                          </div>{" "}
-                          <div className="prp__owner">
-                            Owner{" "}
-                            <span className="prp__owner--name">
-                              Sunny Sethi
-                            </span>
-                          </div>{" "}
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/3-BHK-1200-Sq-ft-Multistorey-Apartment-FOR-SaleRohini-Sector-9-in-New-Delhi-&amp;id=4d423631343630363933&amp;campaignCode=sky_owner_sp_new delhi_61460693_1462022"
-                      target="_blank"
-                      className="rtbanner"
-                    >
-                      <div className="rtbanner-r">
+                        <img
+                          className="img-lazy rtbanner-r--img"
+                          data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1462022/61532283.jpg"
+                          src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1462022/61532283.jpg"
+                          alt=" "
+                        />{" "}
+                      </div>{" "}
+                      <div className="rtbanner-r__detl">
                         {" "}
-                        <div className="rtbanner-r__img">
-                          {" "}
-                          <img
-                            className="img-lazy rtbanner-r--img"
-                            data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1462022/61460693.jpg"
-                            src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1462022/61460693.jpg"
-                            alt=" "
-                          />{" "}
+                        <div className="prp__type">5 Bhk Flat</div>{" "}
+                        <div className="prp__loc">Maya Enclave</div>{" "}
+                        <div className="prp__info">Ready to Move</div>{" "}
+                        <div className="prp__price">
+                          <span className="rupees">₹</span> 2.50 Cr{" "}
                         </div>{" "}
-                        <div className="rtbanner-r__detl">
-                          {" "}
-                          <div className="prp__type">3 Bhk Flat</div>{" "}
-                          <div className="prp__loc">Rohini Sector 9</div>{" "}
-                          <div className="prp__info">Ready to Move</div>{" "}
-                          <div className="prp__price">
-                            <span className="rupees">₹</span> 1.40 Cr{" "}
-                          </div>{" "}
-                          <div className="prp__owner">
-                            Owner{" "}
-                            <span className="prp__owner--name">Dhirendra</span>
-                          </div>{" "}
-                        </div>
+                        <div className="prp__owner">
+                          Owner <span className="prp__owner--name">Rani</span>
+                        </div>{" "}
                       </div>
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/4-BHK-1300-Sq-ft-Multistorey-Apartment-FOR-Sale-Mayur-Vihar-3-in-New-Delhi&amp;id=4d423631303032373031&amp;campaignCode=sky_owner_sp_new delhi_61002701_1662022"
-                      target="_blank"
-                      className="rtbanner"
-                    >
-                      <div className="rtbanner-r">
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/2-BHK-1500-Sq-ft-Multistorey-Apartment-FOR-Sale-in-New-Delhi-&amp;id=4d423631343233363037&amp;campaignCode=sky_owner_sp_new delhi_61423607_1462022"
+                    target="_blank"
+                    className="rtbanner"
+                  >
+                    <div className="rtbanner-r">
+                      {" "}
+                      <div className="rtbanner-r__img">
                         {" "}
-                        <div className="rtbanner-r__img">
-                          {" "}
-                          <img
-                            className="img-lazy rtbanner-r--img"
-                            data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1662022/61002701.jpg"
-                            src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1662022/61002701.jpg"
-                            alt=" "
-                          />{" "}
-                        </div>{" "}
-                        <div className="rtbanner-r__detl">
-                          {" "}
-                          <div className="prp__type">4 Bhk Flat</div>{" "}
-                          <div className="prp__loc">Mayur Vihar 3</div>{" "}
-                          <div className="prp__info"></div>{" "}
-                          <div className="prp__price">
-                            <span className="rupees">₹</span> 1.20 Cr{" "}
-                          </div>{" "}
-                          <div className="prp__owner">
-                            Owner{" "}
-                            <span className="prp__owner--name">Ashok Soni</span>
-                          </div>{" "}
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/3-BHK-900-Sq-ft-Builder-Floor-Apartment-FOR-Sale-Govindpuri-Extension-in-New-Delhi&amp;id=4d423630393833303231&amp;campaignCode=sky_owner_sp_new delhi_60983021_1662022"
-                      target="_blank"
-                      className="rtbanner"
-                    >
-                      <div className="rtbanner-r">
+                        <img
+                          className="img-lazy rtbanner-r--img"
+                          data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1462022/61423607.jpg"
+                          src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1462022/61423607.jpg"
+                          alt=" "
+                        />{" "}
+                      </div>{" "}
+                      <div className="rtbanner-r__detl">
                         {" "}
-                        <div className="rtbanner-r__img">
-                          {" "}
-                          <img
-                            className="img-lazy rtbanner-r--img"
-                            data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1662022/60983021.jpg"
-                            src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1662022/60983021.jpg"
-                            alt=" "
-                          />{" "}
+                        <div className="prp__type">2 Bhk Flat</div>{" "}
+                        <div className="prp__loc"></div>{" "}
+                        <div className="prp__info">Ready to Move</div>{" "}
+                        <div className="prp__price">
+                          <span className="rupees">₹</span> 2.10 Cr{" "}
                         </div>{" "}
-                        <div className="rtbanner-r__detl">
-                          {" "}
-                          <div className="prp__type">3 Bhk Flat</div>{" "}
-                          <div className="prp__loc">Govindpuri Extension</div>{" "}
-                          <div className="prp__info"></div>{" "}
-                          <div className="prp__price">
-                            <span className="rupees">₹</span> 89.0 Lac{" "}
-                          </div>{" "}
-                          <div className="prp__owner">
-                            Owner{" "}
-                            <span className="prp__owner--name">Sk Mandal</span>
-                          </div>{" "}
-                        </div>
+                        <div className="prp__owner">
+                          Owner{" "}
+                          <span className="prp__owner--name">
+                            Sharad Kholi
+                          </span>
+                        </div>{" "}
                       </div>
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/3-BHK-1635-Sq-ft-Builder-Floor-Apartment-FOR-Sale-Guru-Teg-Bahadur-Nagar-in-New-Delhi&amp;id=4d423631303531393637&amp;campaignCode=sky_owner_sp_new delhi_61051967n_1662022"
-                      target="_blank"
-                      className="rtbanner"
-                    >
-                      <div className="rtbanner-r">
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/10-plus-BHK-428-Sq-yrd-Residential-House-FOR-Sale-Rohini-Sector-21-in-New-Delhi&amp;id=4d423630323638363437&amp;campaignCode=sky_owner_sp_new delhi_60268647_1462022"
+                    target="_blank"
+                    className="rtbanner"
+                  >
+                    <div className="rtbanner-r">
+                      {" "}
+                      <div className="rtbanner-r__img">
                         {" "}
-                        <div className="rtbanner-r__img">
-                          {" "}
-                          <img
-                            className="img-lazy rtbanner-r--img"
-                            data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1662022/61051967n.jpg"
-                            src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1662022/61051967n.jpg"
-                            alt=" "
-                          />{" "}
-                        </div>{" "}
-                        <div className="rtbanner-r__detl">
-                          {" "}
-                          <div className="prp__type">3 Bhk Flat</div>{" "}
-                          <div className="prp__loc">Guru Teg Bahadur Nagar</div>{" "}
-                          <div className="prp__info"></div>{" "}
-                          <div className="prp__price">
-                            <span className="rupees">₹</span> 1.72 Cr{" "}
-                          </div>{" "}
-                          <div className="prp__owner">
-                            Owner{" "}
-                            <span className="prp__owner--name">Ramesh</span>
-                          </div>{" "}
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/3-BHK-1300-Sq-ft-Multistorey-Apartment-FOR-SaleVasundhara-Enclave-in-New-Delhi-&amp;id=4d423631353932393635&amp;campaignCode=sky_owner_sp_new delhi_61592965_1962022"
-                      target="_blank"
-                      className="rtbanner"
-                    >
-                      <div className="rtbanner-r">
+                        <img
+                          className="img-lazy rtbanner-r--img"
+                          data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1462022/60268647.jpg"
+                          src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1462022/60268647.jpg"
+                          alt=" "
+                        />{" "}
+                      </div>{" "}
+                      <div className="rtbanner-r__detl">
                         {" "}
-                        <div className="rtbanner-r__img">
-                          {" "}
-                          <img
-                            className="img-lazy rtbanner-r--img"
-                            data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1962022/61592965.jpg"
-                            src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1962022/61592965.jpg"
-                            alt=" "
-                          />{" "}
+                        <div className="prp__type">&gt;10 Bhk House</div>{" "}
+                        <div className="prp__loc">Rohini Sector 21</div>{" "}
+                        <div className="prp__info"></div>{" "}
+                        <div className="prp__price">
+                          <span className="rupees">₹</span> 5.50 Cr{" "}
                         </div>{" "}
-                        <div className="rtbanner-r__detl">
-                          {" "}
-                          <div className="prp__type">3 Bhk Flat</div>{" "}
-                          <div className="prp__loc">Vasundhara Enclave</div>{" "}
-                          <div className="prp__info">Ready to Move</div>{" "}
-                          <div className="prp__price">
-                            <span className="rupees">₹</span> 1.18 Cr{" "}
-                          </div>{" "}
-                          <div className="prp__owner">
-                            Owner{" "}
-                            <span className="prp__owner--name">
-                              Dr Abhishek{" "}
-                            </span>
-                          </div>{" "}
-                        </div>
+                        <div className="prp__owner">
+                          Owner{" "}
+                          <span className="prp__owner--name">
+                            Sunny Sethi
+                          </span>
+                        </div>{" "}
                       </div>
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/3-BHK-1350-Sq-ft-Multistorey-Apartment-FOR-Sale-Nizamuddin-West-in-New-Delhi&amp;id=4d423630303137323431&amp;campaignCode=sky_owner_sp_new delhi_60017241_1942022"
-                      target="_blank"
-                      className="rtbanner"
-                    >
-                      <div className="rtbanner-r">
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/3-BHK-1200-Sq-ft-Multistorey-Apartment-FOR-SaleRohini-Sector-9-in-New-Delhi-&amp;id=4d423631343630363933&amp;campaignCode=sky_owner_sp_new delhi_61460693_1462022"
+                    target="_blank"
+                    className="rtbanner"
+                  >
+                    <div className="rtbanner-r">
+                      {" "}
+                      <div className="rtbanner-r__img">
                         {" "}
-                        <div className="rtbanner-r__img">
-                          {" "}
-                          <img
-                            className="img-lazy rtbanner-r--img"
-                            data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1942022/60017241-300X200.jpg"
-                            src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1942022/60017241-300X200.jpg"
-                            alt=" "
-                          />{" "}
-                        </div>{" "}
-                        <div className="rtbanner-r__detl">
-                          {" "}
-                          <div className="prp__type">3 Bhk Flat</div>{" "}
-                          <div className="prp__loc">Nizamuddin West</div>{" "}
-                          <div className="prp__info"></div>{" "}
-                          <div className="prp__price">
-                            <span className="rupees">₹</span> 3.00 Cr{" "}
-                          </div>{" "}
-                          <div className="prp__owner">
-                            Owner{" "}
-                            <span className="prp__owner--name">
-                              Aftab Baktoo
-                            </span>
-                          </div>{" "}
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/3-BHK-140-Sq-yrd-Builder-Floor-Apartment-FOR-Sale-Janakpuri-Block-A3-in-New-Delhi&amp;id=4d423630383631393731&amp;campaignCode=sky_owner_sp_new delhi_60861971_652022"
-                      target="_blank"
-                      className="rtbanner"
-                    >
-                      <div className="rtbanner-r">
+                        <img
+                          className="img-lazy rtbanner-r--img"
+                          data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1462022/61460693.jpg"
+                          src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1462022/61460693.jpg"
+                          alt=" "
+                        />{" "}
+                      </div>{" "}
+                      <div className="rtbanner-r__detl">
                         {" "}
-                        <div className="rtbanner-r__img">
-                          {" "}
-                          <img
-                            className="img-lazy rtbanner-r--img"
-                            data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/652022/60861971-300X200.jpg"
-                            src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/652022/60861971-300X200.jpg"
-                            alt=" "
-                          />{" "}
+                        <div className="prp__type">3 Bhk Flat</div>{" "}
+                        <div className="prp__loc">Rohini Sector 9</div>{" "}
+                        <div className="prp__info">Ready to Move</div>{" "}
+                        <div className="prp__price">
+                          <span className="rupees">₹</span> 1.40 Cr{" "}
                         </div>{" "}
-                        <div className="rtbanner-r__detl">
-                          {" "}
-                          <div className="prp__type">3 Bhk Flat</div>{" "}
-                          <div className="prp__loc">Janakpuri Block A3</div>{" "}
-                          <div className="prp__info">Ready to Move</div>{" "}
-                          <div className="prp__price">
-                            <span className="rupees">₹</span> 2.40 Cr{" "}
-                          </div>{" "}
-                          <div className="prp__owner">
-                            Owner{" "}
-                            <span className="prp__owner--name">Daljit</span>
-                          </div>{" "}
-                        </div>
+                        <div className="prp__owner">
+                          Owner{" "}
+                          <span className="prp__owner--name">Dhirendra</span>
+                        </div>{" "}
                       </div>
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/3-BHK-1320-Sq-ft-Multistorey-Apartment-FOR-SaleVasant-Kunj-Sector-B-in-New-Delhi-&amp;id=4d423630313734333135&amp;campaignCode=sky_owner_sp_new delhi_60174315_652022"
-                      target="_blank"
-                      className="rtbanner"
-                    >
-                      <div className="rtbanner-r">
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/4-BHK-1300-Sq-ft-Multistorey-Apartment-FOR-Sale-Mayur-Vihar-3-in-New-Delhi&amp;id=4d423631303032373031&amp;campaignCode=sky_owner_sp_new delhi_61002701_1662022"
+                    target="_blank"
+                    className="rtbanner"
+                  >
+                    <div className="rtbanner-r">
+                      {" "}
+                      <div className="rtbanner-r__img">
                         {" "}
-                        <div className="rtbanner-r__img">
-                          {" "}
-                          <img
-                            className="img-lazy rtbanner-r--img"
-                            data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/652022/60174315-300X200.jpg"
-                            src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/652022/60174315-300X200.jpg"
-                            alt=" "
-                          />{" "}
-                        </div>{" "}
-                        <div className="rtbanner-r__detl">
-                          {" "}
-                          <div className="prp__type">3 Bhk Flat</div>{" "}
-                          <div className="prp__loc">Vasant Kunj Sector B</div>{" "}
-                          <div className="prp__info">Ready to Move</div>{" "}
-                          <div className="prp__price">
-                            <span className="rupees">₹</span> 3.00 Cr{" "}
-                          </div>{" "}
-                          <div className="prp__owner">
-                            Owner <span className="prp__owner--name">Ray</span>
-                          </div>{" "}
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/2-BHK-67-Sq-m-Builder-Floor-Apartment-FOR-SaleEast-Shalimar-Bagh-BK-1-Block-in-New-Delhi-&amp;id=4d423539313530353831&amp;campaignCode=sky_owner_sp_new delhi_59150581_2552022"
-                      target="_blank"
-                      className="rtbanner"
-                    >
-                      <div className="rtbanner-r">
+                        <img
+                          className="img-lazy rtbanner-r--img"
+                          data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1662022/61002701.jpg"
+                          src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1662022/61002701.jpg"
+                          alt=" "
+                        />{" "}
+                      </div>{" "}
+                      <div className="rtbanner-r__detl">
                         {" "}
-                        <div className="rtbanner-r__img">
-                          {" "}
-                          <img
-                            className="img-lazy rtbanner-r--img"
-                            data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/2552022/59150581.jpg"
-                            src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/2552022/59150581.jpg"
-                            alt=" "
-                          />{" "}
+                        <div className="prp__type">4 Bhk Flat</div>{" "}
+                        <div className="prp__loc">Mayur Vihar 3</div>{" "}
+                        <div className="prp__info"></div>{" "}
+                        <div className="prp__price">
+                          <span className="rupees">₹</span> 1.20 Cr{" "}
                         </div>{" "}
-                        <div className="rtbanner-r__detl">
-                          {" "}
-                          <div className="prp__type">2 Bhk Flat</div>{" "}
-                          <div className="prp__loc">
-                            East Shalimar Bagh Bk 1 Block
-                          </div>{" "}
-                          <div className="prp__info">Ready to Move</div>{" "}
-                          <div className="prp__price">
-                            <span className="rupees">₹</span> 95.0 Lac{" "}
-                          </div>{" "}
-                          <div className="prp__owner">
-                            Owner{" "}
-                            <span className="prp__owner--name">
-                              Ashwani Pundeer
-                            </span>
-                          </div>{" "}
-                        </div>
+                        <div className="prp__owner">
+                          Owner{" "}
+                          <span className="prp__owner--name">Ashok Soni</span>
+                        </div>{" "}
                       </div>
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/2-BHK-550-Sq-ft-Builder-Floor-Apartment-FOR-Sale-Uttam-Nagar-West-in-New-Delhi&amp;id=4d423630353933383435&amp;campaignCode=sky_owner_sp_new delhi_60593845_3052022"
-                      target="_blank"
-                      className="rtbanner"
-                    >
-                      <div className="rtbanner-r">
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/3-BHK-900-Sq-ft-Builder-Floor-Apartment-FOR-Sale-Govindpuri-Extension-in-New-Delhi&amp;id=4d423630393833303231&amp;campaignCode=sky_owner_sp_new delhi_60983021_1662022"
+                    target="_blank"
+                    className="rtbanner"
+                  >
+                    <div className="rtbanner-r">
+                      {" "}
+                      <div className="rtbanner-r__img">
                         {" "}
-                        <div className="rtbanner-r__img">
-                          {" "}
-                          <img
-                            className="img-lazy rtbanner-r--img"
-                            data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/3052022/60593845.jpg"
-                            src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/3052022/60593845.jpg"
-                            alt=" "
-                          />{" "}
-                        </div>{" "}
-                        <div className="rtbanner-r__detl">
-                          {" "}
-                          <div className="prp__type">2 Bhk Flat</div>{" "}
-                          <div className="prp__loc">Uttam Nagar West</div>{" "}
-                          <div className="prp__info"></div>{" "}
-                          <div className="prp__price">
-                            <span className="rupees">₹</span> 21.0 Lac{" "}
-                          </div>{" "}
-                          <div className="prp__owner">
-                            Owner{" "}
-                            <span className="prp__owner--name">Lalit</span>
-                          </div>{" "}
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/3-BHK-1270-Sq-ft-Multistorey-Apartment-FOR-Sale-Gangotri-Enclave-in-New-Delhi&amp;id=4d423630363330353731&amp;campaignCode=sky_owner_sp_new delhi_60630571_3052022"
-                      target="_blank"
-                      className="rtbanner"
-                    >
-                      <div className="rtbanner-r">
+                        <img
+                          className="img-lazy rtbanner-r--img"
+                          data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1662022/60983021.jpg"
+                          src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1662022/60983021.jpg"
+                          alt=" "
+                        />{" "}
+                      </div>{" "}
+                      <div className="rtbanner-r__detl">
                         {" "}
-                        <div className="rtbanner-r__img">
-                          {" "}
-                          <img
-                            className="img-lazy rtbanner-r--img"
-                            data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/3052022/60630571.jpg"
-                            src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/3052022/60630571.jpg"
-                            alt=" "
-                          />{" "}
+                        <div className="prp__type">3 Bhk Flat</div>{" "}
+                        <div className="prp__loc">Govindpuri Extension</div>{" "}
+                        <div className="prp__info"></div>{" "}
+                        <div className="prp__price">
+                          <span className="rupees">₹</span> 89.0 Lac{" "}
                         </div>{" "}
-                        <div className="rtbanner-r__detl">
-                          {" "}
-                          <div className="prp__type">3 Bhk Flat</div>{" "}
-                          <div className="prp__loc">Gangotri Enclave</div>{" "}
-                          <div className="prp__info"></div>{" "}
-                          <div className="prp__price">
-                            <span className="rupees">₹</span> 2.45 Cr{" "}
-                          </div>{" "}
-                          <div className="prp__owner">
-                            Owner{" "}
-                            <span className="prp__owner--name">DevÂ&nbsp;</span>
-                          </div>{" "}
-                        </div>
+                        <div className="prp__owner">
+                          Owner{" "}
+                          <span className="prp__owner--name">Sk Mandal</span>
+                        </div>{" "}
                       </div>
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/4-BHK-1210-Sq-ft-Residential-House-FOR-Sale-Safdarjung-Enclave-in-New-Delhi&amp;id=4d423630333234333631&amp;campaignCode=sky_owner_sp_new delhi_60324361_3052022"
-                      target="_blank"
-                      className="rtbanner"
-                    >
-                      <div className="rtbanner-r">
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/3-BHK-1635-Sq-ft-Builder-Floor-Apartment-FOR-Sale-Guru-Teg-Bahadur-Nagar-in-New-Delhi&amp;id=4d423631303531393637&amp;campaignCode=sky_owner_sp_new delhi_61051967n_1662022"
+                    target="_blank"
+                    className="rtbanner"
+                  >
+                    <div className="rtbanner-r">
+                      {" "}
+                      <div className="rtbanner-r__img">
                         {" "}
-                        <div className="rtbanner-r__img">
-                          {" "}
-                          <img
-                            className="img-lazy rtbanner-r--img"
-                            data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/3052022/60324361.jpg"
-                            src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/3052022/60324361.jpg"
-                            alt=" "
-                          />{" "}
+                        <img
+                          className="img-lazy rtbanner-r--img"
+                          data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1662022/61051967n.jpg"
+                          src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1662022/61051967n.jpg"
+                          alt=" "
+                        />{" "}
+                      </div>{" "}
+                      <div className="rtbanner-r__detl">
+                        {" "}
+                        <div className="prp__type">3 Bhk Flat</div>{" "}
+                        <div className="prp__loc">Guru Teg Bahadur Nagar</div>{" "}
+                        <div className="prp__info"></div>{" "}
+                        <div className="prp__price">
+                          <span className="rupees">₹</span> 1.72 Cr{" "}
                         </div>{" "}
-                        <div className="rtbanner-r__detl">
-                          {" "}
-                          <div className="prp__type">4 Bhk House</div>{" "}
-                          <div className="prp__loc">Safdarjung Enclave</div>{" "}
-                          <div className="prp__info"></div>{" "}
-                          <div className="prp__price">
-                            <span className="rupees">₹</span> 5.60 Cr{" "}
-                          </div>{" "}
-                          <div className="prp__owner">
-                            Owner{" "}
-                            <span className="prp__owner--name">
-                              Sanjeev Verma
-                            </span>
-                          </div>{" "}
-                        </div>
+                        <div className="prp__owner">
+                          Owner{" "}
+                          <span className="prp__owner--name">Ramesh</span>
+                        </div>{" "}
                       </div>
-                    </a>
-                  </div>
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/3-BHK-1300-Sq-ft-Multistorey-Apartment-FOR-SaleVasundhara-Enclave-in-New-Delhi-&amp;id=4d423631353932393635&amp;campaignCode=sky_owner_sp_new delhi_61592965_1962022"
+                    target="_blank"
+                    className="rtbanner"
+                  >
+                    <div className="rtbanner-r">
+                      {" "}
+                      <div className="rtbanner-r__img">
+                        {" "}
+                        <img
+                          className="img-lazy rtbanner-r--img"
+                          data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1962022/61592965.jpg"
+                          src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1962022/61592965.jpg"
+                          alt=" "
+                        />{" "}
+                      </div>{" "}
+                      <div className="rtbanner-r__detl">
+                        {" "}
+                        <div className="prp__type">3 Bhk Flat</div>{" "}
+                        <div className="prp__loc">Vasundhara Enclave</div>{" "}
+                        <div className="prp__info">Ready to Move</div>{" "}
+                        <div className="prp__price">
+                          <span className="rupees">₹</span> 1.18 Cr{" "}
+                        </div>{" "}
+                        <div className="prp__owner">
+                          Owner{" "}
+                          <span className="prp__owner--name">
+                            Dr Abhishek{" "}
+                          </span>
+                        </div>{" "}
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/3-BHK-1350-Sq-ft-Multistorey-Apartment-FOR-Sale-Nizamuddin-West-in-New-Delhi&amp;id=4d423630303137323431&amp;campaignCode=sky_owner_sp_new delhi_60017241_1942022"
+                    target="_blank"
+                    className="rtbanner"
+                  >
+                    <div className="rtbanner-r">
+                      {" "}
+                      <div className="rtbanner-r__img">
+                        {" "}
+                        <img
+                          className="img-lazy rtbanner-r--img"
+                          data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1942022/60017241-300X200.jpg"
+                          src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/1942022/60017241-300X200.jpg"
+                          alt=" "
+                        />{" "}
+                      </div>{" "}
+                      <div className="rtbanner-r__detl">
+                        {" "}
+                        <div className="prp__type">3 Bhk Flat</div>{" "}
+                        <div className="prp__loc">Nizamuddin West</div>{" "}
+                        <div className="prp__info"></div>{" "}
+                        <div className="prp__price">
+                          <span className="rupees">₹</span> 3.00 Cr{" "}
+                        </div>{" "}
+                        <div className="prp__owner">
+                          Owner{" "}
+                          <span className="prp__owner--name">
+                            Aftab Baktoo
+                          </span>
+                        </div>{" "}
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/3-BHK-140-Sq-yrd-Builder-Floor-Apartment-FOR-Sale-Janakpuri-Block-A3-in-New-Delhi&amp;id=4d423630383631393731&amp;campaignCode=sky_owner_sp_new delhi_60861971_652022"
+                    target="_blank"
+                    className="rtbanner"
+                  >
+                    <div className="rtbanner-r">
+                      {" "}
+                      <div className="rtbanner-r__img">
+                        {" "}
+                        <img
+                          className="img-lazy rtbanner-r--img"
+                          data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/652022/60861971-300X200.jpg"
+                          src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/652022/60861971-300X200.jpg"
+                          alt=" "
+                        />{" "}
+                      </div>{" "}
+                      <div className="rtbanner-r__detl">
+                        {" "}
+                        <div className="prp__type">3 Bhk Flat</div>{" "}
+                        <div className="prp__loc">Janakpuri Block A3</div>{" "}
+                        <div className="prp__info">Ready to Move</div>{" "}
+                        <div className="prp__price">
+                          <span className="rupees">₹</span> 2.40 Cr{" "}
+                        </div>{" "}
+                        <div className="prp__owner">
+                          Owner{" "}
+                          <span className="prp__owner--name">Daljit</span>
+                        </div>{" "}
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/3-BHK-1320-Sq-ft-Multistorey-Apartment-FOR-SaleVasant-Kunj-Sector-B-in-New-Delhi-&amp;id=4d423630313734333135&amp;campaignCode=sky_owner_sp_new delhi_60174315_652022"
+                    target="_blank"
+                    className="rtbanner"
+                  >
+                    <div className="rtbanner-r">
+                      {" "}
+                      <div className="rtbanner-r__img">
+                        {" "}
+                        <img
+                          className="img-lazy rtbanner-r--img"
+                          data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/652022/60174315-300X200.jpg"
+                          src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/652022/60174315-300X200.jpg"
+                          alt=" "
+                        />{" "}
+                      </div>{" "}
+                      <div className="rtbanner-r__detl">
+                        {" "}
+                        <div className="prp__type">3 Bhk Flat</div>{" "}
+                        <div className="prp__loc">Vasant Kunj Sector B</div>{" "}
+                        <div className="prp__info">Ready to Move</div>{" "}
+                        <div className="prp__price">
+                          <span className="rupees">₹</span> 3.00 Cr{" "}
+                        </div>{" "}
+                        <div className="prp__owner">
+                          Owner <span className="prp__owner--name">Ray</span>
+                        </div>{" "}
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/2-BHK-67-Sq-m-Builder-Floor-Apartment-FOR-SaleEast-Shalimar-Bagh-BK-1-Block-in-New-Delhi-&amp;id=4d423539313530353831&amp;campaignCode=sky_owner_sp_new delhi_59150581_2552022"
+                    target="_blank"
+                    className="rtbanner"
+                  >
+                    <div className="rtbanner-r">
+                      {" "}
+                      <div className="rtbanner-r__img">
+                        {" "}
+                        <img
+                          className="img-lazy rtbanner-r--img"
+                          data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/2552022/59150581.jpg"
+                          src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/2552022/59150581.jpg"
+                          alt=" "
+                        />{" "}
+                      </div>{" "}
+                      <div className="rtbanner-r__detl">
+                        {" "}
+                        <div className="prp__type">2 Bhk Flat</div>{" "}
+                        <div className="prp__loc">
+                          East Shalimar Bagh Bk 1 Block
+                        </div>{" "}
+                        <div className="prp__info">Ready to Move</div>{" "}
+                        <div className="prp__price">
+                          <span className="rupees">₹</span> 95.0 Lac{" "}
+                        </div>{" "}
+                        <div className="prp__owner">
+                          Owner{" "}
+                          <span className="prp__owner--name">
+                            Ashwani Pundeer
+                          </span>
+                        </div>{" "}
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/2-BHK-550-Sq-ft-Builder-Floor-Apartment-FOR-Sale-Uttam-Nagar-West-in-New-Delhi&amp;id=4d423630353933383435&amp;campaignCode=sky_owner_sp_new delhi_60593845_3052022"
+                    target="_blank"
+                    className="rtbanner"
+                  >
+                    <div className="rtbanner-r">
+                      {" "}
+                      <div className="rtbanner-r__img">
+                        {" "}
+                        <img
+                          className="img-lazy rtbanner-r--img"
+                          data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/3052022/60593845.jpg"
+                          src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/3052022/60593845.jpg"
+                          alt=" "
+                        />{" "}
+                      </div>{" "}
+                      <div className="rtbanner-r__detl">
+                        {" "}
+                        <div className="prp__type">2 Bhk Flat</div>{" "}
+                        <div className="prp__loc">Uttam Nagar West</div>{" "}
+                        <div className="prp__info"></div>{" "}
+                        <div className="prp__price">
+                          <span className="rupees">₹</span> 21.0 Lac{" "}
+                        </div>{" "}
+                        <div className="prp__owner">
+                          Owner{" "}
+                          <span className="prp__owner--name">Lalit</span>
+                        </div>{" "}
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/3-BHK-1270-Sq-ft-Multistorey-Apartment-FOR-Sale-Gangotri-Enclave-in-New-Delhi&amp;id=4d423630363330353731&amp;campaignCode=sky_owner_sp_new delhi_60630571_3052022"
+                    target="_blank"
+                    className="rtbanner"
+                  >
+                    <div className="rtbanner-r">
+                      {" "}
+                      <div className="rtbanner-r__img">
+                        {" "}
+                        <img
+                          className="img-lazy rtbanner-r--img"
+                          data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/3052022/60630571.jpg"
+                          src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/3052022/60630571.jpg"
+                          alt=" "
+                        />{" "}
+                      </div>{" "}
+                      <div className="rtbanner-r__detl">
+                        {" "}
+                        <div className="prp__type">3 Bhk Flat</div>{" "}
+                        <div className="prp__loc">Gangotri Enclave</div>{" "}
+                        <div className="prp__info"></div>{" "}
+                        <div className="prp__price">
+                          <span className="rupees">₹</span> 2.45 Cr{" "}
+                        </div>{" "}
+                        <div className="prp__owner">
+                          Owner{" "}
+                          <span className="prp__owner--name">DevÂ&nbsp;</span>
+                        </div>{" "}
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="/bricks/campaign.html?pageName=https://www.magicbricks.com/propertyDetails/4-BHK-1210-Sq-ft-Residential-House-FOR-Sale-Safdarjung-Enclave-in-New-Delhi&amp;id=4d423630333234333631&amp;campaignCode=sky_owner_sp_new delhi_60324361_3052022"
+                    target="_blank"
+                    className="rtbanner"
+                  >
+                    <div className="rtbanner-r">
+                      {" "}
+                      <div className="rtbanner-r__img">
+                        {" "}
+                        <img
+                          className="img-lazy rtbanner-r--img"
+                          data-src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/3052022/60324361.jpg"
+                          src="https://cdn.staticmb.com/property/microsite/new-banners/owner-skyscraper/3052022/60324361.jpg"
+                          alt=" "
+                        />{" "}
+                      </div>{" "}
+                      <div className="rtbanner-r__detl">
+                        {" "}
+                        <div className="prp__type">4 Bhk House</div>{" "}
+                        <div className="prp__loc">Safdarjung Enclave</div>{" "}
+                        <div className="prp__info"></div>{" "}
+                        <div className="prp__price">
+                          <span className="rupees">₹</span> 5.60 Cr{" "}
+                        </div>{" "}
+                        <div className="prp__owner">
+                          Owner{" "}
+                          <span className="prp__owner--name">
+                            Sanjeev Verma
+                          </span>
+                        </div>{" "}
+                      </div>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
