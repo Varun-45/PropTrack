@@ -144,6 +144,7 @@ const Header = () => {
             </div>
             <div className="header_login">
               <a
+              href=""
                 className={`header_main_link ${loginactive}`}
                 onMouseOver={() => setloginactive("active")}
                 onMouseOut={() => setloginactive("")}
@@ -186,12 +187,12 @@ const Header = () => {
                   </ul>
                 </div>
                 <div className="login_drop_down">
-                  <a className="login_drop_loginbtn" onClick={(e)=> {e.preventDefault();setloginopen(true)}}>
+                  <a href="" className="login_drop_loginbtn" onClick={(e)=> {e.preventDefault();setloginopen(true)}}>
                     Login
                   </a>
                   <div className="login_drop_text">
                     New to Magicbricks?{" "}
-                    <a className="login_drop_signupbtn">
+                    <a  href="" className="login_drop_signupbtn" onClick={(e)=> {e.preventDefault();setloginopen(true)}}>
                       Sign Up
                     </a>
                   </div>

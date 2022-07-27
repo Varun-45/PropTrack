@@ -1,3 +1,4 @@
+import { render } from "react-dom";
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 
@@ -11,7 +12,7 @@ const Protected = ({ isAdmin, element: Element }) => {
     if (isAdmin === true && user && user.Role !== "admin") {
       return <Navigate to="/login" />;
     }
-    return <Element />;
+    return Element;
   }
 };
 

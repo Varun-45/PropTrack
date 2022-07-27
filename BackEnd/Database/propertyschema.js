@@ -297,6 +297,10 @@ const propertyschema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  ExpiringOn:{
+    type: Date,
+    default:  () => new Date(+new Date() + 45*24*60*60*1000)
+  },
   User: {
     type: mongoose.Schema.ObjectId,
     ref: "User",

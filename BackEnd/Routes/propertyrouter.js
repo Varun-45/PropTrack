@@ -19,9 +19,10 @@ const {
   getpropertyReviews,
   deleteReview,
   getAdminproperties,
+  getmyproperties,
 } = require("../Controllers/propertycontroller");
 
-router.post("/auth/property/new",addnewproperty);
+router.post("/auth/property/new",authuser,addnewproperty);
 
 router
 .route("/auth/property/:id")
@@ -29,7 +30,9 @@ router
   .delete(authuser, deleteproperty);
   
   router.get("/properties", getallproperties);
-  router.route("/property/:id").get(getproperty);
+  router.route("/property/:id").get(getproperty)
+
+  router.route('/properties/user/:id').get(getmyproperties)
   
 router.put("/property/:id/review", authuser, createpropertyreview);
 router.route("/reviews").get(getpropertyReviews).delete(authuser, deleteReview);
