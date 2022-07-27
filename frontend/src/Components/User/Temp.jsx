@@ -53,7 +53,6 @@ const Temp = () => {
             <div className="country-code field">
               <select>
                 <option value="+91">+91 india</option>
-                <option value="+92">+92 india2</option>
               </select>
             </div>
 

@@ -8,6 +8,7 @@ const ErrorHandler = require("../utils/errorhandler");
 const ApiFeatures = require("../utils/apifeatures");
 
 const cloudinary = require("cloudinary");
+const catchasyncerrors = require("../Middlewares/catchasyncerrors");
 
 // Add New property --Admin
 exports.addnewproperty = catchAsyncErrors(async (req, res, next) => {
@@ -41,7 +42,7 @@ exports.addnewproperty = catchAsyncErrors(async (req, res, next) => {
   //   }
   //   req.body.Images = imagesLinks;
   // }
-  // req.body.User = req.user.id;
+  req.body.User = req.user.id;
 
 
   const property = await Property.create(req.body);
@@ -281,3 +282,11 @@ exports.deleteReview = catchAsyncErrors(async (req, res, next) => {
     success: true,
   });
 });
+
+exports.getmyproperties = catchasyncerrors(async(req,res,next)=>{
+  const properties = await Property.find({User:req.params.id})
+  res.status(200).json({
+    success:true,
+    properties
+  })
+})

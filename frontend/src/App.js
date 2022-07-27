@@ -62,7 +62,7 @@ const App = () => {
           <Route exact path="/property/:productid" element={<Suspense fallback={<div></div>}><PropertyDetails/></Suspense>} />
 
           <Route exact path="/login" element={<Suspense fallback={<div></div>}><Login/></Suspense>} />
-          <Route exact path="/account" element={<Protected element={<Suspense fallback={<div></div>}><Profile/></Suspense>} />} />
+          <Route exact path="/profile" element={<Protected element={<Suspense fallback={<div></div>}><Profile/></Suspense>} />} />
           <Route exact path="/me/update" element={<Protected element={<Suspense fallback={<div></div>}><UpdateProfile/></Suspense>} />} />
           <Route exact path="/password/update" element={<Protected element={<Suspense fallback={<div></div>}><UpdatePassword/></Suspense>} />} />
           <Route exact path="/reset/:token" element={<Suspense fallback={<div></div>}><ResetPassword/></Suspense>} />
@@ -82,7 +82,7 @@ const App = () => {
 
           <Route exact path="*" element={<Suspense fallback={<div></div>}><Error404/></Suspense>} />
         </Routes>
-      <Suspense fallback={<div></div>}><Footer/></Suspense>
+      {/* <Suspense fallback={<div></div>}><Footer/></Suspense> */}
       </>
   )
 }
