@@ -11,8 +11,16 @@ input[type="file"] {
   display: none;
 }
 button,
-label {
+label, select {
   cursor: pointer;
+}
+.pri-btn {
+  background-color: var(--brand-color);
+  color: #fff;
+}
+.sec-btn {
+  background-color: #000;
+  color: #fff;
 }
 .modal {
   position: fixed;
@@ -90,32 +98,57 @@ label {
   padding-right: 3em;
   font-weight: bold;
 }
-form,
 .field {
-  display: flex;
-  flex-direction: column;
+  position: relative;
 }
 form {
+  display: flex;
+  flex-direction: column;
   gap: 1em;
 }
 label {
   text-transform: uppercase;
-  font-size: 1.325ch;
   color: #000;
-  font-weight: bold;
+  position: absolute;
+  transition: 0.1s ease;
+  top: 50%;
+  left: 0;
 }
 input,
 select {
   border: none;
   border-bottom: 1px solid hsl(0, 0%, 0%, 0.5);
-  padding: 4px 0;
+  padding: 1em 0 0.25em 0;
   font-size: 1.75ch;
   background-color: #fff;
   font-family: inherit;
   width: 100%;
 }
+.field input {
+	outline: none;
+}
+.field span::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0%;
+	height: 0.2rem;
+	background: var(--brand-color);
+	transition: 0.5s;
+}
+input:focus ~ label, input:focus-visible ~ label, input:valid ~ label {
+  font-size: 0.75em;
+  font-weight: bold;
+  top: 0px;
+  color: var(--brand-color);
+}
+input:focus ~ span::before, input:focus-visible ~ span::before, input:valid ~ span::before {
+	width: 100%;
+}
 select {
-  width: 4.5ch;
+	width: 4.5ch;
+	padding-top: 0.25em;
 }
 .btn-grp {
   display: flex;
@@ -124,14 +157,23 @@ select {
 }
 .btn-grp > button {
   padding: 0.5em 0.75em;
-  background: transparent;
-  border: 1px solid;
   font-size: 0.9em;
   letter-spacing: 1px;
+  border-radius: 4px;
+  border: none;
+}
+.btn-grp > button:hover {
+  background-color: hsla(0, 0%, 0%, 0.2);
+  color: #000;
+}
+.image-field label {
+  position: static;
+  font-size: 1.325ch;
+  font-weight: bold;
 }
 .image-field label:hover {
-  -webkit-text-decoration: underline #000;
-  text-decoration: underline #000;
+  color: var(--brand-color);
+  text-decoration: underline;
 }
 .image-canvas {
   --edge: 100px;
@@ -145,8 +187,7 @@ select {
   padding: 0.25em 0.75em;
   border-radius: 100px;
   margin: 0 0.5em 0.5em 0;
-  background-color: var(--brand-color);
-  color: #fff;
+  background-color: rgba(0,0,0,0.1);
 }
 .contact-field {
   display: flex;
@@ -157,8 +198,6 @@ select {
   width: 100%;
 }
 .location-field > .field {
-  flex-direction: row;
-  gap: 1em;
   margin-bottom: 0.5em;
 }
 @media screen and (min-width: 700px) {
@@ -188,12 +227,12 @@ select {
     width: 90%;
     max-width: 170px;
     text-align: center;
+    border-radius: 4px;
   }
   .btn-grp > button {
     padding: 0.625em 3em;
   }
   .image-field label:hover {
     text-decoration: none;
-    background-color: hsl(0, 0%, 0%, 0.1);
   }
 }
