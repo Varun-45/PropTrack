@@ -1,12 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+.profile {
+	  padding: 0 10%;
+}
 .profile .profile_section {
-    margin: auto;
-    width: calc(100% - 30px);
-    max-width: 1170px;
-    border-radius: 10px;
     background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+    margin: 1em auto;
     position: relative;
-    -webkit-box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
-    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
 }
 .profile .profile_section .icon_edit {
     position: absolute;
@@ -21,6 +24,8 @@
     padding: 15px 10px;
     border-bottom: 1px solid rgba(0,0,0,.1);
     overflow: hidden;
+    display: flex;
+    gap: 1em;
 }
 .profile .profile_section_info_card:last-of-type {
     border-bottom: none;
@@ -29,19 +34,12 @@
     background: url(https://assets-0.housingcdn.com/seller/images/seller-default-b998ba2dede77b431e1ac01cf36048b4.png) 50%/cover no-repeat;
 }
 .profile .profile_pic {
-    position: relative;
-    float: left;
     width: 80px;
     height: 80px;
     background-color: #e6e6e6;
     background-size: cover;
     background-position: 50%;
     border-radius: 50%;
-}
-.profile .profile_details {
-    float: left;
-    margin-left: 20px;
-    width: calc(100% - 80px - 20px);
 }
 .profile .profile_details_primary_detail {
     font-size: 16px;
@@ -58,63 +56,33 @@
     font-size: 14px;
 }
 .myaccount {
-    text-align: center;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    white-space: nowrap;
-    position: relative;
     font-family: Rubik, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 1em;
+    white-space: nowrap;
 }
-.myaccount > div {
-    box-sizing: border-box;
-    white-space: normal;
-    text-align: left;
-    width: calc(100% - 30px);
-    max-width: 1170px;
-    padding-top: 10px;
-    position: relative;
-    display: flex;
-}
-
 .myaccount .leftbar {
-    width: 228px;
-    position: absolute;
+    padding: 1em 1.75em;
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
 }
-
-.myaccount .leftbar .up {
-    margin: 25px 24px 0px;
-    border-bottom: 1px solid rgb(230, 230, 230);
-    padding-bottom: 15px;
-}
-
 .myaccount .leftbar .up {
     font-size: 14px;
-    color: rgb(34, 34, 34);
-    margin-bottom: 5px;
+    border-bottom: 1px solid rgb(0,0,0,0.2);
+    padding-bottom: 1em;
 }
-
 .myaccount .leftbar .up .head {
-    font-size: 14px;
     color: rgb(34, 34, 34);
     margin-bottom: 5px;
 }
-
 .myaccount .leftbar .up .type {
-    height: 32px;
+    padding: 0.5em 0;
     font-weight: 400;
-    font-size: 14px;
     line-height: 17px;
-    letter-spacing: 0px;
-    color: rgb(76, 76, 76);
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
+    color: rgba(0, 0, 0, 0.75);
     cursor: pointer;
 }
-
 .myaccount .leftbar .up .icon_radio_filled {
     color: rgb(94, 35, 220);
 }
@@ -142,7 +110,6 @@
 .myaccount .leftbar .up .label_active {
     color: rgb(94, 35, 220);
     font-weight: 500;
-    margin-left: 8px;
 }
 
 .myaccount .leftbar .up .label {
@@ -150,52 +117,33 @@
 }
 
 .myaccount .leftbar .down {
-    display: flex;
-    flex-direction: column;
-    min-height: 667px;
-    padding-top: 12px;
-    margin: 0px 24px;
+    padding-top: 1em;
 }
-.myaccount .leftbar .down .head{
+.myaccount .leftbar .down .head {
     font-size: 14px;
-color: rgb(34, 34, 34);
-margin-bottom: 5px;
-padding: 16px 0px;
+    margin-bottom: 1em;
 }
 .myaccount .leftbar .down .tab{
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 }
-.myaccount .leftbar .down .tab .tabactive{
-    height: 38px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    letter-spacing: 0.84px;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: start;
-    justify-content: start;
-    padding: 10px 8px;
-    cursor: pointer;
-    background: rgba(94, 71, 220, 0.15);
-    color: rgb(94, 71, 220);
-    border-left: 4px solid rgb(94, 71, 220);
-}
-.myaccount .leftbar .down .tab .tabnonactive{
-    height: 38px;
+.myaccount .leftbar .down .tab .tabnonactive, .myaccount .leftbar .down .tab .tabactive {
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
     letter-spacing: 0.84px;
     color: rgb(0, 0, 0);
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
-    -webkit-box-pack: start;
     justify-content: start;
-    padding: 10px 8px;
+    padding: 1em 8px;
     cursor: pointer;
+}
+.myaccount .leftbar .down .tab .tabactive{
+    background: rgba(94, 71, 220, 0.15);
+    color: rgb(94, 71, 220);
+    border-left: 4px solid rgb(94, 71, 220);
 }
 .icon_arrow_down {
     display: inline-block;
@@ -204,7 +152,6 @@ padding: 16px 0px;
 }
 span.icon.icon_arrow_down {
     margin-left: auto;
-    -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
 .icon_arrow_right:before {
@@ -260,52 +207,35 @@ span.icon.icon_arrow_down {
 }
 
 .myaccount .center {
-    max-width: 604px;
-    width: calc((((100% - 24px) - 24px) - 290px) - 228px);
-    margin-left: 252px;
     position: relative;
 }
-.myaccount .center .section1{
-    width: 100%;
-    height: 85px;
+.myaccount .center .section1 {
+    padding: 0.5em 1em 0.5em 0.5em;
     border-radius: 10px;
-    margin-bottom: 16px;
-    max-width: 604px;
-    z-index: 11;
-    position: relative;
-    background: linear-gradient(150deg, rgba(255, 255, 255, 0.44) 3%, rgba(255, 255, 255, 0) 18%);
-}
-.myaccount .center .section1 > div{
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    padding: 10px 0px 0px 8px;
-    border-radius: 10px;
-    width: calc(100% - 2px);
-    height: 83px;
     background: linear-gradient(90deg, rgb(112, 92, 224) 0%, rgb(94, 71, 220) 100%);
+    display: grid;
+    grid-template-areas: "main more" "text reset";
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    color: #fff;
 }
-.myaccount .center .more{
-    position: absolute;
-    top: 20px;
-    right: 0px;
-    color: rgb(255, 255, 255);
+.myaccount .center .more {
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
     cursor: pointer;
+    grid-area: more;
+    justify-self: right;
 }
-.myaccount .center .reset{
-    position: absolute;
-    right: 0px;
-    color: rgb(255, 255, 255);
+.myaccount .center .reset {
     font-size: 12px;
     line-height: 15px;
     cursor: pointer;
-    top: 55px;
+    grid-area: reset;
+    justify-self: right;
 }
 .myaccount .center .section1 .main{
-    max-width: calc(100% - 60px);
+    grid-area: main;
 }
 .myaccount .center .main .dropdown-component.filter-container {
     min-width: 44px;
@@ -344,17 +274,8 @@ span.icon.icon_arrow_down {
     height: 32px;
 }
 .dropdown-header .head-container {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: left;
-    -webkit-justify-content: left;
-    -ms-flex-pack: left;
     justify-content: left;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
     height: 100%;
     width: 100%;
@@ -367,7 +288,6 @@ span.icon.icon_arrow_down {
 }
 span.icon.icon-arrow-down {
     margin-left: auto;
-    -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
 .dropdown-component .display-text-container {
@@ -377,19 +297,15 @@ span.icon.icon-arrow-down {
 }
 .myaccount .center .text{
     height: 36px;
-    position: absolute;
-    z-index: 5;
-    bottom: 5px;
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
-    color: rgb(255, 255, 255);
     padding-left: 10px;
     font-weight: 500;
     font-size: 14px;
+    grid-area: text;
 }
 .prop-cont {
-    display: inline-block;
+
 }
 .prop-cont .festive-card-listing {
     margin-bottom: 12px;
@@ -401,23 +317,17 @@ span.icon.icon-arrow-down {
     display: inline-block;
     vertical-align: top;
 }
+.owner-property {
+	  margin-top: 1em;
+}
 .mlp-property {
     padding: 10px;
     position: relative;
-    width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     background-color: #fff;
     font-weight: 400;
     border: 0;
-    border-radius: 0;
     border-radius: 10px;
 }
     .owner-property .mlp-property, .seller-property .mlp-property {
@@ -430,38 +340,14 @@ span.icon.icon-arrow-down {
     margin-bottom: 10px;
 }
 .mlp-property .mlpp-wrapper {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-.mlp-property .mlp-card-header, .mlp-property .mlpp-wrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
 .mlp-property .mlp-card-header {
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    padding: 0 18px 0 13px;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    min-height: 43px;
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75em 1em;
     border-bottom: 1px solid #f5f5f5;
 }
 .mlp-property .id-container {
@@ -471,95 +357,51 @@ span.icon.icon-arrow-down {
     display: none;
 }
 .su-li-ctas {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
+    padding: 0 0.5em;
 }
 .su-db-home .su-li-ctas {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
     margin-top: 12px;
 }
-    .mlp-property .mlp-card-header .su-li-ctas {
-        margin-top: 0;
-        display: unset;
-        -webkit-box-align: unset;
-        -webkit-align-items: unset;
-        -ms-flex-align: unset;
-        align-items: unset;
-        margin-left: 43px;
-    }
 .mlp-img:not(.su-upload-stub).mlp-img-stub {
     background-size: 60%;
 }
-.mlp-img:not(.su-upload-stub):not(.single-img) {
+/* .mlp-img:not(.su-upload-stub):not(.single-img) {
     height: 70px;
     width: 85px;
-}
+} */
 .mlp-img:not(.su-upload-stub) {
     background-size: cover;
     background-color: #d8d8d8;
     background-image: url('./download.svg');
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
     flex-shrink: 0;
     background-position: 50%;
     background-repeat: no-repeat;
     position: relative;
     border-radius: 0 0 0 10px;
+    min-width: 200px;
 }
-.mlp-property .mlp-img:not(.su-upload-stub):not(.single-img) {
+/* .mlp-property .mlp-img:not(.su-upload-stub):not(.single-img) {
     min-height: 186px;
     height: auto;
     width: 30%;
-}
+} */
 
 .mlp-info {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
     padding-left: 8px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     position: relative;
-    width: calc(100% - 130px - 8px);
 }
 .mlp-info.padding-left {
     padding-left: 16px;
 }
 .mlp-price-wrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
     font-weight: 500;
     padding-right: 18px;
@@ -569,13 +411,7 @@ span.icon.icon-arrow-down {
     font-weight: 500;
     max-width: calc(100% - 25px);
     padding-right: 6px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
     margin-top: 17px;
 }
@@ -593,12 +429,6 @@ span.icon.icon-arrow-down {
     white-space: nowrap;
     overflow: hidden;
 }
-.text-ellipsis {
-    max-width: 100%;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-}
 .mlp-addr {
     color: #000;
     line-height: 14px;
@@ -608,9 +438,9 @@ span.icon.icon-arrow-down {
     margin-top: 6px;
 }
 .mlp-property .mlp-posted-expired-info-container {
-    margin-left: -17px;
+    margin-left: -16px;
     background: #f9f5ff;
-    padding: 7px 16px 0 17px;
+    padding: 0.5em 0;
     margin-top: 15px;
     border-radius: 0 0 10px 0;
 }
@@ -631,8 +461,6 @@ span.icon.icon-arrow-down {
     position: relative;
 }
 .icon-rupee {
-    -webkit-align-self: center;
-    -ms-flex-item-align: center;
     align-self: center;
 }
 .icon-rupee:before {
@@ -706,46 +534,20 @@ span.icon.icon-arrow-down {
     padding-left: 0;
 }
 .mlp-property .mlp-posted-expired-info-container .mlp-posted-expired-info {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-}
-.mlp-property .mlp-posted-expired-info-container .mlp-posted-expired-info .mlp-date-container {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-}
-.mlp-property .mlp-posted-expired-info-container .mlp-date-separator {
-    margin: 0 27px;
-    border: 1px solid #ece2fc;
 }
 .mlp-property .mlp-posted-expired-info-container .flex {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-}
-.mlp-property .mlp-posted-expired-info-container .mlp-date-separator {
-    margin: 0 27px;
-    border: 1px solid #ece2fc;
 }
 .mlp-property .mlp-posted-expired-info-container .mlp-posted-expired-info .mlp-date-container {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    padding: 0 0.75em;
+}
+.mlp-property .mlp-posted-expired-info-container .mlp-posted-expired-info .mlp-date-container:not(.mlp-posted-expired-info .mlp-date-container:last-of-type) {
+  border-right: 0.5px solid rgba(0,0,0,0.25);
 }
 .mlp-property .mlp-posted-expired-info-container .mlp-posted-expired-info .mlp-date-container .mlp-date-title.upgrade-impl {
     color: #000;
@@ -765,13 +567,41 @@ span.icon.icon-arrow-down {
 .mlp-property .mlp-posted-expired-info-container .mlp-posted-expired-info .mlp-date-container .mlp-date-value .red {
     color: red;
 }
-
-
-
-
-.myaccount .rightbar {
-    margin-left: 24px;
-    width: 290px;
-    display: inline-block;
-    vertical-align: top;
+@media screen and (max-width: 1300px) {
+  .profile {
+    padding: 0 2em;
+  }
+  .myaccount {
+    grid-template-columns: 1fr 2.5fr 1fr;
+  }
+  .myaccount .leftbar {
+    padding: 1em;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .myaccount .leftbar .up {
+    display: flex;
+    background-color: #e7e4fa;
+    padding: 0.5em;
+    border: none;
+    border-radius: 50px;
+  }
+  .myaccount .leftbar .head {
+    display: none;
+  }
+  .myaccount .leftbar .up .type {
+    padding: 0.5em;
+    border-radius: inherit;
+  }
+  .leftbar [class*=" icon_"], .leftbar [class^=icon_] {
+    display: none;
+  }
+  .myaccount .leftbar .up .label {
+    white-space: break-spaces;
+    margin: 0;
+    height: 1em;
+    overflow: hidden;
+    display: block;
+    text-align: center;
+  }
 }

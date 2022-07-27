@@ -1,8 +1,10 @@
 import React from "react";
 import { useState } from "react";
-import "./Temp.css";
+import "./EditProfile.css";
 
-const Temp = () => {
+const EditProfile = (props) => {
+  const { isVisible, hideModal } = props;
+
   const [locations, setLocations] = useState(new Set(['mumbai', 'thane']));
 
   const checkFileAndAct = (event) => {
@@ -24,28 +26,29 @@ const Temp = () => {
   }
 
   return (
-    <div className="modal">
+    <div className="modal" style={{display: isVisible ? null : "none"}}>
       <div className="modal-content" id="profile-edit">
         <h2 className="modal-heading">edit your information</h2>
 
-        <button className="close-btn" type="button" aria-label="close modal"></button>
+        <button className="close-btn" type="button" aria-label="close modal" onClick={hideModal}></button>
 
-        <form onSubmit={e=>e.preventDefault()}>
+        <form noValidate={true} onSubmit={e=>e.preventDefault()}>
           <div className="image-field">
             <canvas className="image-canvas"></canvas>
-
             <label htmlFor="image-input">add image</label>
             <input type="file" id="image-input" onChange={checkFileAndAct}/>
           </div>
 
           <div className="field">
+            <input type="text" id="name-input" required/>
             <label htmlFor="name-input">name</label>
-            <input type="text" id="name-input" />
+            <span></span>
           </div>
 
           <div className="field">
+            <input type="text" id="email-input" required/>
             <label htmlFor="email-input">email</label>
-            <input type="email" id="email-input" />
+            <span></span>
           </div>
 
           <div className="contact-field">
@@ -56,15 +59,17 @@ const Temp = () => {
             </div>
 
             <div className="phone field">
+              <input type="text" id="phone-input" required/>
               <label htmlFor="phone-input">phone number</label>
-              <input type="number" id="phone-input" />
+              <span></span>
             </div>
           </div>
 
           <div className="location-field">
             <div className="field">
+              <input type="text" id="location-input" required/>
               <label htmlFor="location-input">location</label>
-              <input type="text" id="location-input" />
+              <span></span>
             </div>
 
             <div className="location-input-container">
@@ -73,9 +78,8 @@ const Temp = () => {
           </div>
 
           <div className="btn-grp">
-            <button type="button">cancel</button>
-
-            <button>save changes</button>
+            <button type="button" className="sec-btn" onClick={hideModal}>cancel</button>
+            <button className="pri-btn">save changes</button>
           </div>
         </form>
       </div>
@@ -85,4 +89,4 @@ const Temp = () => {
   );
 };
 
-export default Temp;
+export default EditProfile;

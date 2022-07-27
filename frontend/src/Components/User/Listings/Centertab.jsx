@@ -22,7 +22,6 @@ const Centertab = () => {
     
     <div className="center">
       <div class="section1">
-        <div>
           <div class="more">More Filters</div>
           <div class="reset">RESET</div>
           <div class="main">
@@ -60,17 +59,15 @@ const Centertab = () => {
           <div class="text">
             <div class="count-wrap">Showing 2 out of 2 properties</div>
           </div>
-        </div>
       </div>
       <div class="prop-cont">
-        <div class="festive-card-listing">
+        {/* <div class="festive-card-listing">
           <div></div>
-        </div>
+        </div> */}
         <div class="su-dbh-listings">
         {properties.map((property)=>{
           return (
             <>
-            <div>
             <div class="owner-property">
               <div class="mlp-property">
                 <div class="mlpp-wrapper">
@@ -117,15 +114,12 @@ const Centertab = () => {
                           </span>
                           <span class="mlp-date-value">{((new Date(property.CreatedAt)).toDateString()).slice(4)}</span>
                         </div>
-                        <hr class="mlp-date-separator" />
                         <div class="mlp-date-container">
                           <span class="mlp-date-title upgrade-impl">
                             Expiring On
                           </span>
                           <span class="mlp-date-value">{((new Date(property.ExpiringOn)).toDateString()).slice(4)}</span>
                         </div>
-                        <div class="flex">
-                          <hr class="mlp-date-separator" />
                           <div class="mlp-date-container">
                             <span class="mlp-date-title upgrade-impl">
                               Visibility
@@ -134,7 +128,6 @@ const Centertab = () => {
                               <span class="red">Low</span> (Free Plan)
                             </span>
                           </div>
-                        </div>
                       </div>
                       <div class="su-li-ctas">
                         <div class="a-href repost-btn">Reactivate</div>
@@ -144,11 +137,9 @@ const Centertab = () => {
                 </div>
               </div>
             </div>
-          </div>  
             </>)
           
         })}
-          <div>
             <div class="owner-property">
               <div class="mlp-property">
                 <div class="mlpp-wrapper">
@@ -214,15 +205,12 @@ const Centertab = () => {
                           </span>
                           <span class="mlp-date-value">4 Jul 2022</span>
                         </div>
-                        <hr class="mlp-date-separator" />
                         <div class="mlp-date-container">
                           <span class="mlp-date-title upgrade-impl">
                             Expiring On
                           </span>
                           <span class="mlp-date-value">18 Aug 2022</span>
                         </div>
-                        <div class="flex">
-                          <hr class="mlp-date-separator" />
                           <div class="mlp-date-container">
                             <span class="mlp-date-title upgrade-impl">
                               Visibility
@@ -231,7 +219,6 @@ const Centertab = () => {
                               <span class="red">Low</span> (Free Plan)
                             </span>
                           </div>
-                        </div>
                       </div>
                       <div class="su-li-ctas">
                         <div class="upgrade-now-container">
@@ -248,7 +235,6 @@ const Centertab = () => {
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
       </div>
