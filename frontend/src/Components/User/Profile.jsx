@@ -16,7 +16,8 @@ const Profile = () => {
   //   Address: "gaya, bihar, india, 823001, mir abu saleh road"
   // }
 
-  const [editProfile, setEditProfile] = useState(false);
+  const [editProfile, setEditProfile] = useState(false),
+    [isFilterVisible, setIsFilterVisible] = useState(false);
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -44,9 +45,15 @@ const Profile = () => {
             </div>
           </div>
         </section>
+
+        <div className="listings-header">
+          <div className="heading">listings</div>
+          <div className="icon" tabIndex={0} role="button" aria-label="show filters" onClick={() => setIsFilterVisible(true)}>filters</div>
+        </div>
+
         <div className="myaccount">
             <Lefttab />
-            <Centertab />
+            <Centertab isFilterVisible={isFilterVisible} hideFilter={()=>setIsFilterVisible(false)} />
             <Righttab />
         </div>
       </div>

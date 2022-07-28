@@ -12,27 +12,26 @@ const Lefttab = () => {
         <div className="leftbar">
             <div className="up">
               <div className="head">Show</div>
-                <div className="type" onClick={()=>setType('Residential')}>
-                  <span className={"icon_radio" + (Type === 'Residential' ? " icon_radio_filled" : '')}></span>
-                  <span className={"label" + (Type === 'Residential' ? " label_active" : '')}>Residential Properties</span>
+                <div className={"type" + (Type === 'Residential' ? " active" : '')} onClick={()=>setType('Residential')}>
+                  <span className="icon_radio"></span>
+                  <span className="label">Residential Properties</span>
                 </div>
-                <div className="type" onClick={()=>setType('Commercial')}>
-                  <span className={"icon_radio" + (Type === 'Commercial' ? " icon_radio_filled" : '')}></span>
-                  <span className={"label" + (Type === 'Commercial' ? " label_active" : '')}>Commercial Properties</span>
+                <div className={"type" + (Type === 'Commercial' ? " active" : '')} onClick={()=>setType('Commercial')}>
+                  <span className="icon_radio"></span>
+                  <span className="label">Commercial Properties</span>
                 </div>
             </div>
-            <div className="down">
+            <div className={"down" + (tab.length !== 0 ? " active" : '')}>
               <div className="head">Sub-Category</div>
-                    <div className="tab">
-                      <div className={tab === 'Buy' ? "tabactive" : 'tabnonactive'} onClick={()=>tab==='Buy' ? settab('') : settab('Buy')}>
+                    <div className={"tab" + (tab === 'Buy' ? " active" : '')}>
+                      <div className="label" onClick={()=>tab==='Buy' ? settab('') : settab('Buy')}>
                         <span>
                           Buy
                           <span> (2)</span>
                         </span>
                         <span className="icon icon_arrow_down"></span>
                       </div>
-                      <div className={`sub_filter ${tab === 'Buy' && "active"}`}>
-                        <div>
+                      <div className="sub_filter">
                           <div className="rf_group radio_group status_id">
                             <div className={`rf_toggle radio radio_0 toggle_tag pills ${subtab==='All' && 'toggle_active'}`} onClick={()=>setsubtab('All')}>
                               <div className="toggle_label">
@@ -73,19 +72,17 @@ const Lefttab = () => {
                             </div>
                           </div>
                           <div className="errorStyle"></div>
-                        </div>
                       </div>
                     </div>
-                    <div className="tab">
-                      <div className={tab === 'Sell' ? "tabactive" : 'tabnonactive'} onClick={()=>tab==='Sell' ? settab('') : settab('Sell')}>
+                    <div className={"tab" + (tab === 'Sell' ? " active" : '')}>
+                      <div className="label" onClick={()=>tab==='Sell' ? settab('') : settab('Sell')}>
                         <span>
                           Sell
                           <span> (2)</span>
                         </span>
                         <span className="icon icon_arrow_down"></span>
                       </div>
-                      <div className={`sub_filter ${tab === 'Sell' && "active"}`}>
-                        <div>
+                      <div className="sub_filter">
                           <div className="rf_group radio_group status_id">
                             <div className={`rf_toggle radio radio_0 toggle_tag pills ${subtab==='All' && 'toggle_active'}`} onClick={()=>setsubtab('All')}>
                               <div className="toggle_label">
@@ -126,19 +123,17 @@ const Lefttab = () => {
                             </div>
                           </div>
                           <div className="errorStyle"></div>
-                        </div>
                       </div>
                     </div>
-                    <div className="tab">
-                      <div className={tab === 'PG' ? "tabactive" : 'tabnonactive'} onClick={()=>tab==='PG' ? settab('') : settab('PG')}>
+                    <div className={"tab" + (tab === 'PG' ? " active" : '')}>
+                      <div className="label" onClick={()=>tab==='PG' ? settab('') : settab('PG')}>
                         <span>
                           PG
                           <span> (2)</span>
                         </span>
                         <span className="icon icon_arrow_down"></span>
                       </div>
-                      <div className={`sub_filter ${tab === 'PG' && "active"}`}>
-                        <div>
+                      <div className="sub_filter">
                           <div className="rf_group radio_group status_id">
                             <div className={`rf_toggle radio radio_0 toggle_tag pills ${subtab==='All' && 'toggle_active'}`} onClick={()=>setsubtab('All')}>
                               <div className="toggle_label">
@@ -179,7 +174,6 @@ const Lefttab = () => {
                             </div>
                           </div>
                           <div className="errorStyle"></div>
-                        </div>
                       </div>
                     </div>
             </div>

@@ -81,6 +81,7 @@ label, select {
   width: 100%;
   height: 2px;
   background-color: #000;
+  border: 1px solid #fff;
 }
 .close-btn::after {
   transform: translate(-50%, -50%) rotate(45deg);

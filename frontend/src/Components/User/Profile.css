@@ -1,3 +1,6 @@
+:root {
+  --active-color: rgb(93, 33, 222);
+}
 * {
   box-sizing: border-box;
 }
@@ -36,6 +39,7 @@
 .profile .profile_pic {
     width: 80px;
     height: 80px;
+    flex-shrink: 0;
     background-color: #e6e6e6;
     background-size: cover;
     background-position: 50%;
@@ -54,6 +58,9 @@
 .profile .profile_details_secondary_detail {
     margin-top: 8px;
     font-size: 14px;
+}
+.listings-header {
+  display: none;
 }
 .myaccount {
     font-family: Rubik, Helvetica, sans-serif;
@@ -83,15 +90,14 @@
     color: rgba(0, 0, 0, 0.75);
     cursor: pointer;
 }
-.myaccount .leftbar .up .icon_radio_filled {
-    color: rgb(94, 35, 220);
-}
-
-.myaccount .leftbar .up .icon_radio_filled:before {
-    content: "\E92C";
-}
 .myaccount .leftbar .up .icon_radio:before {
-    content: "\E92D";
+  content: "\E92D";
+}
+.myaccount .leftbar .up .active.type .icon_radio {
+    color: var(--active-color);
+}
+.myaccount .leftbar .up .active.type .icon_radio:before {
+    content: "\E92C";
 }
 
 [class*=" icon_"],
@@ -106,16 +112,13 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
-.myaccount .leftbar .up .label_active {
-    color: rgb(94, 35, 220);
-    font-weight: 500;
-}
-
 .myaccount .leftbar .up .label {
     margin-left: 8px;
 }
-
+.myaccount .leftbar .up .type.active .label {
+    color: var(--active-color);
+    font-weight: 500;
+}
 .myaccount .leftbar .down {
     padding-top: 1em;
 }
@@ -128,7 +131,7 @@
     height: -moz-fit-content;
     height: fit-content;
 }
-.myaccount .leftbar .down .tab .tabnonactive, .myaccount .leftbar .down .tab .tabactive {
+.myaccount .leftbar .down .label {
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
@@ -140,15 +143,15 @@
     padding: 1em 8px;
     cursor: pointer;
 }
-.myaccount .leftbar .down .tab .tabactive{
+.myaccount .leftbar .down .tab.active .label{
     background: rgba(94, 71, 220, 0.15);
-    color: rgb(94, 71, 220);
-    border-left: 4px solid rgb(94, 71, 220);
+    color: var(--active-color);
+    border-left: 4px solid var(--active-color);
 }
 .icon_arrow_down {
     display: inline-block;
     margin-left: 5px;
-    color: #5e23dc;
+    color: var(--active-color);
 }
 span.icon.icon_arrow_down {
     margin-left: auto;
@@ -160,7 +163,7 @@ span.icon.icon_arrow_down {
 .icon_arrow_down:before {
     content: "\E90C";
 }
-.myaccount .leftbar .down .tab .sub_filter.active {
+.myaccount .leftbar .down .tab.active .sub_filter {
     height: auto;
     padding: 16px 0px 0px 12px;
 }
@@ -203,7 +206,7 @@ span.icon.icon_arrow_down {
 }
 .myaccount .leftbar .down .tab .sub_filter .rf_group .rf_toggle.pills.toggle_active {
     background-color: transparent;
-    color: rgb(94, 35, 220);
+    color: var(--active-color);
 }
 
 .myaccount .center {
@@ -212,12 +215,15 @@ span.icon.icon_arrow_down {
 .myaccount .center .section1 {
     padding: 0.5em 1em 0.5em 0.5em;
     border-radius: 10px;
-    background: linear-gradient(90deg, rgb(112, 92, 224) 0%, rgb(94, 71, 220) 100%);
+    background: linear-gradient(90deg, rgb(112, 92, 224) 0%, var(--active-color) 100%);
     display: grid;
     grid-template-areas: "main more" "text reset";
     grid-template-columns: 3fr 1fr;
     align-items: center;
     color: #fff;
+}
+.myaccount .center .section1 .close-btn {
+  display: none;
 }
 .myaccount .center .more {
     font-size: 12px;
@@ -303,9 +309,6 @@ span.icon.icon-arrow-down {
     font-weight: 500;
     font-size: 14px;
     grid-area: text;
-}
-.prop-cont {
-
 }
 .prop-cont .festive-card-listing {
     margin-bottom: 12px;
@@ -579,22 +582,52 @@ span.icon.icon-arrow-down {
   }
 }
 @media screen and (max-width: 1023px) {
+  .profile {
+    padding: 0;
+  }
+  .profile .profile_section {
+    margin: 0;
+    border-radius: 0;
+  }
+  .listings-header {
+    display: flex;
+    background-color: #000;
+    color: #fff;
+    align-items: center;
+    padding: 0 5%;
+    text-transform: capitalize;
+    text-align: center;
+  }
+  .listings-header > .heading {
+    flex-grow: 1;
+  }
+  .listings-header > .icon {
+    padding: 0.5em 0;
+  }
+  .myaccount {
+    display: block;
+  }
+  .myaccount .leftbar {
+    padding: 0.5em 0 0 0;
+  }
+  .myaccount .leftbar .head,
+  .leftbar [class*=" icon_"], .leftbar [class^=icon_] {
+    display: none;
+  }
   .myaccount .leftbar .up {
     display: flex;
     background-color: #e7e4fa;
-    padding: 0.5em;
+    padding: 0.325em;
     border: none;
     border-radius: 50px;
   }
-  .myaccount .leftbar .head {
-    display: none;
-  }
   .myaccount .leftbar .up .type {
-    padding: 0.5em;
+    padding: 0.75em 10%;
     border-radius: inherit;
+    flex-grow: 1;
   }
-  .leftbar [class*=" icon_"], .leftbar [class^=icon_] {
-    display: none;
+  .myaccount .leftbar .up .type.active {
+    background: var(--active-color);
   }
   .myaccount .leftbar .up .label {
     white-space: break-spaces;
@@ -604,4 +637,106 @@ span.icon.icon-arrow-down {
     display: block;
     text-align: center;
   }
+  .myaccount .leftbar .up .type.active .label {
+    color: #fff;
+  }
+  .myaccount .leftbar .down {
+    display: flex;
+    --border-y: 0.5px solid hsl(0, 0%, 75%);
+    border-top: var(--border-y);
+    border-bottom: var(--border-y);
+    padding: 0;
+    margin-top: 0.5em;
+    position: relative;
+  }
+  .myaccount .leftbar .down.active {
+    margin-bottom: 3em;
+  }
+  .myaccount .leftbar .down .tab {
+    flex-grow: 1;
+  }
+  .myaccount .leftbar .down .label {
+    justify-content: center;
+  }
+  .myaccount .leftbar .down .tab.active .label {
+    border-left: 0;
+    border-bottom: 2px solid var(--active-color);
+  }
+  .myaccount .leftbar .down .tab .sub_filter {
+    position: absolute;
+    left: 0;
+    top: 105%;
+    width: 100vw;
+    overflow-x: auto;
+    max-width: unset;
+    background-color: #fff;
+  }
+  .myaccount .leftbar .down .tab.active .sub_filter {
+    padding: 0.5em;
+  }
+  .myaccount .leftbar .down .tab .sub_filter .rf_group {
+    flex-direction: row;
+    white-space: nowrap;
+    margin: 0;
+    gap: 1em;
+  }
+  .myaccount .leftbar .down .tab .sub_filter .rf_group .rf_toggle.pills {
+    margin: 0;
+    border: 0.5px solid hsl(0, 0%, 75%);
+    padding: 0 1em;
+    border-radius: 100px;
+  }
+  .myaccount .leftbar .down .tab .sub_filter .rf_group .rf_toggle.pills.toggle_active {
+    background-color: var(--active-color);
+    color: #fff;
+    border-color: var(--active-color);
+  }
+  .myaccount .center .section1 {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+    border-radius: 0;
+    display: none;
+  }
+  .myaccount .center .section1.show, .myaccount .center .section1.show .close-btn {
+    display: initial;
+  }
+  .myaccount .center .more, .myaccount .center .text {
+    display: none;
+  }
+  .myaccount .center .reset {
+    padding: 0.75em 2em;
+    display: inline-block;
+    margin-bottom: 1em;
+    background-color: hsl(0 , 0%, 0%, 0.25);
+  }
+  .filter-container {
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .mlp-property .mlpp-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .mlp-property .mlp-card-header {
+    order: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+  }
+  .mlp-property .id-container {
+    grid-column: 1/5;
+    margin-bottom: 0.5em;
+  }
+  .mlp-img:not(.su-upload-stub).mlp-img-stub {
+    width: 100%;
+    min-height: 100px;
+    background-size: contain;
+    border-radius: 0;
+  }
+  
 }
