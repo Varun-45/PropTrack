@@ -68,7 +68,6 @@ const Photo = () => {
         {!Images[0] ? (
           <>
             <div className="tab_content">
-              <div>
                 <div className="su_photos">
                   <div className="center_div center">
                     <span>
@@ -152,13 +151,11 @@ const Photo = () => {
                     </span>
                   </div>
                 </div>
-              </div>
             </div>
           </>
         ) : (
           <>
             <div className="tab_content">
-              <div>
                 <div className="su_photos">
                   <div className="center_div">
                     <span>
@@ -300,7 +297,6 @@ const Photo = () => {
                     </div>
                   </div>
                 </div>
-              </div>
             </div>
           </>
         )}
