@@ -190,7 +190,7 @@ button, input[type=button], input[type=checkbox], input[type=radio], input[type=
     background: #fff;
     color: #414141;
 }
-.btn {
+.btn:hover, .btn:focus {
     -webkit-filter: grayscale(1);
             filter: grayscale(1);
 }
@@ -766,4 +766,7 @@ textarea {
 .su_photos .txt_cont .bold {
     color: #000;
     font-weight: 500;
+}
+.rf_toggle.pills:hover, .css_1b9k6ne:hover {
+	border-color: #5e23dc;
 }
