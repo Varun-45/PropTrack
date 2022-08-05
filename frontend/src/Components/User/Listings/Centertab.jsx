@@ -13,12 +13,13 @@ const Centertab = (props) => {
   const func = async ()=>{
     const {data} = await axios.get(`/api/v1/properties/user/${user._id}`)
     setproperties(data.properties)
+    // console.log(data.properties);
   }
   
   useEffect(() => {
     func()
   }, [])
-  
+
   return (
     <> 
     <div className="center">
@@ -91,7 +92,7 @@ const Centertab = (props) => {
                       <div className="su-li-tags">
                         <span className="su-li-status red">
                           <span className="su-li-status-icon deleted-icon"></span>
-                          <span className="su-li-status-text">Deleted</span>
+                          <span className="su-li-status-text"></span>
                         </span>
                       </div>
                     </div>

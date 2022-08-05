@@ -724,7 +724,6 @@ const Propdetails = () => {
                         placeholder="Name"
                         name="fname2"
                         id="fname2"
-                        value=""
                         maxlength="100"
                       />
                     </div>
@@ -736,7 +735,6 @@ const Propdetails = () => {
                         placeholder="Email Address"
                         name="user_name2"
                         id="user_name2"
-                        value=""
                         maxlength="100"
                       />
                     </div>
@@ -1030,9 +1028,8 @@ const Propdetails = () => {
                           placeholder="Mobile Number"
                           name="mobile2"
                           id="mobile2"
-                          value=""
                           maxlength="20"
-                          onkeypress="return isNumberKey(event);"
+                          // onkeypress="return isNumberKey(event);"
                         />
                       </div>
                       <label
@@ -1096,7 +1093,6 @@ const Propdetails = () => {
                           name="forward_status"
                           id="forward_status"
                           value="Y"
-                          checked=""
                         />
                         <label className="vam ml2px gray" for="forward_status">
                           I agree to be contacted thru call, WhatsApp, sms &amp;

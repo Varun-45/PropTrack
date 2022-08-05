@@ -880,7 +880,7 @@ setTimeout(() => {
                                   paramstate="flat_details.available_from"
                                   trackchange="true"
                                     value={Available_From || ''}
-                                    onChange={(e) => setAvailable_From(v=>e.target.validity.valid ? e.target.value : v)}
+                                    onChange={(e) => setAvailable_From(e.target.value)}
                                 />
                                 <label className="label">
                                   Available From
@@ -936,7 +936,7 @@ setTimeout(() => {
                                     paramstate="user_flats[0].user_flat_details.price"
                                     pattern="^\d*(\.\d{0,2})?$"
                                     value={Cost || ''}
-                                    onChange={(e) => setCost(v=>e.target.validity.valid ? v=>e.target.validity.valid ? e.target.value : v : v)}
+                                    onChange={(e) => setCost(v=>e.target.validity.valid ? e.target.value : v)}
                                   />
                                   <label className="label">
                                     Cost
@@ -1047,8 +1047,8 @@ setTimeout(() => {
                                 paramstate="flat_details.available_from"
                                 trackchange="true"
                                 value={Available_From || ''}
-                                onClick={(e) =>
-                                  setAvailable_From(v=>e.target.validity.valid ? e.target.value : v)
+                                onChange={(e) =>
+                                  setAvailable_From(e.target.value)
                                 }
                               />
                               <label className="label">
@@ -1116,8 +1116,8 @@ setTimeout(() => {
                               section="basic"
                               paramstate="user_flats[0].user_flat_details.price"
                               pattern="^\d*(\.\d{0,2})?$"
-                                    value={Available_From || ''}
-                                    onChange={(e) => setAvailable_From(v=>e.target.validity.valid ? e.target.value : v)}
+                              value={Available_From || ''}
+                              onChange={(e) => setAvailable_From(v=>e.target.validity.valid ? e.target.value : v)}
                             />
                             <label className="label">
                               Plot Price
@@ -1719,7 +1719,6 @@ setTimeout(() => {
                                 className={Entrance && "has_value"}
                                 type="number"
                                 autoComplete="number"
-                                readonly=""
                                 section="basic"
                                 paramstate="entrance_width"
                                 trackchange="true"
@@ -1741,7 +1740,6 @@ setTimeout(() => {
                                 className={Cieling && "has_value"}
                                 type="number"
                                 autoComplete="number"
-                                readonly=""
                                 section="basic"
                                 paramstate="ceiling_height"
                                 trackchange="true"
@@ -2276,6 +2274,7 @@ setTimeout(() => {
                               className=""
                               maxLength="100"
                               style={{ height: "28px" }}
+                              pattern="."
                             ></textarea>
                             <label className="label">
                               Enter other attractive offers (Max 100 characters)
