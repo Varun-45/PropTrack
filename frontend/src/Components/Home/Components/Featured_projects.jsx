@@ -1,28 +1,53 @@
 import React from 'react'
+import { useEffect } from 'react';
 import { useState, useRef } from "react";
 
 const Featured_projects = () => {
-    
-  const swiperWrapper = useRef();
+  const firstSlide = useRef();
 
-  const [nextfeatureddisabled, setnextfeatureddisabled] = useState('');
-  const [translatefeatured, settranslatefeatured] = useState("0");
+  const [nextfeatureddisabled, setnextfeatureddisabled] = useState(false),
+    [previousFeaturedDisabled, setPreviousFeaturedDisabled] = useState(true);
+  const [translatefeatured, settranslatefeatured] = useState(0),
+    [slideShown, setSlideShown] = useState();
+
+  useEffect(() => setSlideShown(firstSlide.current), []);
 
   const nextfeatured = (e) => {
     e.preventDefault();
-    setnextfeatureddisabled(true);
-    settranslatefeatured((prev) => prev - getWidthToTranslate());
+    const widthToTranslate = getWidthToTranslate();
+    settranslatefeatured((prev) => prev - widthToTranslate);
+    setSlideShown(cur => {
+      setStateOfSwiperBtns(cur.nextElementSibling);
+      return cur.nextElementSibling;
+    });
   };
+
   const previousfeatured = (e) => {
     e.preventDefault();
-    setnextfeatureddisabled(false);
-    settranslatefeatured((prev) => prev + getWidthToTranslate());
+    const widthToTranslate = getWidthToTranslate();
+    settranslatefeatured((prev) => prev + widthToTranslate);
+    setSlideShown(cur => {
+      setStateOfSwiperBtns(cur.previousElementSibling)
+      return cur.previousElementSibling
+    });
   };
 
   const getWidthToTranslate = () => {
-    const computedStyles = getComputedStyle(swiperWrapper.current.firstElementChild);
+    const computedStyles = getComputedStyle(slideShown);
     const width = Number(computedStyles.width.slice(0, -2)) + Number(computedStyles.marginRight.slice(0, -2));
     return width
+  }
+
+  const setStateOfSwiperBtns = (slideShown) => {
+    if (slideShown.nextElementSibling) 
+      setnextfeatureddisabled(false);
+    else 
+      setnextfeatureddisabled(true);
+
+    if (slideShown.previousElementSibling) 
+      setPreviousFeaturedDisabled(false);
+    else
+      setPreviousFeaturedDisabled(true);
   }
 
   return (
@@ -61,7 +86,7 @@ const Featured_projects = () => {
                   </div>
                   <div
                     className={`swiper_button_prev ${
-                      !nextfeatureddisabled ? "swiper_button_disabled" : ''
+                      previousFeaturedDisabled ? "swiper_button_disabled" : ''
                     }`}
                     tabIndex="-1"
                     role="button"
@@ -81,12 +106,12 @@ const Featured_projects = () => {
                         "transitionDuration": "300ms",
                         transform: `translate3d(${translatefeatured}px, 0px, 0px)`,
                       }}
-                      ref={swiperWrapper}
                     >
                       <div
                         className="swiper_slide"
                         role="group"
                         aria-label="1 / 3"
+                        ref={firstSlide}
                       >
                         <div className="home_featured_proj_card card_shadow">
                           <a href="" target="_blank">
