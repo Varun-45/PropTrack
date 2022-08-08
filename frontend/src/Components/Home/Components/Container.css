@@ -27,7 +27,6 @@
     position: relative;
     display: inline-block;
     margin: 0;
-    /* padding: 0; */
 }
 
 .home_section_title_text1:after {
@@ -181,7 +180,6 @@
 }
 
 .home_featured_proj_card {
-    /* height: 332px; */
     overflow: hidden;
     border: 1px solid #d7d7d7;
     border-radius: 8px;
