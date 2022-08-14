@@ -592,25 +592,23 @@
 .header_sub_tabs_dropdown_view_more.active {
   display: inline-block;
 }
-
-#ptadvicedrop, #helpdrop {
+#helpdrop {
+  white-space: nowrap;
+}
+#ptadvicedrop {
 	right: 0;
 }
-
 .header_sub_tabs > li.active {
   padding-top: 4px;
 }
-
 .header_sub_tasks .drop_row {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
-
 .drop_call:not(.drop_call:first-of-type) {
 	margin-left: 2em;
 }
-
 .drop_heading {
   font-size: 16px;
   font-weight: 500;
@@ -623,11 +621,9 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
 .drop_call:hover .drop_heading {
   border-color: var(--brand-color);
 }
-
 .drop_links > li > a {
 	display: block;
 	font-size: 14px;
