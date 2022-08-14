@@ -244,7 +244,113 @@
   margin-top: 40px;
   cursor: pointer;
 }
-
+.search_wrap .dropdown {
+	background: #fff;
+	box-shadow: 4px 3px 6px #00000038;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  left: 0;
+  text-transform: capitalize;
+}
+.sl_tag {
+	align-items: center;
+	display: inline-flex;
+	gap: 8px;
+	padding: 4px 10px;
+	border: 1px solid;
+  font-weight: bold;
+	margin: 0.3em;
+	border-radius: 25px;
+	text-transform: capitalize;
+	background-color: rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+.sl_tag > .remove-btn {
+  --edge: 16px;
+  width: var(--edge);
+  height: var(--edge);
+  position: relative;
+}
+.sl_tag > .remove-btn::after,
+.sl_tag > .remove-btn::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 1.25px;
+  background-color: #000;
+}
+.sl_tag:hover > .remove-btn::after,
+.sl_tag:hover > .remove-btn::before {
+  background-color: red;
+}
+.sl_tag > .remove-btn::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.sl_tag > .remove-btn::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.search_budget_field {
+	padding: 0.25em 0;
+	border: 1px solid rgb(0,0,0,0.25);
+}
+.sb_input {
+	display: grid;
+	padding: .25em;
+	margin-bottom: 0.5em;
+}
+.sb_input > h4 {
+	grid-column: 1/ span 2;
+	text-transform: capitalize;
+	font-size: 0.8em;
+	padding-left: 0.25em;
+	font-weight: bold;
+}
+.sb_base_input, .sb_unit_input {
+	background-color: transparent;
+	border: none;
+	border-bottom: 2px solid rgba(0,0,0,.25);
+	font-size: .9em;
+	padding: 8px 0;
+}
+.sb_base_input {
+	padding-left: 8px;
+	width: 100%;
+}
+.property.dropdown {
+  width: 500px;
+  border: 1px solid rgba(0,0,0,0.25);
+}
+.property.dropdown .type {
+  padding: 0.5em 0.75em;
+}
+.property.dropdown h3 {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+.property.dropdown .values {
+  display: flex;
+  gap: 0.5em 0.75em;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.property.dropdown .tag {
+  border: 1px solid rgba(0,0,0,0.9);
+  border-radius: 50px;
+  padding: 0.25em 0.75em;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.property.dropdown .tag.selected {
+  font-weight: bold;
+  border-width: 2px;
+}
+.property.dropdown .tag:hover {
+  border-right-width: 5px;
+  border-left-width: 5px;
+}
 @media screen and (max-width: 900px) {
   .search_wrap, .search_container, .searchbanner_container, .search_tab {
     width: auto;

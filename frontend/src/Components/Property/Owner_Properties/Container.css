@@ -11909,7 +11909,7 @@ button.swiper-pagination-bullet {
 .swiper-scrollbar {
     border-radius: 10px;
     position: relative;
-    -ms-touch-action: none;
+    touch-action: none;
     background: rgba(0, 0, 0, .1)
 }
 
@@ -12253,7 +12253,6 @@ button.swiper-pagination-bullet {
     position: relative;
     top: -2px;
     display: inline-block;
-    vertical-align: middle;
     margin-right: 4px;
     background: url(https://cdn.staticmb.com/srpstatic/images/srp-sprite-web.svg) no-repeat -24px -1941px
 }
@@ -25666,7 +25665,6 @@ fieldset[disabled] .m-contact__btn--primary-o:hover {
 }
 
 @media screen and (min-width:768px) {
-
     .mb-pagination--next a:hover,
     .mb-pagination--previous a:hover {
         text-decoration: underline
@@ -25686,7 +25684,6 @@ fieldset[disabled] .m-contact__btn--primary-o:hover {
 }
 
 @media screen and (max-width:767px) {
-
     .mb-pagination--next a:before,
     .mb-pagination--previous a:before {
         width: 6px;
@@ -26018,16 +26015,12 @@ fieldset[disabled] .m-contact__btn--primary-o:hover {
     position: relative;
     line-height: 1.4;
     background-color: #fff;
-    border: 1px solid #e8e8e8
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
 }
-
-.mb-map,
 .mb-map * {
-    box-sizing: border-box
-}
-
-.mb-map * {
-    font-family: Montserrat, Helvetica, Arial, sans-serif
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 .mb-map__categories {
@@ -26208,18 +26201,13 @@ fieldset[disabled] .m-contact__btn--primary-o:hover {
     width: 100%;
     display: block;
     justify-content: space-between;
-    padding: 0
+    padding: 0;
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
 }
-
-.mbform__select__group,
 .mbform__select__group * {
-    font-family: Montserrat, Helvetica, Arial, sans-serif
+    box-sizing: border-box;
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
 }
-
-.mbform__select__group * {
-    box-sizing: border-box
-}
-
 .mbform__select__list {
     width: 100%
 }
@@ -26427,16 +26415,12 @@ fieldset[disabled] .m-contact__btn--primary-o:hover {
 }
 
 .mb-form__container {
-    padding: 0
+    padding: 0;
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
 }
-
-.mb-form__container,
 .mb-form__container * {
-    font-family: Montserrat, Helvetica, Arial, sans-serif
-}
-
-.mb-form__container * {
-    box-sizing: border-box
+    box-sizing: border-box;
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
 }
 
 .mb-form__col-group {
@@ -26675,15 +26659,6 @@ fieldset[disabled] .m-contact__btn--primary-o:hover {
     color: #909090;
     opacity: 1
 }
-
-.mb-form__input:-ms-input-placeholder {
-    color: #909090
-}
-
-.mb-form__input::-ms-input-placeholder {
-    color: #909090
-}
-
 .mb-form__textarea-label {
     color: #606060
 }

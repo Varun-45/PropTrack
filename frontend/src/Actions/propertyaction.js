@@ -35,6 +35,8 @@ import {
 export const getallproperties =
   (keyword = "", currentPage = 1, price = [0, 200000], category, ratings = 0) =>
   async (dispatch) => {
+    // 'category' argument will be of type 'Set'
+    // 'keyword' argument will be a string of keywords separated by '?'
     try {
       dispatch({ type: ALL_PROPERTY_REQUEST });
       let link = `/api/v1/properties?keyword=${keyword}&page=${currentPage}&Price[gte]=${price[0]}&Price[lte]=${price[1]}&Ratings[gte]=${ratings}`;
