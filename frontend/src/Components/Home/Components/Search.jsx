@@ -1,10 +1,12 @@
 import React, { useEffect, useState, useReducer } from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router";
 import { getallproperties } from "../../../Actions/propertyaction";
 import "./Search.css";
 
 const Search = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(),
+    navigate = useNavigate();
   const [searchaniwidth, setsearchaniwidth] = useState(""),
     [searchanileft, setsearchanileft] = useState("");
   const [dropdown, setDropdown] = useState("");
@@ -160,13 +162,14 @@ const Search = () => {
     });
   };
   const handleSubmit = () => {
-    const keyword = location.join("?");
+    const keyword = location.join("|");
     const minPrice = getPriceInNumber(budget.min),
       maxPrice = getPriceInNumber(budget.max),
       price = [Math.min(minPrice, maxPrice), Math.max(minPrice, maxPrice)];
-    const category = selectedProperties;
+    const category = selectedProperties.map(value => value.replace(/\s/g, "_"));
 
     dispatch(getallproperties({ keyword, price, category }));
+    navigate("/owner-properties");
 
     function getPriceInNumber(priceObj) {
       if (priceObj.unit === "thousand") return priceObj.base * 1000;

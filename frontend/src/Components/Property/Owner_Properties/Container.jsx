@@ -1,9 +1,17 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import './Container.css'
 
 const Container = () => {
+
+  // const {error, properties, propertycount, resultPerPage, filteredpropertyCount } = useSelector(state => state.AllOwnerProperties);
+  const all = useSelector(state => state.AllOwnerProperties);
+  console.table(all)
+  /* if (error) {
+    console.error(error);
+    alert(`We have an error\n${error}\nRefresh the page and if the problem persists, contact the site administrator`);
+  } */
   return (
-    <>
       <div className="container-fluid">
         <div className="container">
           <div className="mb-srp">
@@ -44,7 +52,7 @@ const Container = () => {
               <div className="mb-srp__tabs">
                 <ul className="mb-srp__tabs__list">
                   <li className="mb-srp__tabs__list--item">
-                    <a className="active">Properties (15,360)</a>
+                    <a className="active">Properties ({})</a>
                   </li>
                   <li className="mb-srp__tabs__list--item">
                     <a className="">New Projects (68)</a>
@@ -85,7 +93,7 @@ const Container = () => {
                 </div>
               </div>
               <div className="mb-srp__title">
-                <div className="mb-srp__title--text1">15360 results | </div>{" "}
+                <div className="mb-srp__title--text1">{} results | </div>{" "}
                 <h1 className="mb-srp__title--text1">
                   Property for Sale in New Delhi without brokerage
                 </h1>
@@ -9004,7 +9012,6 @@ const Container = () => {
         </div>
       </div>
       </div>
-    </>
   );
 };
 
