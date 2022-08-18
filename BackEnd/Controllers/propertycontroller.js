@@ -67,11 +67,11 @@ exports.getallproperties = catchAsyncErrors(async (req, res, next) => {
 
   apifeatures.pagination(resultPerPage);
 
-  const property = await apifeatures.query;
+  const properties = await apifeatures.query;
 
   res.status(200).json({
     success: true,
-    property,
+    properties,
     propertycount,
     resultPerPage,
     filteredpropertyCount,
