@@ -1,16 +1,26 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getallproperties } from "../../../Actions/propertyaction";
 import './Container.css'
 
 const Container = () => {
+  const dispatch = useDispatch()
+  const {properties,loading,propertycount,resultPerPage,filteredpropertyCount,error} = useSelector(state=>state.AllOwnerProperties)
 
-  // const {error, properties, propertycount, resultPerPage, filteredpropertyCount } = useSelector(state => state.AllOwnerProperties);
-  const all = useSelector(state => state.AllOwnerProperties);
-  console.table(all)
-  /* if (error) {
-    console.error(error);
-    alert(`We have an error\n${error}\nRefresh the page and if the problem persists, contact the site administrator`);
-  } */
+  useEffect(() => {
+    dispatch(getallproperties())
+  }, [])
+
+  useEffect(() => {
+    if (error) {
+      console.error(error);
+      alert(`We have an error\n${error}\nRefresh the page and if the problem persists, contact the site administrator`);
+    }
+  }, [error])
+  
+  
+
   return (
       <div className="container-fluid">
         <div className="container">
@@ -52,10 +62,10 @@ const Container = () => {
               <div className="mb-srp__tabs">
                 <ul className="mb-srp__tabs__list">
                   <li className="mb-srp__tabs__list--item">
-                    <a className="active">Properties ({})</a>
+                    <a className="active">Properties ({properties.length})</a>
                   </li>
                   <li className="mb-srp__tabs__list--item">
-                    <a className="">New Projects (68)</a>
+                    <a className="">New Projects</a>
                   </li>
                   <li className="mb-srp__tabs__list--item">
                     <a className="">Top Agents</a>
@@ -93,31 +103,34 @@ const Container = () => {
                 </div>
               </div>
               <div className="mb-srp__title">
-                <div className="mb-srp__title--text1">{} results | </div>{" "}
+                <div className="mb-srp__title--text1">{properties.length} results | </div>{" "}
                 <h1 className="mb-srp__title--text1">
-                  Property for Sale in New Delhi without brokerage
+                  {/* Property for Sale in New Delhi without brokerage */}
                 </h1>
               </div>
               <div></div>
+              {properties.map(property=>{
+                return(<>
+
               <div className="mb-srp__list" id="cardid29342943">
                 <div className="mb-srp__card">
                   <div className="mb-srp__card__container">
                     <div className="mb-srp__card__photo">
                       <div className="mb-srp__card__photo__fig">
                         <span className="mb-srp__card__photo__fig--count">
-                          20<span className="sign-plus">+</span>
+                          {property.Images.length}<span className="sign-plus">+</span>
                         </span>
                         <img
                           alt=""
                           decoding="async"
-                          src="https://img.staticmb.com/mbphoto/property/cropped_images/2022/May/20/Photo_h180_w240/29342943_1_PropertyImage1653069246429_180_240.jpg"
+                          src={property.Images[0]}
                           data-src="https://img.staticmb.com/mbphoto/property/cropped_images/2022/May/20/Photo_h180_w240/29342943_1_PropertyImage1653069246429_180_240.jpg"
                           width="100%"
                           height="100%"
                           className="mb-srp__card__photo__fig--graphic"
                         />
                         <div className="mb-srp__card__photo__fig--post">
-                          Posted: Yesterday
+                          Posted: {new Date(property.CreatedAt).toDateString()}
                         </div>
                       </div>
                       <div className="mb-srp__card__ads">
@@ -375,6 +388,8 @@ const Container = () => {
                   </div>
                 </div>
               </div>
+                </>)
+              })}
               <div className="mb-srp__list" id="cardid61456341">
                 <div className="mb-srp__card">
                   <div className="mb-srp__card__container">

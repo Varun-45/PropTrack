@@ -9,6 +9,7 @@ const ApiFeatures = require("../utils/apifeatures");
 
 const cloudinary = require("cloudinary");
 const catchasyncerrors = require("../Middlewares/catchasyncerrors");
+const User = require("../Database/userschema");
 
 // Add New property --Admin
 exports.addnewproperty = catchAsyncErrors(async (req, res, next) => {
@@ -60,7 +61,7 @@ exports.getallproperties = catchAsyncErrors(async (req, res, next) => {
   const resultPerPage = 10;
   const propertycount = await Property.countDocuments();
 
-  const apifeatures = new ApiFeatures(Property.find(), req.query).filter();
+  const apifeatures = new ApiFeatures(Property.find().populate('user'), req.query).filter()
 
   let filteredpropertyCount = await apifeatures.query.clone();
   filteredpropertyCount = filteredpropertyCount.length;

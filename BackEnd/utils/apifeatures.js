@@ -3,6 +3,16 @@ class ApiFeatures {
         this.query = query,
         this.querystr = querystr
     }
+    search(){
+        const keyword = this.querystr.keyword ? {
+            Name:{
+                $regex : this.querystr.keyword,
+                $options : 'i',
+            }
+        } : {}
+        this.query = this.query.find({...keyword})
+        return this
+    }
     filter(){
         const querycopy = {...this.querystr}
         delete querycopy['keyword','page','limit']

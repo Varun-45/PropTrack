@@ -11,7 +11,11 @@ const Owner_Properties = () => {
     dispatch(getallproperties());
   }
   
-  return (<Container/>)
+  return (
+    <>
+      <Container/>
+    </>
+  )
 }
 
 export default Owner_Properties

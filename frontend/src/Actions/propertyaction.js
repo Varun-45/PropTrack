@@ -33,7 +33,7 @@ import {
 
 // All Property
 export const getallproperties =
-  (keyword = "", currentPage = 1, price = [0, 200000], category, ratings = 0) =>
+  (keyword = "", currentPage = 1, price = [0, 20000000], category, ratings = 0) =>
   async (dispatch) => {
     // 'category' argument will be of type 'Set' with values in lowercase alphabets and underscore only
     // 'keyword' argument will be a string of keywords separated by '|'
